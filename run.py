@@ -45,7 +45,7 @@ def get_profession_choice():
         """
         Prompt the user to enter the letter corresponding to their choice
         """
-        choice = input("Enter valid letter for your profession:\n ").lower()
+        choice = input("Enter your profession. Choose one of the above options:\n ").lower()
 
         """
         Validate the users input and confirm their choice
@@ -73,4 +73,4 @@ if __name__ == "__main__":
 
 hrs = input("Enter your hours:\n ")
 pay = float(hrs) * float["rate"]
-# print("Your Weekly Pay before tax is £" + str('pay')
+print("Your Weekly Pay before tax is £" + str('pay')
