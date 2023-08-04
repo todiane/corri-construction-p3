@@ -1,3 +1,7 @@
+"""
+Main code that appears in terminal
+"""
+
 print("Welcome to the Corri Construction Company Contractors Page.")
 print("Please input your first and last name to begin\n")
 
@@ -16,7 +20,10 @@ print("What is your job role " + first_name + "?")
 
 
 def get_profession_choice():
-    # Dictionary to map profession codes to profession names
+    """
+    Dictionary to map profession codes to profession names
+    and rate of pay 
+    """
     professions = {
         "a": {"name": "Bricklayer", "rate": 25.85},
         "b": {"name": "Plumber", "rate": 36.52},
@@ -27,19 +34,23 @@ def get_profession_choice():
     }
 
     while True:
-        # Display available professions to the user
+        """
+        Display available professions to the user
+        """
         print("Choose a profession:\n")
         for key, profession in professions.items():
             print(f"{key}: {profession['name']}")
 
-        # Prompt the user to enter the letter corresponding to their choice
+        """
+        Prompt the user to enter the letter corresponding to their choice
+        """
         choice = input("Enter valid letter for your profession: ").lower()
 
         """
         Validate the users input and confirm their choice
         """
         if choice in professions:
-            confirm = input(f"You chose {professions[choice]['name']}. Is this correct? (y/n): ").lower()
+            confirm = input(f"You chose {professions[choice]['name']}.\n Is this correct? (y/n): ").lower()
             if confirm == "y":
                 return professions[choice]
         else:
@@ -57,7 +68,6 @@ if __name__ == "__main__":
     print(f"You earn £{chosen_profession['rate']} per hour.")
     print("You pay 20% tax and 13% National Insurance")
 
-
-#GET HOW MANY HOURS HAVE BEEN WORKED
-
-#WORK OUT NUMBER OF HOURS * HOURLY RATE - TAX AND NATIONAL INSURANCE
+hrs = input("Enter your hours: ")
+pay = float(hrs) * float["rate"]
+# print("Your Weekly Pay before tax is £" + str('pay')
