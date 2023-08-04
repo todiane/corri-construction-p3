@@ -18,12 +18,12 @@ print("What is your job role " + first_name + "?")
 def get_profession_choice():
     # Dictionary to map profession codes to profession names
     professions = {
-        "a": {"name": "bricklayer", "rate": 25},
-        "b": {"name": "plumber", "rate": 36},
-        "c": {"name": "scaffolder", "rate": 22},
-        "d": {"name": "electrician", "rate": 36},
-        "e": {"name": "carpenter", "rate": 25},
-        "f": {"name": "construction worker", "rate": 22}
+        "a": {"name": "Bricklayer", "rate": 25.85},
+        "b": {"name": "Plumber", "rate": 36.52},
+        "c": {"name": "Scaffolder", "rate": 22.95},
+        "d": {"name": "Electrician", "rate": 36.52},
+        "e": {"name": "Carpenter", "rate": 25.85},
+        "f": {"name": "Construction Worker", "rate": 22.95}
     }
 
     while True:
