@@ -3,6 +3,8 @@
 
 A construction company that uses contractors. Every week contractors input their weekly hours which are verfied by a supervisor and paid a week later.
 
+deployed project <https://corri-construction-p3-e9d1aa627f6f.herokuapp.com/>
+
 ## Creating the Heroku app
 
 When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
