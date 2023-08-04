@@ -12,7 +12,8 @@ print("Hello: " + first_name + " " + last_name)
 instructions to confirm their profession
 
 """
-print ("What is your job role " + first_name + "?")
+print("What is your job role " + first_name + "?")
+
 
 def get_profession_choice():
     # Dictionary to map profession codes to profession names
@@ -32,23 +33,26 @@ def get_profession_choice():
             print(f"{key}: {profession['name']}")
 
         # Prompt the user to enter the letter corresponding to their choice
-        choice = input("Enter the letter corresponding to your choice: ").lower()
+        choice = input("Enter valid letter for your profession: ").lower()
 
-        # Validate the user's input
+        """
+        Validate the users input and confirm their choice
+        """
         if choice in professions:
-            # Confirm the user's choice
             confirm = input(f"You chose {professions[choice]['name']}. Is this correct? (y/n): ").lower()
             if confirm == "y":
-                return professions[choice]  # Return the chosen profession if confirmed
+                return professions[choice]
         else:
             print("Invalid choice. Please choose a valid option.")
 
+"""
+if yes print out the details including random user number and hourly pay
+"""
 
-#if yes print out the details including employee number and hourly rate of pay
 if __name__ == "__main__":
     chosen_profession = get_profession_choice()
-    import random  #import random number for user
-    print(first_name + " " + "your employee number is " + str(random.randint(23203,63944)))  
+    import random
+    print(first_name + " " + "your contractor number is " + str(random.randint(23203, 63944)))
     print(f"Your profession is: {chosen_profession['name']}")
     print(f"You earn £{chosen_profession['rate']} per hour.")
     print("You pay 20% tax and 13% National Insurance")
