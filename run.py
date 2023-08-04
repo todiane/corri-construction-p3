@@ -56,3 +56,8 @@ if __name__ == "__main__":
     print(f"Your profession is: {chosen_profession['name']}")
     print(f"You earn £{chosen_profession['rate']} per hour.")
     print("You pay 20% tax and 13% National Insurance")
+
+
+#GET HOW MANY HOURS HAVE BEEN WORKED
+
+#WORK OUT NUMBER OF HOURS * HOURLY RATE - TAX AND NATIONAL INSURANCE

@@ -2,15 +2,6 @@
 # Corri Construction Company
 
 A construction company that uses contractors. Every week contractors input their weekly hours which are verfied by a supervisor and paid a week later.
-Welcome,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
-
-## Reminders
-
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
 
 ## Creating the Heroku app
 
@@ -25,9 +16,11 @@ If you have credentials, such as in the Love Sandwiches project, you must create
 
 Connect your GitHub repository and deploy as normal.
 
-## Constraints
+## Credits
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+Free Code Camp Python for everyone course
+
+https://www.youtube.com/watch?v=wgkC8SxraAQ
 
 ---
 
