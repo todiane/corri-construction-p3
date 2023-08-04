@@ -17,19 +17,19 @@ print ("What is your job role " + first_name + "?")
 def get_profession_choice():
     # Dictionary to map profession codes to profession names
     professions = {
-        "a": "bricklayer",
-        "b": "plumber",
-        "c": "scaffolder",
-        "d": "electrician",
-        "e": "carpenter",
-        "f": "construction worker"
+        "a": {"name": "bricklayer", "rate": 25},
+        "b": {"name": "plumber", "rate": 36},
+        "c": {"name": "scaffolder", "rate": 22},
+        "d": {"name": "electrician", "rate": 36},
+        "e": {"name": "carpenter", "rate": 25},
+        "f": {"name": "construction worker", "rate": 22}
     }
 
     while True:
         # Display available professions to the user
         print("Choose a profession:\n")
         for key, profession in professions.items():
-            print(f"{key}: {profession}")
+            print(f"{key}: {profession['name']}")
 
         # Prompt the user to enter the letter corresponding to their choice
         choice = input("Enter the letter corresponding to your choice: ").lower()
@@ -37,16 +37,18 @@ def get_profession_choice():
         # Validate the user's input
         if choice in professions:
             # Confirm the user's choice
-            confirm = input(f"You chose {professions[choice]}. Is this correct? (y/n): ").lower()
+            confirm = input(f"You chose {professions[choice]['name']}. Is this correct? (y/n): ").lower()
             if confirm == "y":
                 return professions[choice]  # Return the chosen profession if confirmed
         else:
             print("Invalid choice. Please choose a valid option.")
 
+
 #if yes print out the details including employee number and hourly rate of pay
 if __name__ == "__main__":
     chosen_profession = get_profession_choice()
-    print(first_name + " " + "your employee number is 3432" ) #NEED TO CREATE RANDOM NUMBER
-    print(f"Your profession is: {chosen_profession}")
-    print("You earn £34 per hour") #NEED TO CREATE CODE FOR PAY
+    import random  #import random number for user
+    print(first_name + " " + "your employee number is " + str(random.randint(23203,63944)))  
+    print(f"Your profession is: {chosen_profession['name']}")
+    print(f"You earn £{chosen_profession['rate']} per hour.")
     print("You pay 20% tax and 13% National Insurance")
