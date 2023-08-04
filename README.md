@@ -1,5 +1,7 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Corri Construction Company
 
+A construction company that uses contractors. Every week contractors input their weekly hours which are verfied by a supervisor and paid a week later.
 Welcome,
 
 This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
