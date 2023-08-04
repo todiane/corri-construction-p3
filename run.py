@@ -1,3 +1,9 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+print("Welcome to the Corri Construction Company Contractors Page.")
+print("Please input your first and last name to begin\n")
+
+"""
+instructions to add first and last name\n
+"""
+first_name = input("Enter your First Name: ")
+last_name = input("Enter your Last Name: ")
+print("Hello: " + first_name + " " + last_name)
