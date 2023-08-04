@@ -8,12 +8,13 @@ print("Please input your first and last name to begin\n")
 """
 instructions to add first and last name\n
 """
-first_name = input("Enter your First Name: ")
-last_name = input("Enter your Last Name: ")
+first_name = input("Enter your First Name:\n ")
+last_name = input("Enter your Last Name:\n ")
 print("Hello: " + first_name + " " + last_name)
 
 """
-instructions to confirm their profession
+instructions to confirm their profession by
+selecting one of the letters provided.
 
 """
 print("What is your job role " + first_name + "?")
@@ -44,10 +45,12 @@ def get_profession_choice():
         """
         Prompt the user to enter the letter corresponding to their choice
         """
-        choice = input("Enter valid letter for your profession: ").lower()
+        choice = input("Enter valid letter for your profession:\n ").lower()
 
         """
         Validate the users input and confirm their choice
+        Or let them know their input is incorrect and provide the
+        list of options again
         """
         if choice in professions:
             confirm = input(f"You chose {professions[choice]['name']}.\n Is this correct? (y/n): ").lower()
@@ -68,6 +71,6 @@ if __name__ == "__main__":
     print(f"You earn £{chosen_profession['rate']} per hour.")
     print("You pay 20% tax and 13% National Insurance")
 
-hrs = input("Enter your hours: ")
+hrs = input("Enter your hours:\n ")
 pay = float(hrs) * float["rate"]
 # print("Your Weekly Pay before tax is £" + str('pay')
