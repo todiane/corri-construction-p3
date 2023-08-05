@@ -2,22 +2,19 @@
 Main code for Corri Construction Company that appears in terminal
 """
 
-def welcome() -> None:
-    """
-    welcome message created
-    using ASCII art
-    """
-    clrscr()
-    line1 = "   Welcome to   "
-    val.slow_print(line1)
-    time.sleep(1.2)
-    val.program_title()
-    line2 = """
-Corri Construction Company
-Contractor Page
-        """
+def print_welcome_ascii_art():
 
-print("Welcome to the Corri Construction Company Contractors Page.")
+    welcome_art = r"""
+              _                       
+             |       
+__      _____| | ___ ___  _ __ ___   ___
+\ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \
+ \ V  V /  __/ | (_| (_) | | | | | |  __/
+  \_/\_/ \___|_|\___\___/|_| |_| |_|\___|                                   
+"""
+    print(welcome_art)
+
+print("This is the Corri Construction Company Contractors Page.\n")
 print("Please input your first and last name to begin\n")
 
 """
@@ -60,7 +57,7 @@ def get_profession_choice():
         """
         Prompt the user to enter the letter corresponding to their choice
         """
-        choice = input("Enter your profession. Choose one of the above options:\n ").lower()
+        choice = input("Enter your profession. Choose one of the above options:\n").lower()
 
         """
         Validate the users input and confirm their choice
@@ -68,7 +65,7 @@ def get_profession_choice():
         list of options again
         """
         if choice in professions:
-            confirm = input(f"You chose {professions[choice]['name']}.\n Is this correct? (y/n): ").lower()
+            confirm = input(f"You chose {professions[choice]['name']}. Is this correct? (y/n): ").lower()
             if confirm == "y":
                 return professions[choice]
         else:
