@@ -27,12 +27,12 @@ def get_profession_choice():
     and rate of pay
     """
     professions = {
-        "a": {"name": "Bricklayer", "rate": 25.85},
-        "b": {"name": "Plumber", "rate": 36.52},
-        "c": {"name": "Scaffolder", "rate": 22.95},
-        "d": {"name": "Electrician", "rate": 36.52},
-        "e": {"name": "Carpenter", "rate": 25.85},
-        "f": {"name": "Construction Worker", "rate": 22.95}
+        "a": {"name": "Bricklayer", "rate": 28},
+        "b": {"name": "Plumber", "rate": 36},
+        "c": {"name": "Scaffolder", "rate": 25},
+        "d": {"name": "Electrician", "rate": 36},
+        "e": {"name": "Carpenter", "rate": 29},
+        "f": {"name": "Construction Worker", "rate": 27}
     }
 
     while True:
@@ -95,7 +95,7 @@ def get_date_from_user(prompt):
            
 
 if __name__ == "__main__":
-    print("Enter your 'from' and 'to' dates in the format DD-MM-YYYY for August and/or September 2023.")
+    print("Enter your 'from' and 'to' dates in the format DD-MM-YYYY.")
 
     from_date = get_date_from_user("Enter the 'from' date: ")
     to_date = get_date_from_user("Enter the 'to' date: ")
@@ -105,7 +105,7 @@ if __name__ == "__main__":
 Asks user to input their hours and works out pay
 """
 hrs = input("Enter your hours: ")
-print("Here are your potential pay details. If everything is authorised by your manager,\n")
+print("This information will be authorised by your manager\n")
 pay = float(hrs) * chosen_profession['rate'] 
 print(f"From: {from_date.strftime('%d-%m-%Y')}")
 print(f"To: {to_date.strftime('%d-%m-%Y')}")
@@ -118,11 +118,5 @@ print("Your pay before tax is £" + str(pay) + " " + "for" + " " + str(hrs) + " 
 """
 NEED TO ADD : IF EVERYTHING IS OK ASK IF THEY WANT TO EXIT
 IF THEY SAY NO EVERYTHING ISN'T OK - PRINT CONTACT HR ON 01304 849204
-
-THEN
-ASK IF THEY WANT TO ADD ANY MORE DATES
-print()
-
-DO YOU WANT TO ADD DATES - WORK FROM AND TO?
 
 """
