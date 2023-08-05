@@ -1,19 +1,6 @@
 """
 Main code for Corri Construction Company that appears in terminal
 """
-
-def print_welcome_ascii_art():
-
-    welcome_art = r"""
-              _                       
-             |       
-__      _____| | ___ ___  _ __ ___   ___
-\ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \
- \ V  V /  __/ | (_| (_) | | | | | |  __/
-  \_/\_/ \___|_|\___\___/|_| |_| |_|\___|                                   
-"""
-    print(welcome_art)
-
 print("This is the Corri Construction Company Contractors Page.\n")
 print("Please input your first and last name to begin\n")
 
@@ -84,5 +71,5 @@ if __name__ == "__main__":
     print("You pay 20% tax and 13% National Insurance")
 
 hrs = input("Enter your hours:\n ")
-pay = float(hrs) * float["rate"]
-# print("Your Weekly Pay before tax is £" + str('pay'))
+pay = float(hrs) * chosen_profession['rate'] 
+print("Your Weekly pay before tax is £" + str(pay))

@@ -30,6 +30,8 @@ https://www.youtube.com/watch?v=wgkC8SxraAQ
 
 py4e autograder to help with checking maths https://www.py4e.com/tsugi/store/test/pythonauto 
 
+Art generator for ASCII code https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+
 ---
 
 Happy coding!
