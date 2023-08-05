@@ -75,6 +75,8 @@ if __name__ == "__main__":
 
 """
 Get dates from the user for August or September 2023 only
+Checks if the dates are within that range
+NEED TO ADD MESSAGE IF DATES ARE IN WRONG ORDER *************
 """
 
 from datetime import datetime
@@ -84,7 +86,6 @@ def get_date_from_user(prompt):
         try:
             date_str = input(prompt)
             date_obj = datetime.strptime(date_str, "%d-%m-%Y")
-             # Check if the date is within the allowed range
             if date_obj < datetime(2023, 8, 1) or date_obj > datetime(2023, 9, 30):
                 print("Dates should be between 1st August 2023 and 30th September 2023.")
                 print("If your hours are for previous months please contact HR on 01305 483048\n")
@@ -107,9 +108,10 @@ Asks user to input their hours and works out pay
 hrs = input("Enter your hours: ")
 print("\nThis information will be authorised by your manager:\n")
 pay = float(hrs) * chosen_profession['rate'] 
-print(f"From: {from_date.strftime('%d-%m-%Y')}")
-print(f"To: {to_date.strftime('%d-%m-%Y')}")
-print("Your pay before tax is £" + str(pay) + " " + "for" + " " + str(hrs) + " " + "hours\n")
+# print(f"From: {from_date.strftime('%d-%m-%Y')}")
+# print(f"To: {to_date.strftime('%d-%m-%Y')}")
+print((f"From {from_date.strftime('%d-%m')}") + " " + (f"to {to_date.strftime('%d-%m')}") + " 2023, your pay before tax" + " " + first_name + " " + "is £" + str(pay) + " for" + " " + str(hrs) + " hours\n")
+# print("Your pay before tax is £" + str(pay) + " " + "for" + " " + str(hrs) + " " + "hours\n")
 
 # print("You will pay " +  + "in tax and" + + "National Insurance\n")
 
