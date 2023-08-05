@@ -1,6 +1,21 @@
 """
-Main code that appears in terminal
+Main code for Corri Construction Company that appears in terminal
 """
+
+def welcome() -> None:
+    """
+    welcome message created
+    using ASCII art
+    """
+    clrscr()
+    line1 = "   Welcome to   "
+    val.slow_print(line1)
+    time.sleep(1.2)
+    val.program_title()
+    line2 = """
+Corri Construction Company
+Contractor Page
+        """
 
 print("Welcome to the Corri Construction Company Contractors Page.")
 print("Please input your first and last name to begin\n")
@@ -8,8 +23,8 @@ print("Please input your first and last name to begin\n")
 """
 instructions to add first and last name\n
 """
-first_name = input("Enter your First Name:\n ")
-last_name = input("Enter your Last Name:\n ")
+first_name = input("Enter your First Name:\n")
+last_name = input("Enter your Last Name:\n")
 print("Hello: " + first_name + " " + last_name)
 
 """
@@ -73,4 +88,4 @@ if __name__ == "__main__":
 
 hrs = input("Enter your hours:\n ")
 pay = float(hrs) * float["rate"]
-print("Your Weekly Pay before tax is £" + str('pay')
+# print("Your Weekly Pay before tax is £" + str('pay'))
