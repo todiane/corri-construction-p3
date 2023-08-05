@@ -23,7 +23,7 @@ print("What is your job role " + first_name + "?")
 def get_profession_choice():
     """
     Dictionary to map profession codes to profession names
-    and rate of pay 
+    and rate of pay
     """
     professions = {
         "a": {"name": "Bricklayer", "rate": 25.85},
