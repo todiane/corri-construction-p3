@@ -96,7 +96,7 @@ def get_date_from_user(prompt):
            
 
 if __name__ == "__main__":
-    print("Enter your 'from' and 'to' dates in the format DD-MM-YYYY.")
+    print("Enter your dates for August/September 2023 in the format DD-MM-YYYY.")
 
     from_date = get_date_from_user("Enter the 'from' date: ")
     to_date = get_date_from_user("Enter the 'to' date: ")
@@ -115,6 +115,9 @@ print((f"From {from_date.strftime('%d-%m')}") + " " + (f"to {to_date.strftime('%
 # Print("Total potential pay after tax and NI is \n" )
 """
 NEED TO ADD : IF EVERYTHING IS OK ASK IF THEY WANT TO EXIT
-IF THEY SAY NO EVERYTHING ISN'T OK - PRINT CONTACT HR ON 01304 849204
+IF THEY SAY NO EVERYTHING ISN'T OK - PRINT CONTACT HR ON  01305 483048
+
+DO YOU WANT A PRINT OUT - CAN i FIGURE OUT HOW TO PROVIDE A PRINT-OUT SO THEY CAN DOWNLOAD IT.
+OR SHOULD I JUST GET PYTHON TO LET THEM SAVE THE INFORMATION FOR THEM?
 
 """
