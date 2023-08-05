@@ -46,7 +46,7 @@ def get_profession_choice():
         """
         Prompt the user to enter the letter corresponding to their choice
         """
-        choice = input("Select one of the above options a-f: ").lower()
+        choice = input("\nSelect one of the above options a-f: ").lower()
 
         """
         Validate the users input and confirm their choice
@@ -105,7 +105,7 @@ if __name__ == "__main__":
 Asks user to input their hours and works out pay
 """
 hrs = input("Enter your hours: ")
-print("This information will be authorised by your manager\n")
+print("\nThis information will be authorised by your manager:\n")
 pay = float(hrs) * chosen_profession['rate'] 
 print(f"From: {from_date.strftime('%d-%m-%Y')}")
 print(f"To: {to_date.strftime('%d-%m-%Y')}")
