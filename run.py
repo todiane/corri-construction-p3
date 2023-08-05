@@ -108,13 +108,9 @@ Asks user to input their hours and works out pay
 hrs = input("Enter your hours: ")
 print("\nThis information will be authorised by your manager:\n")
 pay = float(hrs) * chosen_profession['rate'] 
-# print(f"From: {from_date.strftime('%d-%m-%Y')}")
-# print(f"To: {to_date.strftime('%d-%m-%Y')}")
 print((f"From {from_date.strftime('%d-%m')}") + " " + (f"to {to_date.strftime('%d-%m')}") + " 2023, your pay before tax" + " " + first_name + " " + "is £" + str(pay) + " for" + " " + str(hrs) + " hours\n")
-# print("Your pay before tax is £" + str(pay) + " " + "for" + " " + str(hrs) + " " + "hours\n")
 
 # print("You will pay " +  + "in tax and" + + "National Insurance\n")
-
 
 # Print("Total potential pay after tax and NI is \n" )
 """
