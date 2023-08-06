@@ -79,11 +79,14 @@ if __name__ == "__main__":
     print("You pay 20% tax and 13% National Insurance\n")
 
 """
-Get dates from the user for August or September 2023 only
-Checks if the dates are within that range
-NEED TO ADD MESSAGE IF DATES ARE IN WRONG ORDER *************
+Get dates from the user for August or September 2023 only. Checks if the dates 
+are within that range and in sequential order. True flag added to to_date
+so that it can run the extra 'if' condition on the second run.
+Code created with support from Travis.media.
+
 """
-def get_date_from_user(prompt):
+
+def get_date_from_user(prompt, last=False):
     while True:
         try:
             date_str = input(prompt)
@@ -91,19 +94,21 @@ def get_date_from_user(prompt):
             if date_obj < datetime(2023, 8, 1) or date_obj > datetime(2023, 9, 30):
                 print("Dates should be between 1st August 2023 and 30th September 2023.")
                 print("If your hours are for previous months please contact HR on 01305 483048\n")
+            if last == True:
+                if from_date >= date_obj: #date_obj is to_date
+                    print("'To' date must be after or equal to the 'from' date. Please try again.")
+                else:
+                    return date_obj
             else:
                 return date_obj
         except ValueError:
             print("Invalid date format. Please enter a date in the format DD-MM-YYYY.")
-           
 
 if __name__ == "__main__":
     print("Enter your dates for August/September 2023 in the format DD-MM-YYYY.")
 
     from_date = get_date_from_user("Enter the 'from' date: ")
-    to_date = get_date_from_user("Enter the 'to' date: ")
-
-
+    to_date = get_date_from_user("Enter the 'to' date: ", True)
 """
 Asks user to input their hours and works out pay
 """
@@ -135,8 +140,6 @@ print("If you have any questions please contact HR on 01305 483048\n")
 
 
 """
-
-
 NEED TO ADD : IF EVERYTHING IS OK ASK IF THEY WANT TO EXIT
 IF THEY SAY NO EVERYTHING ISN'T OK - PRINT CONTACT HR ON  01305 483048
 
