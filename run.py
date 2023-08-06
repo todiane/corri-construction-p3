@@ -119,13 +119,23 @@ def final_pay(pay, tax, national_insurance):
   pay_after = pay - (tax * pay) - (national_insurance * pay)
   return pay_after
 
-tax = 0.2
-national_insurance = 0.13
+tax = 0.02
+national_insurance = 0.013
+pay_after = final_pay(pay, tax, national_insurance)
+tax_amount = tax * pay
+national_insurance_amount = national_insurance * pay
 
-print(f"Your pay after deducting tax and national insurance is £{final_pay(pay, tax, national_insurance)}.")
+# print(f"Your pay after deducting tax and national insurance is £{final_pay(pay, tax, national_insurance)}.")
+
+# print(f"Your pay after deducting tax £" + ({tax_amount})  + " and" + " national insurance £ "({national_insurance_amount}) + " is £"{final_pay(pay, tax, national_insurance})
+print(f"The pay after minus tax (£{tax_amount}) and national insurance (£{national_insurance_amount}) is £{pay_after}.")
+
+
 
 
 """
+
+SHOULD I include the tax and ni amounts as well so it shows how much is deducted
 NEED TO ADD : IF EVERYTHING IS OK ASK IF THEY WANT TO EXIT
 IF THEY SAY NO EVERYTHING ISN'T OK - PRINT CONTACT HR ON  01305 483048
 
