@@ -125,7 +125,7 @@ pay_after = final_pay(pay, tax, national_insurance)
 tax_amount = tax * pay
 national_insurance_amount = national_insurance * pay
 
-print(f"The pay after minus tax (£{tax_amount}) and national insurance (£{national_insurance_amount}) is £{pay_after}.")
+print(f"Pay minus tax (£{tax_amount}) & NI (£{national_insurance_amount}) is £{pay_after}.")
 print("The TAX and NATIONAL INSURANCE amounts shown are for your information only\n")
 print("Final pay amounts are approximate and depend on your tax status")
 print("The actual amount you are paid may change\n")
