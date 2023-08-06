@@ -1,3 +1,11 @@
+
+# imports ----------
+
+# from colorama import Fore, Back, Style FIND OUT HOW TO ADD COLOUR TO TEXT****
+from datetime import datetime
+
+# --------------
+
 """
 Main code for Corri Construction Company that appears in terminal
 """
@@ -18,9 +26,6 @@ instructions to confirm their profession by
 selecting one of the letters provided.
 
 """
-# print("What is your job role ?")
-
-
 def get_profession_choice():
     """
     Dictionary to map profession codes to profession names
@@ -78,9 +83,6 @@ Get dates from the user for August or September 2023 only
 Checks if the dates are within that range
 NEED TO ADD MESSAGE IF DATES ARE IN WRONG ORDER *************
 """
-
-from datetime import datetime
-
 def get_date_from_user(prompt):
     while True:
         try:
@@ -110,14 +112,28 @@ print("\nThis information will be authorised by your manager:\n")
 pay = float(hrs) * chosen_profession['rate'] 
 print((f"From {from_date.strftime('%d-%m')}") + " " + (f"to {to_date.strftime('%d-%m')}") + " 2023, your pay before tax" + " " + first_name + " " + "is £" + str(pay) + " for" + " " + str(hrs) + " hours\n")
 
-# print("You will pay " +  + "in tax and" + + "National Insurance\n")
+"""
+Calculating payment after tax - 20% tax is 0.2 and 13% NI is 0.13
+"""
+def final_pay(pay, tax, national_insurance):
+  pay_after = pay - (tax * pay) - (national_insurance * pay)
+  return pay_after
 
-# Print("Total potential pay after tax and NI is \n" )
+tax = 0.2
+national_insurance = 0.13
+
+print(f"Your pay after deducting tax and national insurance is £{final_pay(pay, tax, national_insurance)}.")
+
+
 """
 NEED TO ADD : IF EVERYTHING IS OK ASK IF THEY WANT TO EXIT
 IF THEY SAY NO EVERYTHING ISN'T OK - PRINT CONTACT HR ON  01305 483048
 
 DO YOU WANT A PRINT OUT - CAN i FIGURE OUT HOW TO PROVIDE A PRINT-OUT SO THEY CAN DOWNLOAD IT.
 OR SHOULD I JUST GET PYTHON TO LET THEM SAVE THE INFORMATION FOR THEM?
+
+do you want to include 40% tax and 13% option as well - it will have to be a random computer selection 
+so when people enter their details the computer will randomly give them either 20% or 40% status
+OR I can set it up so plumber and electrician selections are 40% and the others are 20%
 
 """

@@ -32,6 +32,8 @@ py4e autograder to help with checking maths https://www.py4e.com/tsugi/store/tes
 
 Art generator for ASCII code https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
 
+to help putting together the function that calculates income tax and national insurance I started with this video and adapated it https://www.youtube.com/watch?v=b4lok6-_GGg 
+
 ---
 
 Happy coding!
