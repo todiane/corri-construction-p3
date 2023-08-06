@@ -126,7 +126,7 @@ tax_amount = tax * pay
 national_insurance_amount = national_insurance * pay
 
 print(f"The pay after minus tax (£{tax_amount}) and national insurance (£{national_insurance_amount}) is £{pay_after}.")
-print("The TAX and NATIONAL INSURANCE amounts shown are for information only\n)
+print("The TAX and NATIONAL INSURANCE amounts shown are for your information only\n")
 print("Final pay amounts are approximate and depend on your tax status")
 print("The actual amount you are paid may change\n")
 print("If you have any questions please contact HR on 01305 483048\n")
