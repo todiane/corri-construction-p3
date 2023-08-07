@@ -3,15 +3,13 @@
 import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
-
-from datetime import datetime
-
+import datetime
 # --------------
 
 """
 Main code for Corri Construction Company that appears in terminal
 """
-print(Fore.GREEN + "This is the Corri Construction Company Contractors Page.\n")
+print(Fore.GREEN + "This is the Corri Construction Company Contractors Page")
 print(Fore.CYAN + "\nUse this portal to input your hours for August and September 2023 only.\n")
 print("If your hours are for previous months please contact HR on 01305 483048\n")
 print("Please input your first and last name to begin:\n")
@@ -81,36 +79,51 @@ if __name__ == "__main__":
     print("You pay 20% tax and 13% National Insurance\n")
 
 """
-Get dates from the user for August or September 2023 only. Checks if the dates 
-are within that range and in sequential order. True flag added to to_date
-so that it can run the extra 'if' condition on the second run.
+Get dates from the user for August or September 2023 only. Checks if the dates
+are within that range and in sequential order if not error message given.
 Code created with support from Travis.media.
 
 """
 
-def get_date_from_user(prompt, last=False):
+# Define the valid date range - this can change each month
+start_date = datetime.date(2023, 8, 1)
+end_date = datetime.date(2023, 9, 30)
+
+# Function to validate the user input
+def validate_date(date_str):
+    try:
+        date = datetime.datetime.strptime(date_str, "%d-%m-%Y").date()
+    except ValueError:
+        return False
+    # Check if the date is within the valid range
+    if start_date <= date <= end_date:
+        return date
+    else:
+        return False
+
+# Function to get the date from user
+def get_date_input(prompt):
     while True:
-        try:
-            date_str = input(prompt)
-            date_obj = datetime.strptime(date_str, "%d-%m-%Y")
-            if date_obj < datetime(2023, 8, 1) or date_obj > datetime(2023, 9, 30):
-                print(Back.RED + "Dates should be between 1st August 2023 and 30th September 2023.")
-                print("If your hours are for previous months please contact HR on 01305 483048\n")
-            if last == True:
-                if from_date >= date_obj: #date_obj is to_date
-                    print(Back.RED + "'To' date must be after or equal to the 'from' date. Please try again.")
-                else:
-                    return date_obj
-            else:
-                return date_obj
-        except ValueError:
-            print(Back.RED + "Invalid date format. Please enter a date in the format DD-MM-YYYY.")
+        date_str = input(prompt)
+        date = validate_date(date_str)
+        if date:
+            return date
+        else:
+            print(Back.RED + "\nInvalid date. Please enter a date between 1 August 2023 and 30 September 2023 in DD-MM-YYYY format.\n")
 
-if __name__ == "__main__":
-    print(Fore.GREEN + "Enter your dates for August/September 2023 in the format DD-MM-YYYY.")
+# Function to get the from and to dates from the user
+def get_from_to_dates():
+    while True:
+        from_date = get_date_input("Enter the from date (DD-MM-YYYY): ")
+        to_date = get_date_input("Enter the to date (DD-MM-YYYY): ")
+        if from_date <= to_date:
+            return from_date, to_date
+        else:
+            print(Back.RED + "\nInvalid dates. The from date must be before or equal to the to date.\n")
 
-    from_date = get_date_from_user("Enter the 'from' date: ")
-    to_date = get_date_from_user("Enter the 'to' date: ")
+from_date, to_date = get_from_to_dates()
+print(Fore.GREEN + f"Thank you, you entered from {from_date.strftime('%d-%m-%Y')} and to {to_date.strftime('%d-%m-%Y')} as your dates.\n")
+
 """
 Asks user to input their hours and works out pay
 """
