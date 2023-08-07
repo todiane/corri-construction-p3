@@ -1,7 +1,9 @@
 
 # imports ----------
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 
-# from colorama import Fore, Back, Style FIND OUT HOW TO ADD COLOUR TO TEXT****
 from datetime import datetime
 
 # --------------
@@ -9,17 +11,17 @@ from datetime import datetime
 """
 Main code for Corri Construction Company that appears in terminal
 """
-print("This is the Corri Construction Company Contractors Page.\n")
-print("Use this portal to input your hours for August and September 2023 only.")
+print(Fore.GREEN + "This is the Corri Construction Company Contractors Page.\n")
+print(Fore.CYAN + "\nUse this portal to input your hours for August and September 2023 only.\n")
 print("If your hours are for previous months please contact HR on 01305 483048\n")
-print("Please input your first and last name to begin\n")
+print("Please input your first and last name to begin:\n")
 
 """
 instructions to add first and last name
 """
 first_name = input("Enter your First Name: ")
 last_name = input("Enter your Last Name: ")
-print("Hello " + first_name + " " + last_name + ",\n")
+print(Fore.YELLOW + "Hello " + first_name + " " + last_name + "\n")
 
 """
 instructions to confirm their profession by
@@ -44,14 +46,14 @@ def get_profession_choice():
         """
         Display available professions to the user
         """
-        print("Select your profession:")
+        print(Fore.GREEN + "Select your profession:")
         for key, profession in professions.items():
             print(f"{key}: {profession['name']}")
 
         """
         Prompt the user to enter the letter corresponding to their choice
         """
-        choice = input("\nSelect one of the above options a-f: ").lower()
+        choice = input("\nSelect one of the above options " + Fore.GREEN + "a-f: ").lower()
 
         """
         Validate the users input and confirm their choice
@@ -63,7 +65,7 @@ def get_profession_choice():
             if confirm == "y":
                 return professions[choice]
         else:
-            print("Invalid choice. Please choose a valid option.\n")
+            print(Back.RED + "Invalid choice. Please choose a valid option.\n")
 
 """
 if yes print out the details including random user number and hourly pay
@@ -73,9 +75,9 @@ if __name__ == "__main__":
     chosen_profession = get_profession_choice()
     import random
     print("Thank you.\n")
-    print(first_name + " " + "your contractor number is " + str(random.randint(23203, 63944)))
+    print(Fore.GREEN + first_name + " " + "your contractor number is " + str(random.randint(23203, 63944)))
     print(f"Your profession is: {chosen_profession['name']}")
-    print(f"You earn £{chosen_profession['rate']} per hour.")
+    print(Fore.GREEN + f"You earn £{chosen_profession['rate']} per hour.")
     print("You pay 20% tax and 13% National Insurance\n")
 
 """
@@ -92,30 +94,30 @@ def get_date_from_user(prompt, last=False):
             date_str = input(prompt)
             date_obj = datetime.strptime(date_str, "%d-%m-%Y")
             if date_obj < datetime(2023, 8, 1) or date_obj > datetime(2023, 9, 30):
-                print("Dates should be between 1st August 2023 and 30th September 2023.")
+                print(Back.RED + "Dates should be between 1st August 2023 and 30th September 2023.")
                 print("If your hours are for previous months please contact HR on 01305 483048\n")
             if last == True:
                 if from_date >= date_obj: #date_obj is to_date
-                    print("'To' date must be after or equal to the 'from' date. Please try again.")
+                    print(Back.RED + "'To' date must be after or equal to the 'from' date. Please try again.")
                 else:
                     return date_obj
             else:
                 return date_obj
         except ValueError:
-            print("Invalid date format. Please enter a date in the format DD-MM-YYYY.")
+            print(Back.RED + "Invalid date format. Please enter a date in the format DD-MM-YYYY.")
 
 if __name__ == "__main__":
-    print("Enter your dates for August/September 2023 in the format DD-MM-YYYY.")
+    print(Fore.GREEN + "Enter your dates for August/September 2023 in the format DD-MM-YYYY.")
 
     from_date = get_date_from_user("Enter the 'from' date: ")
-    to_date = get_date_from_user("Enter the 'to' date: ", True)
+    to_date = get_date_from_user("Enter the 'to' date: ")
 """
 Asks user to input their hours and works out pay
 """
 hrs = input("Enter your hours: ")
 print("\nThis information will be authorised by your manager:\n")
 pay = float(hrs) * chosen_profession['rate'] 
-print((f"From {from_date.strftime('%d-%m')}") + " " + (f"to {to_date.strftime('%d-%m')}") + " 2023, your pay before tax" + " " + first_name + " " + "is £" + str(pay) + " for" + " " + str(hrs) + " hours\n")
+print((Fore.CYAN + f"From {from_date.strftime('%d-%m')}") + " " + (f"to {to_date.strftime('%d-%m')}") + " 2023, your pay before tax" + " " + first_name + " " + "is £" + str(pay) + " for" + " " + str(hrs) + " hours\n")
 
 """
 Calculating payment after tax - 20% tax is 0.2 and 13% NI is 0.13
@@ -130,8 +132,8 @@ pay_after = final_pay(pay, tax, national_insurance)
 tax_amount = tax * pay
 national_insurance_amount = national_insurance * pay
 
-print(f"Pay minus tax (£{tax_amount}) & NI (£{national_insurance_amount}) is £{pay_after}.")
-print("The TAX and NATIONAL INSURANCE amounts shown are for your information only\n")
+print(Fore.GREEN + f"Pay minus tax (£{tax_amount}) & NI (£{national_insurance_amount}) is £{pay_after}.")
+print(Fore.RED + "\nThe TAX and NATIONAL INSURANCE amounts shown are for your information only\n")
 print("Final pay amounts are approximate and depend on your tax status")
 print("The actual amount you are paid may change\n")
 print("If you have any questions please contact HR on 01305 483048\n")

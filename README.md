@@ -34,6 +34,7 @@ Art generator for ASCII code https://patorjk.com/software/taag/#p=display&f=Graf
 
 to help putting together the function that calculates income tax and national insurance I started with this video and adapated it https://www.youtube.com/watch?v=b4lok6-_GGg 
 
+Using colorama import https://www.youtube.com/watch?v=u51Zjlnui4Y 
 ---
 
 Happy coding!
