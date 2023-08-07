@@ -17,9 +17,12 @@ text = Fore.BLUE + '\033[1m' + "CORRI CONSTRUCTION COMPANY CONTRACTORS PAGE" + '
 new_text = text.center(71)
 print(new_text)
 
-print(Fore.YELLOW + "\nUse this portal to input your hours for August and September 2023 only.\n")
-print("If your hours are for previous months please contact HR on 01305 483048\n")
-print("Input your first and last name to begin:\n")
+print(Fore.YELLOW + "\nUse this portal to input your August(08) and September(09) 2023 hours.\n")
+print("INSTRUCTIONS:")
+print("If your hours are for previous months please contact HR on 01305 483048")
+print("Information once entered cannot be amended.")
+print("If you make an error or want to restart, hit the Run Program button\n")
+print(Fore.YELLOW + "Input your first and last name to begin:\n")
 
 """
 Instructions to add first and last name
@@ -154,27 +157,24 @@ national_insurance_amount = national_insurance * pay
 """
 Print out full result of pay minus tax and NI
 """
-pay_statement = Fore.BLUE + '\033[1m' + (f"Pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}") + '\033[0m'
+pay_statement = Fore.BLUE + '\033[1m' + (f" Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}") + '\033[0m'
 pay_summary = pay_statement.center(70)
 
 print(pay_summary)
 print(Fore.RED + "\nThe TAX and NATIONAL INSURANCE amounts shown are for your information only\n")
 print("Final pay amounts are approximate and depend on your tax status.")
 print("The actual amount you are paid may change.\n")
-print("If you have any questions please contact HR on 01305 483048.\n")
-
-
-
+print("If you have any questions contact HR on 01305 483048.\n")
 
 """
-NEED TO ADD : IF EVERYTHING IS OK ASK IF THEY WANT TO EXIT
-IF THEY SAY NO EVERYTHING ISN'T OK - PRINT CONTACT HR ON  01305 483048
-
-DO YOU WANT A PRINT OUT - CAN i FIGURE OUT HOW TO PROVIDE A PRINT-OUT SO THEY CAN DOWNLOAD IT.
-OR SHOULD I JUST GET PYTHON TO LET THEM SAVE THE INFORMATION FOR THEM?
-
-do you want to include 40% tax and 13% option as well - it will have to be a random computer selection 
-so when people enter their details the computer will randomly give them either 20% or 40% status
-OR I can set it up so plumber and electrician selections are 40% and the others are 20%
-
+Ask user if they want to exit
 """
+exit = input(Fore.GREEN + f"Information Complete. Select y to submit or n to continue (y/n): ").lower()
+if exit == "y":
+    print(Fore.WHITE + "\nInformation successfully sent to HR. Thank you " + first_name + ".")
+    print("If you have any questions contact HR on 01305 483048.\n")
+    quit()
+
+else:
+    print(Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",")
+    print("but you can hit the Run Program button above to start again.")
