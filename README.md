@@ -34,7 +34,14 @@ Art generator for ASCII code https://patorjk.com/software/taag/#p=display&f=Graf
 
 to help putting together the function that calculates income tax and national insurance I started with this video and adapated it https://www.youtube.com/watch?v=b4lok6-_GGg 
 
+Travis.media community - To help with to and from dates function so it worked correctly
+
+To change numerical value to end in two figures only
+https://tutorial.eyehunts.com/python/how-to-display-2-decimal-places-in-python-example-code/
+
 Using colorama import https://www.youtube.com/watch?v=u51Zjlnui4Y 
+
+
 ---
 
 Happy coding!

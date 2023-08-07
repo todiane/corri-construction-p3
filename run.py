@@ -1,3 +1,6 @@
+"""
+Main code for Corri Construction Company that appears in terminal
+"""
 
 # imports ----------
 import colorama
@@ -7,24 +10,27 @@ import datetime
 # --------------
 
 """
-Main code for Corri Construction Company that appears in terminal
+Corri Construction Company Introduction
 """
-print(Fore.GREEN + "This is the Corri Construction Company Contractors Page")
-print(Fore.CYAN + "\nUse this portal to input your hours for August and September 2023 only.\n")
+text = Fore.GREEN + "CORRI CONSTRUCTION COMPANY CONTRACTORS PAGE"
+new_text = text.center(71,)
+print(new_text)
+
+# print(Fore.GREEN + "Corri Construction Company - Contractors Page")
+print(Fore.YELLOW + "\nUse this portal to input your hours for August and September 2023 only.\n")
 print("If your hours are for previous months please contact HR on 01305 483048\n")
-print("Please input your first and last name to begin:\n")
+print("Input your first and last name to begin:\n")
 
 """
-instructions to add first and last name
+Instructions to add first and last name
 """
 first_name = input("Enter your First Name: ")
 last_name = input("Enter your Last Name: ")
 print(Fore.YELLOW + "Hello " + first_name + " " + last_name + "\n")
 
 """
-instructions to confirm their profession by
+Instructions to confirm their profession by
 selecting one of the letters provided.
-
 """
 def get_profession_choice():
     """
@@ -66,7 +72,7 @@ def get_profession_choice():
             print(Back.RED + "Invalid choice. Please choose a valid option.\n")
 
 """
-if yes print out the details including random user number and hourly pay
+If yes print out the details including random user number and hourly pay
 """
 
 if __name__ == "__main__":
