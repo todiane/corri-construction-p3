@@ -41,11 +41,11 @@ def get_profession_choice():
     and rate of pay
     """
     professions = {
-        "a": {"name": "Bricklayer", "rate": 28.75, "tax": 20},
-        "b": {"name": "Plumber", "rate": 46.55, "tax": 40},
-        "c": {"name": "Scaffolder", "rate": 25.75, "tax": 20},
-        "d": {"name": "Electrician", "rate": 46.55, "tax": 40},
-        "e": {"name": "Carpenter", "rate": 32.95, "tax": 20},
+        "a": {"name": "Bricklayer", "rate": 28, "tax": 20},
+        "b": {"name": "Plumber", "rate": 46, "tax": 40},
+        "c": {"name": "Scaffolder", "rate": 25, "tax": 20},
+        "d": {"name": "Electrician", "rate": 46, "tax": 40},
+        "e": {"name": "Carpenter", "rate": 32, "tax": 20},
         "f": {"name": "Construction Worker", "rate": 27.95, "tax": 20}
     }
 
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     print(f"Your profession is: {chosen_profession['name']}")
     print(Fore.GREEN + f"You earn £{chosen_profession['rate']} per hour.")
     print("You pay 20% tax and 13% National Insurance\n")
-    # print("Earnings this year are " + str(random.randint(67500, 80000)) + " so you will pay " + {chosen_profession['tax']} + "% tax and 13% National Insurance\n")
+    # print("Earnings this year are £" + str(random.randint(67500, 80000)) + " so you will pay " + {chosen_profession['tax']} + "% tax and 13% National Insurance\n")
 
 """
 Get dates from the user for August or September 2023 only. Checks if the dates
@@ -172,7 +172,7 @@ Ask user if they want to exit
 """
 exit = input(Fore.GREEN + f"Information Complete. Select y to submit or n to continue (y/n): ").lower()
 if exit == "y":
-    print(Fore.WHITE + "\nInformation successfully sent to HR. Thank you " + first_name + ".")
+    print(Fore.WHITE + "\nInformation successfully submitted to HR. Thank you " + first_name + ".")
     print("If you have any questions contact HR on 01305 483048.\n")
     quit()
 
