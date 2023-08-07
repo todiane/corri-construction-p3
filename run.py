@@ -21,7 +21,7 @@ print(Fore.YELLOW + "\nUse this portal to input your August(08) and September(09
 print("INSTRUCTIONS:")
 print("If your hours are for previous months please contact HR on 01305 483048")
 print("Information once entered cannot be amended.")
-print("If you make an error or want to restart, hit the Run Program button\n")
+print("If you make an error or want to restart, hit the Run Program button.\n")
 print(Fore.YELLOW + "Input your first and last name to begin:\n")
 
 """
@@ -41,12 +41,12 @@ def get_profession_choice():
     and rate of pay
     """
     professions = {
-        "a": {"name": "Bricklayer", "rate": 28},
-        "b": {"name": "Plumber", "rate": 36},
-        "c": {"name": "Scaffolder", "rate": 25},
-        "d": {"name": "Electrician", "rate": 36},
-        "e": {"name": "Carpenter", "rate": 29},
-        "f": {"name": "Construction Worker", "rate": 27}
+        "a": {"name": "Bricklayer", "rate": 28.75, "tax": 20},
+        "b": {"name": "Plumber", "rate": 46.55, "tax": 40},
+        "c": {"name": "Scaffolder", "rate": 25.75, "tax": 20},
+        "d": {"name": "Electrician", "rate": 46.55, "tax": 40},
+        "e": {"name": "Carpenter", "rate": 32.95, "tax": 20},
+        "f": {"name": "Construction Worker", "rate": 27.95, "tax": 20}
     }
 
     while True:
@@ -81,11 +81,12 @@ If yes print out the details including random user number and hourly pay
 if __name__ == "__main__":
     chosen_profession = get_profession_choice()
     import random
-    print("Thank you.\n")
+    print(Fore.WHITE + "Thank you.\n")
     print(Fore.GREEN + first_name + " " + "your contractor number is " + str(random.randint(23203, 63944)))
     print(f"Your profession is: {chosen_profession['name']}")
     print(Fore.GREEN + f"You earn £{chosen_profession['rate']} per hour.")
     print("You pay 20% tax and 13% National Insurance\n")
+    # print("Earnings this year are " + str(random.randint(67500, 80000)) + " so you will pay " + {chosen_profession['tax']} + "% tax and 13% National Insurance\n")
 
 """
 Get dates from the user for August or September 2023 only. Checks if the dates
