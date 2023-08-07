@@ -13,11 +13,10 @@ import datetime
 Corri Construction Company Introduction
 Header code taken from w3Schools - https://www.w3schools.com/python/ref_string_center.asp
 """
-text = Fore.GREEN + "CORRI CONSTRUCTION COMPANY CONTRACTORS PAGE"
-new_text = text.center(71,)
+text = Fore.BLUE + '\033[1m' + "CORRI CONSTRUCTION COMPANY CONTRACTORS PAGE" + '\033[0m'
+new_text = text.center(71)
 print(new_text)
 
-# print(Fore.GREEN + "Corri Construction Company - Contractors Page")
 print(Fore.YELLOW + "\nUse this portal to input your hours for August and September 2023 only.\n")
 print("If your hours are for previous months please contact HR on 01305 483048\n")
 print("Input your first and last name to begin:\n")
@@ -116,7 +115,7 @@ def get_date_input(prompt):
         if date:
             return date
         else:
-            print(Back.RED + "\nInvalid date. Please enter a date between 1 August 2023 and 30 September 2023 in DD-MM-YYYY format.\n")
+            print(Back.RED + "\nInvalid date. Enter a date between 1 August 2023 and 30 September 2023.")
 
 # Function to get the from and to dates from the user
 def get_from_to_dates():
@@ -126,7 +125,7 @@ def get_from_to_dates():
         if from_date <= to_date:
             return from_date, to_date
         else:
-            print(Back.RED + "\nInvalid dates. The from date must be before or equal to the to date.\n")
+            print(Back.RED + "\nInvalid dates. The from date must be before or equal to the to date.")
 
 from_date, to_date = get_from_to_dates()
 print(Fore.GREEN + f"Thank you, you entered from {from_date.strftime('%d-%m-%Y')} to {to_date.strftime('%d-%m-%Y')} as your dates.\n")
@@ -137,7 +136,7 @@ Asks user to input their hours and works out pay
 hrs = input("Enter your hours: ")
 print("\nThis information will be authorised by your manager:\n")
 pay = float(hrs) * chosen_profession['rate'] 
-print((Fore.CYAN + f"From {from_date.strftime('%d-%m')}") + " " + (f"to {to_date.strftime('%d-%m')}") + " 2023, your pay before tax" + " " + first_name + " " + "is £" + str(pay) + " for" + " " + str(hrs) + " hours\n")
+print((f"From {from_date.strftime('%d-%m')}") + " " + (f"to {to_date.strftime('%d-%m')}") + " 2023, your pay before tax" + " " + first_name + " " + "is £" + str(pay) + " for" + " " + str(hrs) + " hours\n")
 
 """
 Calculating payment after tax - 20% tax is 0.2 and 13% NI is 0.13
@@ -152,11 +151,17 @@ pay_after = final_pay(pay, tax, national_insurance)
 tax_amount = tax * pay
 national_insurance_amount = national_insurance * pay
 
-print(Fore.GREEN + f"Pay minus tax (£{tax_amount:.2f}) & NI (£{national_insurance_amount:.2f}) is £{pay_after:.2f}.")
+"""
+Print out full result of pay minus tax and NI
+"""
+pay_statement = Fore.BLUE + '\033[1m' + (f"Pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}") + '\033[0m'
+pay_summary = pay_statement.center(70)
+
+print(pay_summary)
 print(Fore.RED + "\nThe TAX and NATIONAL INSURANCE amounts shown are for your information only\n")
-print("Final pay amounts are approximate and depend on your tax status")
-print("The actual amount you are paid may change\n")
-print("If you have any questions please contact HR on 01305 483048\n")
+print("Final pay amounts are approximate and depend on your tax status.")
+print("The actual amount you are paid may change.\n")
+print("If you have any questions please contact HR on 01305 483048.\n")
 
 
 
