@@ -122,7 +122,7 @@ def get_from_to_dates():
             print(Back.RED + "\nInvalid dates. The from date must be before or equal to the to date.\n")
 
 from_date, to_date = get_from_to_dates()
-print(Fore.GREEN + f"Thank you, you entered from {from_date.strftime('%d-%m-%Y')} and to {to_date.strftime('%d-%m-%Y')} as your dates.\n")
+print(Fore.GREEN + f"Thank you, you entered from {from_date.strftime('%d-%m-%Y')} to {to_date.strftime('%d-%m-%Y')} as your dates.\n")
 
 """
 Asks user to input their hours and works out pay
@@ -145,7 +145,7 @@ pay_after = final_pay(pay, tax, national_insurance)
 tax_amount = tax * pay
 national_insurance_amount = national_insurance * pay
 
-print(Fore.GREEN + f"Pay minus tax (£{tax_amount}) & NI (£{national_insurance_amount}) is £{pay_after}.")
+print(Fore.GREEN + f"Pay minus tax (£{tax_amount:.2f}) & NI (£{national_insurance_amount:.2f}) is £{pay_after:.2f}.")
 print(Fore.RED + "\nThe TAX and NATIONAL INSURANCE amounts shown are for your information only\n")
 print("Final pay amounts are approximate and depend on your tax status")
 print("The actual amount you are paid may change\n")
