@@ -11,6 +11,7 @@ import datetime
 
 """
 Corri Construction Company Introduction
+Header code taken from w3Schools - https://www.w3schools.com/python/ref_string_center.asp
 """
 text = Fore.GREEN + "CORRI CONSTRUCTION COMPANY CONTRACTORS PAGE"
 new_text = text.center(71,)
