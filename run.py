@@ -20,9 +20,18 @@ print("Information once entered cannot be amended.")
 print("If you make an error or want to restart, hit the Run Program button.\n")
 print(Fore.YELLOW + "Input your first and last name to begin:\n")
 
-# Instructions to add first and last name
-first_name = input("Enter your First Name: ")
-last_name = input("Enter your Last Name: ")
+# Instructions to add first and last name. Used strip() for invalid data/if left blank
+while True:
+    first_name = input("Enter your First Name: ")
+    if first_name.strip() == "":
+        print("First name is required. Please enter a valid first name.")
+        continue
+    last_name = input("Enter your Last Name: ")
+    if last_name.strip() == "":
+        print("Last name is required. Please enter a valid First & Last name.")
+        continue
+    break
+
 print(Fore.YELLOW + "Hello " + first_name + " " + last_name + "\n")
 
 # Instructions to confirm their profession by selecting a letter.
@@ -64,6 +73,7 @@ def get_profession_choice():
             print(Back.RED + "Invalid choice. Please choose a valid option.\n")
 
 # If yes print out the details including random user number and hourly pay
+
 if __name__ == "__main__":
     chosen_profession = get_profession_choice()
     import random
