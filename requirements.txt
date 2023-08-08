@@ -1,6 +1,9 @@
 ansi2html==1.8.0
 click==8.1.6
 colorama==0.4.6
+dash-core-components==2.0.0
+dash-html-components==2.0.0
+dash-table==5.0.0
 Flask==2.2.5
 itsdangerous==2.1.2
 numpy==1.24.4
