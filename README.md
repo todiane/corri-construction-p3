@@ -41,6 +41,8 @@ https://tutorial.eyehunts.com/python/how-to-display-2-decimal-places-in-python-e
 
 Using colorama import https://www.youtube.com/watch?v=u51Zjlnui4Y 
 
+Header code taken from w3Schools - https://www.w3schools.com/python/ref_string_center.asp
+
 
 ---
 
