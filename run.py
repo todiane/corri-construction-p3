@@ -1,13 +1,11 @@
 # Main code for Corri Construction Company that appears in terminal
 
 # imports ----------
+import datetime
+from flask import Flask
 import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
-
-import datetime
-
-from flask import Flask
 # --------------
 
 # Corri Construction Company Introduction
@@ -25,7 +23,7 @@ print(Fore.YELLOW + "Input your first and last name to begin:\n")
 # Instructions to add first and last name. Used strip() to detect if section left blank
 while True:
     first_name = input("Enter your First Name: ")
-    if first_name.strip() == "": #code found at GeekforGeek
+    if first_name.strip() == "":    # code found at GeekforGeek
         print("First name is required. Please enter a valid first name.")
         continue
     last_name = input("Enter your Last Name: ")
@@ -38,22 +36,22 @@ print(Fore.YELLOW + "Hello " + first_name + " " + last_name + "\n")
 
 # Instructions to confirm their profession by selecting a letter.
 
+
 def get_profession_choice():
     """
     Dictionary to map profession codes to profession names
     and rate of pay to each profession
     """
     professions = {
-        "a": {"name": "Bricklayer", "rate": 28,},
-        "b": {"name": "Plumber", "rate": 46,},
-        "c": {"name": "Scaffolder", "rate": 25,},
-        "d": {"name": "Electrician", "rate": 46,},
-        "e": {"name": "Carpenter", "rate": 32,},
-        "f": {"name": "Construction Worker", "rate": 27,}
+        "a": {"name": "Bricklayer", "rate": 28, },
+        "b": {"name": "Plumber", "rate": 46, },
+        "c": {"name": "Scaffolder", "rate": 25, },
+        "d": {"name": "Electrician", "rate": 46, },
+        "e": {"name": "Carpenter", "rate": 32, },
+        "f": {"name": "Construction Worker", "rate": 27, }
     }
 
     while True:
-        
         # Display available professions to the user
         print(Fore.GREEN + "Select your profession:")
         for key, profession in professions.items():
@@ -75,6 +73,7 @@ def get_profession_choice():
             print(Back.RED + "Invalid choice. Please choose a valid option.\n")
 
 # If yes print out the details including random user number and hourly pay
+
 
 if __name__ == "__main__":
     chosen_profession = get_profession_choice()
@@ -100,6 +99,8 @@ start_date = datetime.date(2023, 8, 1)
 end_date = datetime.date(2023, 9, 30)
 
 # Function to validate the user input
+
+
 def validate_date(date_str):
     try:
         date = datetime.datetime.strptime(date_str, "%d-%m-%Y").date()
@@ -112,6 +113,8 @@ def validate_date(date_str):
         return False
 
 # Function to get the from and to dates from user
+
+
 def get_date_input(prompt):
     while True:
         date_str = input(prompt)
@@ -122,6 +125,8 @@ def get_date_input(prompt):
             print(Back.RED + "\nInvalid date. Enter a date between 1 August 2023 and 30 September 2023.")
 
 # Function to get the from and to dates from the user
+
+
 def get_from_to_dates():
     while True:
         from_date = get_date_input("Enter the from date (DD-MM-YYYY): ")
@@ -131,7 +136,10 @@ def get_from_to_dates():
         else:
             print(Back.RED + "\nInvalid dates. The from date must be before or equal to the to date.")
 
+
 from_date, to_date = get_from_to_dates()
+
+
 print(Fore.GREEN + f"Thank you, you entered from {from_date.strftime('%d-%m-%Y')} to {to_date.strftime('%d-%m-%Y')} as your dates.\n")
 
 
@@ -150,13 +158,16 @@ else:
 
 # Confirm information of profession, dates and hours plus gives before tax amount
 print("\nThis information will be authorised by your manager:\n")
-pay = float(hrs) * chosen_profession['rate'] 
+pay = float(hrs) * chosen_profession['rate']
 print((f"From {from_date.strftime('%d-%m')}") + " " + (f"to {to_date.strftime('%d-%m')}") + " 2023, your pay before tax is £" + str(pay) + " for" + " " + str(hrs) + " hours\n")
 
 # Calculating payment after tax - 20% tax is 0.2 and 13% NI is 0.13
+
+
 def final_pay(pay, tax, national_insurance):
-  pay_after = pay - (tax * pay) - (national_insurance * pay)
-  return pay_after
+    pay_after = pay - (tax * pay) - (national_insurance * pay)
+    return pay_after
+
 
 tax = 0.02
 national_insurance = 0.013
@@ -179,10 +190,10 @@ print("If you have any questions contact HR on 01305 483048.\n")
 exit = input(Fore.GREEN + f"Information Complete. Select y to submit or n to continue (y/n): ").lower()
 if exit == "y":
     print(Fore.WHITE + "\nInformation successfully submitted to HR. Thank you " + first_name + ".")
-    print("A copy has been sent to the email address we have on file for you.") 
+    print("A copy has been sent to the email address we have on file for you.")
     print("If you have any questions contact HR on 01305 483048.\n")
     quit()
 
 else:
     print(Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",")
-    print("but you can hit the Run Program button above to start again.")
+    print("but you can hit the Run Program button above to start again.\n")
