@@ -9,18 +9,9 @@ deployed project <https://corri-construction-p3-e9d1aa627f6f.herokuapp.com/>
 
 favicons added
 
-## Creating the Heroku app
+## Future Updates
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
+The program generates an employee number. An update of this app would be to link to a Google sheet where the number is saved so that if they returned and entered their name they will be given the same employee number and their past submissions will be listed.
 
 ## Credits
 
@@ -29,6 +20,9 @@ Free Code Camp Python for everyone course
 https://www.youtube.com/watch?v=wgkC8SxraAQ
 
 py4e autograder to help with checking maths https://www.py4e.com/tsugi/store/test/pythonauto 
+
+Geek for Geek to help me use strip() to check if first/last name are left empty
+https://www.geeksforgeeks.org/python-program-to-check-if-string-is-empty-or-not/
 
 Art generator for ASCII code https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
 

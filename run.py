@@ -13,17 +13,17 @@ text = Fore.BLUE + '\033[1m' + "CORRI CONSTRUCTION COMPANY CONTRACTORS PAGE" + '
 new_text = text.center(71)
 print(new_text)
 
-print(Fore.YELLOW + "\nUse this portal to input your August(08) and September(09) 2023 hours.\n")
+print(Fore.YELLOW + '\033[1m' + "\nUse this portal to input your August(08) and September(09) 2023 hours.\n")
 print("INSTRUCTIONS:")
 print("If your hours are for previous months please contact HR on 01305 483048")
 print("Information once entered cannot be amended.")
 print("If you make an error or want to restart, hit the Run Program button.\n")
 print(Fore.YELLOW + "Input your first and last name to begin:\n")
 
-# Instructions to add first and last name. Used strip() for invalid data/if left blank
+# Instructions to add first and last name. Used strip() to detect if section left blank
 while True:
     first_name = input("Enter your First Name: ")
-    if first_name.strip() == "":
+    if first_name.strip() == "": #code found at GeekforGeek
         print("First name is required. Please enter a valid first name.")
         continue
     last_name = input("Enter your Last Name: ")
@@ -39,15 +39,15 @@ print(Fore.YELLOW + "Hello " + first_name + " " + last_name + "\n")
 def get_profession_choice():
     """
     Dictionary to map profession codes to profession names
-    and rate of pay
+    and rate of pay to each profession
     """
     professions = {
-        "a": {"name": "Bricklayer", "rate": 28, "tax": 20},
-        "b": {"name": "Plumber", "rate": 46, "tax": 40},
-        "c": {"name": "Scaffolder", "rate": 25, "tax": 20},
-        "d": {"name": "Electrician", "rate": 46, "tax": 40},
-        "e": {"name": "Carpenter", "rate": 32, "tax": 20},
-        "f": {"name": "Construction Worker", "rate": 27.95, "tax": 20}
+        "a": {"name": "Bricklayer", "rate": 28,},
+        "b": {"name": "Plumber", "rate": 46,},
+        "c": {"name": "Scaffolder", "rate": 25,},
+        "d": {"name": "Electrician", "rate": 46,},
+        "e": {"name": "Carpenter", "rate": 32,},
+        "f": {"name": "Construction Worker", "rate": 27,}
     }
 
     while True:
