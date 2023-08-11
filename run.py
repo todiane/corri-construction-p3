@@ -12,12 +12,18 @@ colorama.init(autoreset=True)
 text = Fore.BLUE + '\033[1m' + "CORRI CONSTRUCTION COMPANY CONTRACTORS PAGE" + '\033[0m'
 new_text = text.center(71)
 print(new_text)
-
+# Instructions for contractors
 print(Fore.YELLOW + '\033[1m' + "\nUse this portal to input your August(08) and September(09) 2023 hours.\n")
 print("INSTRUCTIONS:")
 print("If your hours are for previous months please contact HR on 01305 483048")
-print("Information once entered cannot be amended.")
-print("If you make an error or want to restart, hit the Run Program button.\n")
+print(Fore.RED + "Information once entered cannot be amended.")
+print("If you make an error or want to restart, " + Fore.RED + "hit the Run Program button.\n")
+
+print("Failure to input your NAME correctly may result in your pay being delayed by weeks.")
+print("Our system uses your " + Fore.GREEN + "name and employee number to find you so it is important")
+print("that you use letters only e.g. " + Fore.GREEN + "James Jenkins, although james and JAMES are also ok.\n")
+
+print("Okay, let's get started")
 print(Fore.YELLOW + "Input your first and last name to begin:\n")
 
 # Instructions to add first and last name. Used strip() to detect if section left blank
@@ -32,7 +38,7 @@ while True:
         continue
     break
 
-print(Fore.YELLOW + "Hello " + first_name + " " + last_name + "\n")
+print(Fore.YELLOW + "H E L L O " + first_name + " " + last_name + "\n")
 
 # Instructions to confirm their profession by selecting a letter.
 
@@ -86,7 +92,7 @@ if __name__ == "__main__":
     # print("Earnings this year are £" + str(random.randint(67500, 80000)) + " so you will pay " + {chosen_profession['tax']} + "% tax and 13% National Insurance\n")
 
 # Ask user for dates and hours
-print(Fore.WHITE + "\nNext, we need to know the dates you worked and number of hours\n")
+print(Fore.WHITE + "\nNext, we need to know the dates you worked (From - To) and number of hours\n")
 
 """
 Get dates from the user for August or September 2023 only. Checks if the dates
@@ -147,13 +153,13 @@ print(Fore.GREEN + f"Thank you, you entered from {from_date.strftime('%d-%m-%Y')
 hrs = input("Enter your hours: ")
 
 # Ask user to confirm the information added is correct
-info_confirm = input(Fore.GREEN + f"\nIs all the information added so far correct? Enter (y/n): ").lower()
+info_confirm = input(Fore.GREEN + f"\nCheck that all the information added so far is correct and confirm. Enter (y/n): ").lower()
 if info_confirm == "y":
     print(Fore.WHITE + "\nThank you, " + first_name + ".")
 
 else:
-    print(Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",")
-    print("but you can hit the Run Program button above to start again.")
+    print(Fore.RED + "\nOkay. You can't edit anything already entered " + first_name + ",")
+    print(Fore.WHITE + "but you can hit the Run Program button above to start again.")
     quit()
 
 # Confirm information of profession, dates and hours plus gives before tax amount
