@@ -9,9 +9,10 @@ colorama.init(autoreset=True)
 # --------------
 
 # Corri Construction Company Introduction
-text = Fore.BLUE + '\033[1m' + "CORRI CONSTRUCTION COMPANY CONTRACTORS PAGE" + '\033[0m'
-new_text = text.center(71)
+text = Fore.WHITE + '\033[1m' + "CORRI CONSTRUCTION COMPANY CONTRACTORS PAGE" + '\033[0m'
+new_text = text.center(150)
 print(new_text)
+
 # Instructions for contractors
 print(Fore.YELLOW + '\033[1m' + "\nUse this portal to input your August(08) and September(09) 2023 hours.\n")
 print("INSTRUCTIONS:")
@@ -19,12 +20,12 @@ print("If your hours are for previous months please contact HR on 01305 483048")
 print(Fore.RED + "Information once entered cannot be amended.")
 print("If you make an error or want to restart, " + Fore.RED + "hit the Run Program button.\n")
 
-print("Failure to input your NAME correctly may result in your pay being delayed by weeks.")
-print("Our system uses your " + Fore.GREEN + "name and employee number to find you so it is important")
-print("that you use letters only e.g. " + Fore.GREEN + "James Jenkins, although james and JAMES are also ok.\n")
+print("Failure to input your NAME correctly may result in your pay being delayed.")
+print("Our system uses your " + Fore.GREEN + "name and employee number" + Fore.WHITE + " to find you so it is important")
+print("that you use letters only e.g. " + Fore.GREEN + "James, although james and JAMES are also ok.\n")
 
-print("Okay, let's get started")
-print(Fore.YELLOW + "Input your first and last name to begin:\n")
+print("All Clear? Great. Let's get started - otherwise contact HR")
+print("Input your first and last name to begin:\n")
 
 # Instructions to add first and last name. Used strip() to detect if section left blank
 while True:
@@ -153,7 +154,7 @@ print(Fore.GREEN + f"Thank you, you entered from {from_date.strftime('%d-%m-%Y')
 hrs = input("Enter your hours: ")
 
 # Ask user to confirm the information added is correct
-info_confirm = input(Fore.GREEN + f"\nCheck that all the information added so far is correct and confirm. Enter (y/n): ").lower()
+info_confirm = input(Fore.GREEN + f"\nCheck that the information added so far is correct & confirm. Enter (y/n): ").lower()
 if info_confirm == "y":
     print(Fore.WHITE + "\nThank you, " + first_name + ".")
 
@@ -184,7 +185,7 @@ national_insurance_amount = national_insurance * pay
 
 # Print out full result of pay minus tax and NI
 pay_statement = Fore.YELLOW + '\033[1m' + (f" Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}") + '\033[0m'
-pay_summary = pay_statement.center(70)
+pay_summary = pay_statement.center(100)
 
 print(pay_summary)
 print(Fore.RED + "\nThe TAX and NATIONAL INSURANCE amounts shown are for your information only\n")
