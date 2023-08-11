@@ -7,17 +7,17 @@ Corri Construction Company (not their real name!) hires anything from 2 - 300 co
 
 This app asks contractors to input their name, profession, working dates and number of hours. They are then given a rough estimate of payments due to them after tax and NI (which is handled by an umbrella company). Future updates will include the ability to save this information so that contractors can get an overview of their inputted data. Currently, the data is forwarded to HR and a copy to the contractor.
 
+## Project Aims
 
-## Future Updates
+## Wireframes
 
-The program generates an employee number. An update of this app would be to link to a Google sheet where the number is saved so that if they returned and entered their name they will be given the same employee number and their past submissions will be listed.
 
-Contractor can input details of other payments that need to be removed from their pay e.g. student loan or pension.
+## How It Works
 
-The ability to edit information already added if it is incorrect without having to start again.
+Contractors are asked a series of questions after reading the instructions. Having worked with contractors for several years, many of them have a tendency to dislike technology and not follow instructions. This then results in phone calls to HR that could easily be avoided. For this reason it was decided to leave the instructions in full view each time, rather than hide them behind an instruction button.
 
-## Checks
-Things that the app checks for
+### What the app checks
+
 
 - A name is inputted and not left blank. Instructions are given to only use letters to avoid a delay in payment.
 ![CCCCP name](/assets/images/ccccp-rm-namecheck.webp)
@@ -32,7 +32,17 @@ Things that the app checks for
 
 - Based on information provided a calculation is made to determine pay before tax and then pay after tax and NI deductions.
 
+## Future Updates
 
+The next update of the app will include the option to choose whether it is their first visit (which will show the instructions) or whether they have used the service before - which will show the instructions behind a button.
+
+The ability to edit information already added if it is incorrect without having to start again.
+
+Contractor can input details of other payments that need to be removed from their pay e.g. student loan or pension.
+
+The program generates an employee number. An update of this app would be to link to a Google sheet where the number is saved so that if they returned and entered their name they will be given the same employee number and their past submissions will be listed.
+
+## Testing
 
 ## Credits
 
