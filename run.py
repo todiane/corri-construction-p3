@@ -10,7 +10,7 @@ colorama.init(autoreset=True)
 
 # Corri Construction Company Introduction
 text = Fore.WHITE + '\033[1m' + "CORRI CONSTRUCTION COMPANY CONTRACTORS PAGE" + '\033[0m'
-new_text = text.center(150)
+new_text = text.center(100)
 print(new_text)
 
 # Instructions for contractors
@@ -22,10 +22,10 @@ print("If you make an error or want to restart, " + Fore.RED + "hit the Run Prog
 
 print("Failure to input your NAME correctly may result in your pay being delayed.")
 print("Our system uses your " + Fore.GREEN + "name and employee number" + Fore.WHITE + " to find you so it is important")
-print("that you use letters only e.g. " + Fore.GREEN + "James, although james and JAMES are also ok.\n")
+print("that you use letters only e.g. " + Fore.GREEN + "Mark" + Fore.WHITE + ", although " + Fore.GREEN + "mark " + Fore.WHITE + "and " + Fore.GREEN + "MARK " + Fore.WHITE + "are also ok.\n")
 
-print("All Clear? Great. Let's get started - otherwise contact HR")
-print("Input your first and last name to begin:\n")
+print("All Clear? Great. Let's get started - otherwise contact HR\n")
+print(Fore.GREEN + "Input your first and last name to begin:\n")
 
 # Instructions to add first and last name. Used strip() to detect if section left blank
 while True:
@@ -86,14 +86,14 @@ if __name__ == "__main__":
     chosen_profession = get_profession_choice()
     import random
     print(Fore.WHITE + "Thank you.\n")
-    print(Fore.GREEN + first_name + " " + "your contractor number is " + str(random.randint(23203, 63944)))
+    print(Fore.GREEN + first_name + " your contractor number is " + str(random.randint(23203, 63944)))
     print(f"Your profession is: {chosen_profession['name']}")
     print(Fore.GREEN + f"You earn £{chosen_profession['rate']} per hour.")
     print("You pay 20% tax and 13% National Insurance\n")
     # print("Earnings this year are £" + str(random.randint(67500, 80000)) + " so you will pay " + {chosen_profession['tax']} + "% tax and 13% National Insurance\n")
 
 # Ask user for dates and hours
-print(Fore.WHITE + "\nNext, we need to know the dates you worked (From - To) and number of hours\n")
+print(Fore.GREEN + "\nNext, we need to know the dates you worked (From - To) and number of hours\n")
 
 """
 Get dates from the user for August or September 2023 only. Checks if the dates
@@ -159,7 +159,7 @@ if info_confirm == "y":
     print(Fore.WHITE + "\nThank you, " + first_name + ".")
 
 else:
-    print(Fore.RED + "\nOkay. You can't edit anything already entered " + first_name + ",")
+    print(Back.RED + Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",")
     print(Fore.WHITE + "but you can hit the Run Program button above to start again.")
     quit()
 
@@ -185,7 +185,7 @@ national_insurance_amount = national_insurance * pay
 
 # Print out full result of pay minus tax and NI
 pay_statement = Fore.YELLOW + '\033[1m' + (f" Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}") + '\033[0m'
-pay_summary = pay_statement.center(100)
+pay_summary = pay_statement.center(80)
 
 print(pay_summary)
 print(Fore.RED + "\nThe TAX and NATIONAL INSURANCE amounts shown are for your information only\n")

@@ -1,9 +1,12 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-# Corri Construction Company
+![CCCCP header](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Corri Construction Company - Contractor Page
 
-A construction company that uses contractors. Every week contractors input their weekly hours which are verfied by a supervisor and paid a week later.
+The deployed project live link is [HERE](https://corri-construction-p3-e9d1aa627f6f.herokuapp.com/) - Press Ctrl (Cmd) and mouse click to open in a new window.
 
-deployed project <https://corri-construction-p3-e9d1aa627f6f.herokuapp.com/>
+Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with calls asking different questions about their pay so they asked for an app to be built that will help them manage these requests. This app asks contractors to input their name, profession, working dates and number of hours. They are then given a rough estimate of payments due to them after tax and NI (which is handled by an umbrella company). Future updates will include the ability to save this information so that contractors can get an overview of their inputted data. Currently, the data is forwarded to HR and a copy to the contractor.
+
+
+deployed project <>
 
 404 page
 
@@ -12,6 +15,23 @@ favicons added
 ## Future Updates
 
 The program generates an employee number. An update of this app would be to link to a Google sheet where the number is saved so that if they returned and entered their name they will be given the same employee number and their past submissions will be listed.
+
+Contractor can input details of other payments that need to be removed from their pay e.g. student loan or pension.
+
+## Checks
+Things that the app checks for
+
+- A name is inputted and not left blank. Instructions are given to only use letters to avoid a delay in payment.
+
+- Profession is chosen from a list of options
+
+- The dates worked (must be within a two month period) and the number of hours
+
+- As per Working Time Regulations 1998 a maximum of 13 hours are allowed in a day. App checks that no more than 18 hours can be inputted if the dates show only one day was worked.
+
+- Based on information provided a calculation is made to determine pay before tax and then pay after tax and NI deductions.
+
+
 
 ## Credits
 
