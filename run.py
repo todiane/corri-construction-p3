@@ -15,13 +15,13 @@ print(new_text)
 
 # Instructions for contractors
 print(Fore.YELLOW + '\033[1m' + "\nUse this portal to input your August(08) and September(09) 2023 hours.\n")
-print("INSTRUCTIONS: (please read carefully)")
-print("\nIf your hours are for previous months please contact HR on 01305 483048")
-print(Fore.RED + "\nInformation once entered CANNOT be amended.")
-print("If you make an error/want to restart, press the " + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button.\n")
+print("If your hours are for previous months please contact HR on 01305 483048")
+print("\nINSTRUCTIONS: (please read carefully)")
+print(Fore.RED + "\nInformation once entered CANNOT be amended." + Fore.WHITE + "If you make an error")
+print("and want to resubmit, press the " + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button.\n")
 
 print("Failure to input your NAME correctly may result in your pay being delayed.")
-print("\nOur system uses your " + Fore.GREEN + "name and employee number" + Fore.WHITE + " to find you so it is important")
+print("Our system uses your " + Fore.GREEN + "name and employee number" + Fore.WHITE + " to find you so it is important")
 print("that you enter the FULL NAME you provided for our records.")
 print("e.g. " + Fore.GREEN + "Mark Jenkins" + Fore.WHITE + ", although " + Fore.GREEN + "mark jenkins " + Fore.WHITE + "and " + Fore.GREEN + "MARK JENKINS " + Fore.WHITE + "are also ok.\n")
 
@@ -94,7 +94,8 @@ if __name__ == "__main__":
     # print("Earnings this year are £" + str(random.randint(67500, 80000)) + " so you will pay " + {chosen_profession['tax']} + "% tax and 13% National Insurance\n")
 
 # Ask user for dates and hours
-print(Fore.GREEN + "\nNext, we need to know the dates you worked (From - To) and number of hours\n")
+print(Fore.GREEN + "\nNext, we need to know the dates you worked (From - To) and number of hours.\n")
+print("This is for the months of August (08) and September(09) only.")
 
 """
 Get dates from the user for August or September 2023 only. Checks if the dates
@@ -186,7 +187,7 @@ national_insurance_amount = national_insurance * pay
 
 # Print out full result of pay minus tax and NI
 pay_statement = Fore.YELLOW + '\033[1m' + (f" Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}") + '\033[0m'
-pay_summary = pay_statement.center(80)
+pay_summary = pay_statement.center(90)
 
 print(pay_summary)
 print(Fore.RED + "\nThe TAX and NATIONAL INSURANCE amounts shown are for your information only\n")

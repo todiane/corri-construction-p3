@@ -18,6 +18,8 @@ The program generates an employee number. An update of this app would be to link
 
 Contractor can input details of other payments that need to be removed from their pay e.g. student loan or pension.
 
+The ability to edit information already added if it is incorrect without having to start again.
+
 ## Checks
 Things that the app checks for
 
