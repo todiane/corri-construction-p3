@@ -1,16 +1,12 @@
-![CCCCP header](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![CCCCP header](/assets/images/ccccp-rm-header.webp)
 # Corri Construction Company - Contractor Page
 
 The deployed project live link is [HERE](https://corri-construction-p3-e9d1aa627f6f.herokuapp.com/) - Press Ctrl (Cmd) and mouse click to open in a new window.
 
-Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with calls asking different questions about their pay so they asked for an app to be built that will help them manage these requests. This app asks contractors to input their name, profession, working dates and number of hours. They are then given a rough estimate of payments due to them after tax and NI (which is handled by an umbrella company). Future updates will include the ability to save this information so that contractors can get an overview of their inputted data. Currently, the data is forwarded to HR and a copy to the contractor.
+Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with calls from contractors asking different questions about their pay, so they asked for an app to be built that will help them manage these requests. 
 
+This app asks contractors to input their name, profession, working dates and number of hours. They are then given a rough estimate of payments due to them after tax and NI (which is handled by an umbrella company). Future updates will include the ability to save this information so that contractors can get an overview of their inputted data. Currently, the data is forwarded to HR and a copy to the contractor.
 
-deployed project <>
-
-404 page
-
-favicons added
 
 ## Future Updates
 
@@ -24,8 +20,11 @@ The ability to edit information already added if it is incorrect without having 
 Things that the app checks for
 
 - A name is inputted and not left blank. Instructions are given to only use letters to avoid a delay in payment.
+![CCCCP name](/assets/images/ccccp-rm-namecheck.webp)
+
 
 - Profession is chosen from a list of options
+![CCCCP name](/assets/images/ccccp-rm-profession.webp)
 
 - The dates worked (must be within a two month period) and the number of hours
 
@@ -37,29 +36,26 @@ Things that the app checks for
 
 ## Credits
 
-Free Code Camp Python for everyone course
+Free Code Camp Python for everyone course that helped me get my project started - [here](https://www.youtube.com/watch?v=wgkC8SxraAQ)
 
-https://www.youtube.com/watch?v=wgkC8SxraAQ
+py4e autograder to help with checking maths - [here](https://www.py4e.com/tsugi/store/test/pythonauto )
 
-py4e autograder to help with checking maths https://www.py4e.com/tsugi/store/test/pythonauto 
+Geek for Geek to help me use strip() to add required field for first/last name - [here](https://www.geeksforgeeks.org/python-program-to-check-if-string-is-empty-or-not/)
 
-Geek for Geek to help me use strip() to check if first/last name are left empty
-https://www.geeksforgeeks.org/python-program-to-check-if-string-is-empty-or-not/
 
-Art generator for ASCII code https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+Help putting together the function that calculates income tax and national insurance I started with this video and adapated it - [here](https://www.youtube.com/watch?v=b4lok6-_GGg )
 
-to help putting together the function that calculates income tax and national insurance I started with this video and adapated it https://www.youtube.com/watch?v=b4lok6-_GGg 
+To change numerical value to end in two figures only - [here](https://tutorial.eyehunts.com/python/how-to-display-2-decimal-places-in-python-example-code/)
+
+Using colorama import - [here](https://www.youtube.com/watch?v=u51Zjlnui4Y )
+
+Header code - being able to bold and center - taken from w3Schools - [here](https://www.w3schools.com/python/ref_string_center.asp)
+
+
+## Acknowledgements
+
+Code Institute women-in-tech group for their support during huddles.
 
 Travis.media community - To help with to and from dates function so it worked correctly
 
-To change numerical value to end in two figures only
-https://tutorial.eyehunts.com/python/how-to-display-2-decimal-places-in-python-example-code/
-
-Using colorama import https://www.youtube.com/watch?v=u51Zjlnui4Y 
-
-Header code taken from w3Schools - https://www.w3schools.com/python/ref_string_center.asp
-
-
----
-
-Happy coding!
+My mentor
