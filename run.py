@@ -10,22 +10,23 @@ colorama.init(autoreset=True)
 
 # Corri Construction Company Introduction
 text = Fore.WHITE + '\033[1m' + "CORRI CONSTRUCTION COMPANY CONTRACTORS PAGE" + '\033[0m'
-new_text = text.center(100)
+new_text = text.center(90)
 print(new_text)
 
 # Instructions for contractors
 print(Fore.YELLOW + '\033[1m' + "\nUse this portal to input your August(08) and September(09) 2023 hours.\n")
-print("INSTRUCTIONS:")
-print("If your hours are for previous months please contact HR on 01305 483048")
-print(Fore.RED + "Information once entered cannot be amended.")
-print("If you make an error or want to restart, " + Fore.RED + "hit the Run Program button.\n")
+print("INSTRUCTIONS: (please read carefully)")
+print("\nIf your hours are for previous months please contact HR on 01305 483048")
+print(Fore.RED + "\nInformation once entered CANNOT be amended.")
+print("If you make an error/want to restart, press the " + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button.\n")
 
 print("Failure to input your NAME correctly may result in your pay being delayed.")
-print("Our system uses your " + Fore.GREEN + "name and employee number" + Fore.WHITE + " to find you so it is important")
-print("that you use letters only e.g. " + Fore.GREEN + "Mark" + Fore.WHITE + ", although " + Fore.GREEN + "mark " + Fore.WHITE + "and " + Fore.GREEN + "MARK " + Fore.WHITE + "are also ok.\n")
+print("\nOur system uses your " + Fore.GREEN + "name and employee number" + Fore.WHITE + " to find you so it is important")
+print("that you enter the FULL NAME you provided for our records.")
+print("e.g. " + Fore.GREEN + "Mark Jenkins" + Fore.WHITE + ", although " + Fore.GREEN + "mark jenkins " + Fore.WHITE + "and " + Fore.GREEN + "MARK JENKINS " + Fore.WHITE + "are also ok.\n")
 
 print("All Clear? Great. Let's get started - otherwise contact HR\n")
-print(Fore.GREEN + "Input your first and last name to begin:\n")
+print(Fore.GREEN + "Input your FULL (First + Last) name to begin:\n")
 
 # Instructions to add first and last name. Used strip() to detect if section left blank
 while True:
@@ -39,7 +40,7 @@ while True:
         continue
     break
 
-print(Fore.YELLOW + "H E L L O " + first_name + " " + last_name + "\n")
+print(Fore.YELLOW + "H E L L O, " + first_name + " " + last_name + "\n")
 
 # Instructions to confirm their profession by selecting a letter.
 
@@ -160,7 +161,7 @@ if info_confirm == "y":
 
 else:
     print(Back.RED + Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",")
-    print(Fore.WHITE + "but you can hit the Run Program button above to start again.")
+    print(Fore.WHITE + "but you can hit the" + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button above to start again.")
     quit()
 
 # Confirm information of profession, dates and hours plus gives before tax amount
