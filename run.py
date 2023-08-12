@@ -49,17 +49,17 @@ print(Fore.GREEN + "Input your FULL (First + Last) name to begin:\n")
 # Instructions to add first and last name. Used strip() to detect if section left blank
 while True:
     first_name = input(Fore.WHITE + "Enter your First Name: ")
-    if first_name.strip() == "":    # code found at GeekforGeek
+    if first_name.strip() == "":     # code found at GeeksforGeeks
         type_print(Fore.RED + "First name is required. Please enter a valid first name.")
         continue
-    elif any(char.isdigit() for char in first_name):
+    elif not first_name.isalpha():   # code found at GeeksforGeeks
         type_print(Fore.RED + "First name should not contain numbers. Please enter a valid first name.")
         continue
     last_name = input("Enter your Last Name: ")
     if last_name.strip() == "":
         type_print(Fore.RED + "Last name is required. Please enter a valid First & Last name.")
         continue
-    elif any(char.isdigit() for char in last_name):
+    elif not last_name.isalpha():
         type_print(Fore.RED + "Last name should not contain numbers. Please enter a valid Last name.")
         continue
     break
