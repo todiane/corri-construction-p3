@@ -53,14 +53,14 @@ while True:
         type_print(Fore.RED + "First name is required. Please enter a valid first name.")
         continue
     elif not first_name.isalpha():   # code found at GeeksforGeeks
-        type_print(Fore.RED + "First name should not contain numbers. Please enter a valid first name.")
+        type_print(Fore.RED + "First name should not contain numbers or symbols. Enter a valid first name.")
         continue
     last_name = input("Enter your Last Name: ")
     if last_name.strip() == "":
         type_print(Fore.RED + "Last name is required. Please enter a valid First & Last name.")
         continue
     elif not last_name.isalpha():
-        type_print(Fore.RED + "Last name should not contain numbers. Please enter a valid Last name.")
+        type_print(Fore.RED + "First name should not contain numbers or symbols. Enter a valid Last name.")
         continue
     break
 
