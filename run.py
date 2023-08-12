@@ -2,12 +2,15 @@
 
 # imports ----------
 import datetime
-import time,os,sys
+import time
+import os 
+import sys
 from flask import Flask
 from colorama import Fore, Back, Style
 # --------------
 
 # Typing effect for letters from Python 101
+
 
 def type_print(text):
     for character in text:
@@ -18,8 +21,9 @@ def type_print(text):
 
 # Clears the screen at the very end
 
-def clearScreen():
-  os.system("clear")
+
+# def clearScreen():
+#     os.system("clear")
 
 
 # Corri Construction Company Introduction
@@ -169,7 +173,7 @@ def get_date_input(prompt):
 def get_from_to_dates():
     while True:
         from_date = get_date_input(Fore.WHITE + "Enter the from date (DD-MM-YYYY): ")
-        to_date = get_date_input(Fore.WHITE +"Enter the to date (DD-MM-YYYY): ")
+        to_date = get_date_input(Fore.WHITE + "Enter the to date (DD-MM-YYYY): ")
         if from_date <= to_date:
             return from_date, to_date
         else:
@@ -219,7 +223,7 @@ national_insurance_amount = national_insurance * pay
 
 
 # Print out full result of pay minus tax and NI
-pay_statement = Fore.YELLOW + '\033[1m' + (f" Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}") + '\033[0m'
+pay_statement = Fore.YELLOW + (f" Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}")
 pay_summary = pay_statement.center(90)
 type_print(pay_summary)
 time.sleep(1)
@@ -230,7 +234,7 @@ print('')
 type_print("Final pay amounts are approximate and depend on your tax status.")
 time.sleep(1)
 type_print("The actual amount you are paid may change.")
-time.sleep(1)  
+time.sleep(1)
 print('')
 type_print("If you have any questions contact HR on 01305 483048.\n")
 
@@ -243,6 +247,8 @@ if exit == "y":
     type_print("A copy has been sent to the email address we have on file for you.")
     print("If you have any questions contact HR on 01305 483048.\n")
     time.sleep(1)
+    type_print("You can now exit this window " + first_name + ".")
+    quit()
 
 
 else:
@@ -253,12 +259,12 @@ else:
 
 # Clear screen message once everything is complete - taken from Python 101
 
-type_print("Your session is now complete.\n")
-time.sleep(3)
-type_print("This screen will clear itself in 3..")
-time.sleep(1)
-type_print("2..")
-time.sleep(1)
-type_print("1..")
-time.sleep(1)
-clearScreen()
+# type_print("Your session is now complete.\n")
+# time.sleep(3)
+# type_print("This screen will clear itself in 3..")
+# time.sleep(1)
+# type_print("2..")
+# time.sleep(1)
+# type_print("1..")
+# time.sleep(1)
+# clearScreen()
