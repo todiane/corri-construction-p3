@@ -7,7 +7,7 @@ from flask import Flask
 from colorama import Fore, Back, Style
 # --------------
 
-# Typing effect for letters
+# Typing effect for letters from Python 101
 
 def type_print(text):
     for character in text:
@@ -35,13 +35,13 @@ type_print(Fore.WHITE + "If your hours are for previous months please contact HR
 time.sleep(1)
 type_print("\nINSTRUCTIONS: (please read carefully)")
 time.sleep(1)
-print(Fore.RED + "\nInformation once entered CANNOT be amended." + Fore.WHITE + "If you make an error")
-print("and want to resubmit, press the " + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button.\n")
+type_print(Fore.RED + "\nInformation once entered CANNOT be amended. " + Fore.WHITE + "If you make an error")
+type_print("and want to resubmit, press the " + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button.\n")
 time.sleep(2)
 type_print("Failure to input your NAME correctly may result in your pay being delayed.\n")
-print("Our system uses your " + Fore.GREEN + "name and employee number" + Fore.WHITE + " to find you so it is important")
-print("that you enter the FULL NAME you provided for our records.")
-print("e.g. " + Fore.GREEN + "Mark Jenkins" + Fore.WHITE + ", although " + Fore.GREEN + "mark jenkins " + Fore.WHITE + "and " + Fore.GREEN + "MARK JENKINS " + Fore.WHITE + "are also ok.\n")
+type_print("Our system uses your " + Fore.GREEN + "name and employee number" + Fore.WHITE + " to find you so it is important")
+type_print("that you enter the FULL NAME you provided for our records.")
+type_print("e.g. " + Fore.GREEN + "Mark Jenkins" + Fore.WHITE + ", although " + Fore.GREEN + "mark jenkins " + Fore.WHITE + "and " + Fore.GREEN + "MARK JENKINS " + Fore.WHITE + "are also ok.\n")
 time.sleep(3)
 type_print("All Clear? Great. Let's get started - otherwise contact HR\n")
 print(Fore.GREEN + "Input your FULL (First + Last) name to begin:\n")
@@ -50,11 +50,17 @@ print(Fore.GREEN + "Input your FULL (First + Last) name to begin:\n")
 while True:
     first_name = input(Fore.WHITE + "Enter your First Name: ")
     if first_name.strip() == "":    # code found at GeekforGeek
-        print("First name is required. Please enter a valid first name.")
+        type_print(Fore.RED + "First name is required. Please enter a valid first name.")
+        continue
+    elif any(char.isdigit() for char in first_name):
+        type_print(Fore.RED + "First name should not contain numbers. Please enter a valid first name.")
         continue
     last_name = input("Enter your Last Name: ")
     if last_name.strip() == "":
-        print("Last name is required. Please enter a valid First & Last name.")
+        type_print(Fore.RED + "Last name is required. Please enter a valid First & Last name.")
+        continue
+    elif any(char.isdigit() for char in last_name):
+        type_print(Fore.RED + "Last name should not contain numbers. Please enter a valid Last name.")
         continue
     break
 
@@ -69,12 +75,12 @@ def get_profession_choice():
     and rate of pay to each profession
     """
     professions = {
-        "a": {"name": "Bricklayer", "rate": 28, },
-        "b": {"name": "Plumber", "rate": 46, },
-        "c": {"name": "Scaffolder", "rate": 25, },
-        "d": {"name": "Electrician", "rate": 46, },
-        "e": {"name": "Carpenter", "rate": 32, },
-        "f": {"name": "Construction Worker", "rate": 27, }
+        "a": {"name": "Bricklayer", "rate": 28.87, },
+        "b": {"name": "Plumber", "rate": 46.75, },
+        "c": {"name": "Scaffolder", "rate": 25.75, },
+        "d": {"name": "Electrician", "rate": 46.75, },
+        "e": {"name": "Carpenter", "rate": 32.89, },
+        "f": {"name": "Construction Worker", "rate": 27.57, }
     }
 
     while True:
@@ -98,7 +104,7 @@ def get_profession_choice():
             if confirm == "y":
                 return professions[choice]
         else:
-            print(Back.RED + "Invalid choice. Please choose a valid option.\n")
+            print(Fore.RED + "Invalid choice. Please choose a valid option.\n")
 
 # If yes print out the details including random user number and hourly pay
 
@@ -118,7 +124,7 @@ if __name__ == "__main__":
 
 # Ask user for dates and hours
 type_print(Fore.GREEN + "\nNext, we need to know the dates you worked (From - To) and number of hours.\n")
-time.sleep(1)
+time.sleep(0.5)
 type_print(Fore.WHITE + "This is for the months of August (08) and September(09) only.")
 time.sleep(0.5)
 """
@@ -155,19 +161,19 @@ def get_date_input(prompt):
         if date:
             return date
         else:
-            print(Back.RED + "\nInvalid date. Enter a date between 1 August 2023 and 30 September 2023.")
+            print(Fore.RED + "\nInvalid date. Enter a date between 1 August 2023 and 30 September 2023.")
 
 # Function to get the from and to dates from the user
 
 
 def get_from_to_dates():
     while True:
-        from_date = get_date_input("Enter the from date (DD-MM-YYYY): ")
-        to_date = get_date_input("Enter the to date (DD-MM-YYYY): ")
+        from_date = get_date_input(Fore.WHITE + "Enter the from date (DD-MM-YYYY): ")
+        to_date = get_date_input(Fore.WHITE +"Enter the to date (DD-MM-YYYY): ")
         if from_date <= to_date:
             return from_date, to_date
         else:
-            print(Back.RED + "\nInvalid dates. The from date must be before or equal to the to date.")
+            print(Fore.RED + "\nInvalid dates. The from date must be before or equal to the to date.")
 
 
 from_date, to_date = get_from_to_dates()
@@ -186,8 +192,9 @@ if info_confirm == "y":
     time.sleep(1)
 
 else:
-    print(Back.RED + Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",")
-    print(Fore.WHITE + "but you can hit the" + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button above to start again.")
+    type_print(Back.RED + Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",")
+    time.sleep(1)
+    type_print(Fore.WHITE + "but you can hit the" + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button above to start again.")
     quit()
 
 # Confirm information of profession, dates and hours plus gives before tax amount
@@ -236,16 +243,18 @@ if exit == "y":
     type_print("A copy has been sent to the email address we have on file for you.")
     print("If you have any questions contact HR on 01305 483048.\n")
     time.sleep(1)
-    # quit()
+
 
 else:
-    print(Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",")
-    print("but you can hit the Run Program button above to start again.\n")
+    type_print(Back.RED + Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",")
+    time.sleep(1)
+    type_print("but you can hit the Run Program button above to start again.\n")
+    quit()
 
-# Clear screen message once everything is complete
+# Clear screen message once everything is complete - taken from Python 101
 
 type_print("Your session is now complete.\n")
-time.sleep(2)
+time.sleep(3)
 type_print("This screen will clear itself in 3..")
 time.sleep(1)
 type_print("2..")

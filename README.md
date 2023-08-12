@@ -44,6 +44,10 @@ The program generates an employee number. An update of this app would be to link
 
 ## Testing
 
+## Bugs
+
+After importing the type element so that text can be typed out a line at a time the codes for Fore.WHITE or bold kept showing up e.g. '\033[1m' for bold was typed out. To fix this I had to remove - colorama.init(autoreset=True) - which  meant I had to go through each line of code to ensure if one line was red, all subsequent lines didn't turn red. 
+
 ## Credits
 
 Free Code Camp Python for everyone course that helped me get my project started - [here](https://www.youtube.com/watch?v=wgkC8SxraAQ)
@@ -58,6 +62,8 @@ Help putting together the function that calculates income tax and national insur
 To change numerical value to end in two figures only - [here](https://tutorial.eyehunts.com/python/how-to-display-2-decimal-places-in-python-example-code/)
 
 Using colorama import - [here](https://www.youtube.com/watch?v=u51Zjlnui4Y )
+
+Using typing font effect and clear screen [here](https://www.101computing.net/python-typing-text-effect/)
 
 Header code - being able to bold and center - taken from w3Schools - [here](https://www.w3schools.com/python/ref_string_center.asp)
 
