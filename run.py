@@ -224,7 +224,7 @@ national_insurance_amount = national_insurance * pay
 
 # Print out full result of pay minus tax and NI
 pay_statement = Fore.YELLOW + (f" Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}")
-pay_summary = pay_statement.center(90)
+pay_summary = pay_statement.center(80)
 type_print(pay_summary)
 time.sleep(1)
 
