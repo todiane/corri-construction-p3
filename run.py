@@ -1,9 +1,9 @@
 # Main code for Corri Construction Company that appears in terminal
 
 # imports ----------
-import datetime
+from datetime import datetime, timedelta
 import time
-import os 
+import os
 import sys
 from flask import Flask
 from colorama import Fore, Back, Style
@@ -97,7 +97,7 @@ def get_profession_choice():
             print(f"{key}: {profession['name']}")
 
 # Prompt the user to enter the letter corresponding to their choice
-        choice = input("\nSelect one of the above options " + Fore.GREEN + "a-f: ").lower()
+        choice = input("\n Select one of the above options " + Fore.GREEN + "a-f: ").lower()
 
         """
         Validate the users input and confirm their choice
@@ -109,7 +109,7 @@ def get_profession_choice():
             if confirm == "y":
                 return professions[choice]
         else:
-            print(Fore.RED + " Invalid choice. Please choose a valid option.\n")
+            print(Fore.RED + " Error: Invalid choice. Please choose a valid option.\n")
 
 # If yes print out the details including random user number and hourly pay
 
@@ -117,21 +117,21 @@ def get_profession_choice():
 if __name__ == "__main__":
     chosen_profession = get_profession_choice()
     import random
-    type_print(Fore.WHITE + "Thank you.\n")
+    type_print(Fore.WHITE + " Thank you.\n")
     time.sleep(1)
-    print(first_name + " your contractor number is " + str(random.randint(23203, 63944)))
-    type_print(f"Your profession is: {chosen_profession['name']}")
+    print(" " + first_name + " your contractor number is " + str(random.randint(23203, 63944)))
+    type_print(f" Your profession is: {chosen_profession['name']}")
     time.sleep(1)
-    type_print(Fore.GREEN + f"You earn £{chosen_profession['rate']} per hour.")
+    type_print(Fore.GREEN + f" You earn £{chosen_profession['rate']} per hour")
     time.sleep(1)
-    type_print(Fore.WHITE + "You pay 20% tax and 13% National Insurance\n")
+    type_print(Fore.WHITE + " You pay 20% tax and 13% National Insurance\n")
     # print("Earnings this year are £" + str(random.randint(67500, 80000)) + " so you will pay " + {chosen_profession['tax']} + "% tax and 13% National Insurance\n")
 
 # Ask user for dates and hours
-type_print(Fore.GREEN + "\nNext, we need to know the dates you worked (From - To)")
-type_print(Fore.GREEN + "plus the number of days and number of hours worked.\n")
+type_print(Fore.GREEN + "\n Next, we need to know the dates you worked (From - To)")
+type_print(Fore.GREEN + " plus the number of days and number of hours worked.\n")
 time.sleep(0.5)
-type_print(Fore.WHITE + "This is for the months of August (08) and September(09) only.\n")
+type_print(Fore.WHITE + " This is for the months of August (08) and September(09) only.\n")
 time.sleep(0.5)
 
 """
@@ -141,52 +141,52 @@ Code created with support from Travis.media.
 """
 
 # Define the valid date range - this can change each month
-start_date = datetime.date(2023, 8, 1)
-end_date = datetime.date(2023, 9, 30)
+# start_date = datetime.date(2023, 8, 1)
+# end_date = datetime.date(2023, 9, 30)
 
 # Function to validate the user input
 
 
-def validate_date(date_str):
-    try:
-        date = datetime.datetime.strptime(date_str, "%d-%m-%Y").date()
-    except ValueError:
-        return False
-    # Check if the date is within the valid range
-    if start_date <= date <= end_date:
-        return date
-    else:
-        return False
+# def validate_date(date_str):
+#     try:
+#         date = datetime.datetime.strptime(date_str, "%d-%m-%Y").date()
+#     except ValueError:
+#         return False
+#     # Check if the date is within the valid range
+#     if start_date <= date <= end_date:
+#         return date
+#     else:
+#         return False
 
 # Function to get the from and to dates from user
 
 
-def get_date_input(prompt):
-    while True:
-        date_str = input(prompt)
-        date = validate_date(date_str)
-        if date:
-            return date
-        else:
-            print(Fore.RED + "\n Invalid date. Enter a date between 1 August 2023 and 30 September 2023.")
+# def get_date_input(prompt):
+#     while True:
+#         date_str = input(prompt)
+#         date = validate_date(date_str)
+#         if date:
+#             return date
+#         else:
+#             print(Fore.RED + "\n Invalid date. Enter a date between 1 August 2023 and 30 September 2023.")
 
 # Function to get the from and to dates from the user
 
 
-def get_from_to_dates():
-    while True:
-        from_date = get_date_input(Fore.WHITE + " Enter the from date (DD-MM-YYYY): ")
-        to_date = get_date_input(Fore.WHITE + " Enter the to date (DD-MM-YYYY): ")
-        if from_date <= to_date:
-            return from_date, to_date
-        else:
-            print(Fore.RED + "\n Invalid dates. The from date must be before or equal to the to date.")
+# def get_from_to_dates():
+#     while True:
+#         from_date = get_date_input(Fore.WHITE + " Enter the from date (DD-MM-YYYY): ")
+#         to_date = get_date_input(Fore.WHITE + " Enter the to date (DD-MM-YYYY): ")
+#         if from_date <= to_date:
+#             return from_date, to_date
+#         else:
+#             print(Fore.RED + "\n Invalid dates. The from date must be before or equal to the to date.")
 
 
-from_date, to_date = get_from_to_dates()
+# from_date, to_date = get_from_to_dates()
 
-type_print(Fore.GREEN + f" Thank you, you entered from {from_date.strftime('%d-%m-%Y')} to {to_date.strftime('%d-%m-%Y')} as your dates.\n")
-time.sleep(1)
+# type_print(Fore.GREEN + f" Thank you, you entered from {from_date.strftime('%d-%m-%Y')} to {to_date.strftime('%d-%m-%Y')} as your dates.\n")
+# time.sleep(1)
 
 
 """
@@ -195,6 +195,32 @@ Checks to ensure no more than 13 hours per day have been worked.
 Code help provided by Travis.Media
 """
 
+
+# def worked_too_many_hours(days_worked, hours_entered):
+#     max_hours_per_day = 13
+#     max_total_hours = days_worked * max_hours_per_day
+#     if hours_entered > max_total_hours:
+#         return True
+#     return False
+
+
+# while True:
+#     try:
+#         days_worked = int(input(Fore.WHITE + "Enter the number of days worked: "))
+#         hrs = float(input(Fore.WHITE + "\nEnter your hours: "))
+#         if worked_too_many_hours(days_worked, hrs):
+#             print(" You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
+#             print(Fore.RED + " You cannot enter more than 13 hours per day for a total of " + str(days_worked) + " days.")
+#             print(" Please check your total hours.")
+#         else:
+#             print("You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
+#             break
+#     except ValueError:
+#         print("Invalid input. Please enter a valid number.")
+
+"""
+new code
+"""
 
 def worked_too_many_hours(days_worked, hours_entered):
     max_hours_per_day = 13
@@ -205,19 +231,39 @@ def worked_too_many_hours(days_worked, hours_entered):
 
 while True:
     try:
-        days_worked = int(input(Fore.WHITE + "Enter the number of days worked: "))
-        hrs = float(input(Fore.WHITE + "\nEnter your hours: "))
+        start_date_str = input(Fore.WHITE + " Enter the start date (DD-MM-YYYY): ")
+        end_date_str = input(Fore.WHITE + " Enter the end date (DD-MM-YYYY): ")
+        days_worked = int(input(Fore.WHITE + " Enter the number of days worked: "))
+        hrs = float(input(Fore.WHITE + " Enter your hours: "))
+     
+        start_date = datetime.strptime(start_date_str, "%d-%m-%Y")
+        end_date = datetime.strptime(end_date_str, "%d-%m-%Y")
       
+        # Validation to ensure the dates are within the specified range
+        valid_start_date = datetime(2023, 8, 1)
+        valid_end_date = datetime(2023, 9, 30)
+      
+        if start_date < valid_start_date or end_date > valid_end_date:
+            print(Fore.RED + " Error: The start and/or end date is outside the allowed range (01-08-2023 to 30-09-2023).")
+            continue
+     
+        calculated_days_worked = (end_date - start_date).days + 1  # Including both start and end dates
+      
+        if days_worked != calculated_days_worked:
+            print(Fore.RED + " Error: The dates entered and the number of days worked do not match.")
+            continue
+
         if worked_too_many_hours(days_worked, hrs):
-            print(" You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
-            print(Fore.RED + " You cannot enter more than 13 hours per day for a total of " + str(days_worked) + " days.") 
-            print(" Please check your total hours.")
+            print(Fore.RED + " Error: You cannot enter more than 13 hours per day for a total of " + str(days_worked) + " days.")
         else:
-            print("You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
+            print(" You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
             break
     except ValueError:
-        print("Invalid input. Please enter a valid number.")
+        print(Fore.RED + " Error: Invalid input. Please enter valid values.")
 
+
+
+# NEW CODE ENDS HERE
 
 # Ask user to confirm the information added is correct
 info_confirm = input(Fore.GREEN + f"\nCheck that the information added so far is correct & confirm. Enter (y/n): ").lower()
@@ -235,7 +281,9 @@ else:
 type_print("\nThis information will be authorised by your manager:\n")
 time.sleep(1)
 pay = float(hrs) * chosen_profession['rate']
-type_print((f"From {from_date.strftime('%d-%m')}") + " " + (f"to {to_date.strftime('%d-%m')}") + " 2023, your pay before tax is £" + str(pay) + " for" + " " + str(hrs) + " hours\n")
+# type_print((f"From {from_date.strftime('%d-%m')}") + " " + (f"to {to_date.strftime('%d-%m')}") + " 2023, your pay before tax is £" + str(pay) + " for" + " " + str(hrs) + " hours\n")
+type_print((f" From {start_date.strftime('%d-%m-%Y')}") + (f" to {end_date.strftime('%d-%m-%Y')}") + " you worked " + str(days_worked) + " days, and")
+type_print(" your pay before tax is £" + str(pay))
 time.sleep(1)
 # Calculating payment after tax - 20% tax is 0.2 and 13% NI is 0.13
 
@@ -253,38 +301,38 @@ national_insurance_amount = national_insurance * pay
 
 
 # Print out full result of pay minus tax and NI
-pay_statement = Fore.YELLOW + (f" Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}")
+pay_statement = Fore.YELLOW + (f"\n Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}")
 pay_summary = pay_statement.center(80)
 type_print(pay_summary)
 time.sleep(1)
 
-type_print(Fore.WHITE + "\nThe TAX and NATIONAL INSURANCE amounts shown are for your information only")
+type_print(Fore.WHITE + "\n The TAX and NATIONAL INSURANCE amounts shown are for your information only")
 time.sleep(1)
 print('')
-type_print("Final pay amounts are approximate and depend on your tax status.")
+type_print(" Final pay amounts are approximate and depend on your tax status.")
 time.sleep(1)
-type_print("The actual amount you are paid may change.")
+type_print(" The actual amount you are paid may change.")
 time.sleep(1)
 print('')
-type_print("If you have any questions contact HR on 01305 483048.\n")
+type_print(" If you have any questions contact HR on 01305 483048.\n")
 
 # Ask user if they want to exit
-exit = input(Fore.GREEN + f"Information Complete. Select y to submit or n to continue (y/n): ").lower()
+exit = input(Fore.GREEN + f" Information Complete. Select y to submit or n to continue (y/n): ").lower()
 if exit == "y":
-    type_print(Fore.WHITE + "\nInformation successfully submitted to HR. Thank you " + first_name + ".")
+    type_print(Fore.WHITE + "\n Information successfully submitted to HR. Thank you " + first_name + ".")
     time.sleep(1)
     print('')
-    type_print("A copy has been sent to the email address we have on file for you.")
-    print("If you have any questions contact HR on 01305 483048.\n")
+    type_print(" A copy has been sent to the email address we have on file for you.")
+    print(" If you have any questions contact HR on 01305 483048.\n")
     time.sleep(1)
-    type_print("You can now exit this window " + first_name + ".")
+    type_print(Fore.GREEN + " You can now exit this window " + first_name + ".")
     quit()
 
 
 else:
-    type_print(Back.RED + Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",")
+    type_print(Back.RED + Fore.WHITE + "\n Okay. You can't edit anything already entered " + first_name + ",")
     time.sleep(1)
-    type_print("but you can hit the Run Program button above to start again.\n")
+    type_print(" but you can hit the Run Program button above to start again.\n")
     quit()
 
 # Clear screen message once everything is complete - taken from Python 101
