@@ -34,41 +34,42 @@ new_text = text.center(90)
 print(new_text)
 
 # Instructions for contractors
-type_print(Fore.YELLOW + '\033[1m' + "\nUse this portal to input your August(08) and September(09) 2023 hours.\n")
-type_print(Fore.WHITE + "If your hours are for previous months please contact HR on 01305 483048")
+type_print(Fore.YELLOW + '\033[1m' + "\n Use this portal to input your August(08) and September(09) 2023 hours.\n")
+type_print(Fore.WHITE + " If your hours are for previous months please contact HR on 01305 483048")
 time.sleep(1)
-type_print("\nINSTRUCTIONS: (please read carefully)")
+type_print("\n INSTRUCTIONS: (please read carefully)")
 time.sleep(1)
-type_print(Fore.RED + "\nInformation once entered CANNOT be amended. " + Fore.WHITE + "If you make an error")
-type_print("and want to resubmit, press the " + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button.\n")
+type_print(Fore.RED + "\n Information once entered CANNOT be amended. " + Fore.WHITE + "If you make an error")
+type_print(" and want to resubmit, press the " + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button.\n")
 time.sleep(2)
-type_print("Failure to input your NAME correctly may result in your pay being delayed.\n")
-type_print("Our system uses your " + Fore.GREEN + "name and employee number" + Fore.WHITE + " to find you so it is important")
-type_print("that you enter the FULL NAME you provided for our records.")
-type_print("e.g. " + Fore.GREEN + "Mark Jenkins" + Fore.WHITE + ", although " + Fore.GREEN + "mark jenkins " + Fore.WHITE + "and " + Fore.GREEN + "MARK JENKINS " + Fore.WHITE + "are also ok.\n")
+type_print(" Failure to input your NAME correctly may result in your pay being delayed.\n")
+type_print(" Our system uses your " + Fore.GREEN + "name and employee number" + Fore.WHITE + " to find you so it is important")
+type_print(" that you enter the FULL NAME you provided for our records.")
+type_print(" e.g. " + Fore.GREEN + "Mark Jenkins" + Fore.WHITE + ", although " + Fore.GREEN + "mark jenkins " + Fore.WHITE + "and " + Fore.GREEN + "MARK JENKINS " + Fore.WHITE + "are also ok.\n")
 time.sleep(3)
-type_print("All Clear? Great. Let's get started - otherwise contact HR\n")
-print(Fore.GREEN + "Input your FULL (First + Last) name to begin:\n")
-
+type_print(" All Clear? Great. Let's get started - otherwise contact HR\n")
+time.sleep(0.5)
+type_print(Fore.GREEN + " Input your FULL (First + Last) name to begin:\n")
+time.sleep(0.5)
 # Instructions to add first and last name. Used strip() to detect if section left blank
 while True:
-    first_name = input(Fore.WHITE + "Enter your First Name: ")
+    first_name = input(Fore.WHITE + " Enter your First Name: ")
     if first_name.strip() == "":     # code found at GeeksforGeeks
-        type_print(Fore.RED + "First name is required. Please enter a valid first name.")
+        type_print(Fore.RED + " First name is required. Please enter a valid first name.")
         continue
     elif not first_name.isalpha():   # code found at GeeksforGeeks
-        type_print(Fore.RED + "First name should not contain numbers or symbols. Enter a valid first name.")
+        type_print(Fore.RED + " First name should not contain numbers or symbols. Enter a valid first name.")
         continue
-    last_name = input("Enter your Last Name: ")
+    last_name = input(" Enter your Last Name: ")
     if last_name.strip() == "":
-        type_print(Fore.RED + "Last name is required. Please enter a valid First & Last name.")
+        type_print(Fore.RED + " Last name is required. Please enter a valid First & Last name.")
         continue
     elif not last_name.isalpha():
-        type_print(Fore.RED + "First name should not contain numbers or symbols. Enter a valid Last name.")
+        type_print(Fore.RED + " First name should not contain numbers or symbols. Enter a valid Last name.")
         continue
     break
 
-type_print(Fore.YELLOW + "H E L L O, " + first_name + " " + last_name + "\n")
+type_print(Fore.YELLOW + " HELLO, " + first_name + " " + last_name + "\n")
 
 # Instructions to confirm their profession by selecting a letter.
 
@@ -89,7 +90,7 @@ def get_profession_choice():
 
     while True:
         # Display available professions to the user
-        type_print(Fore.WHITE + "Select your profession:")
+        type_print(Fore.WHITE + " Select your profession:")
         time.sleep(1)
         print('')
         for key, profession in professions.items():
@@ -104,11 +105,11 @@ def get_profession_choice():
         list of options again
         """
         if choice in professions:
-            confirm = input(f"You chose {professions[choice]['name']}. Is this correct? (y/n): ").lower()
+            confirm = input(f" You chose {professions[choice]['name']}. Is this correct? (y/n): ").lower()
             if confirm == "y":
                 return professions[choice]
         else:
-            print(Fore.RED + "Invalid choice. Please choose a valid option.\n")
+            print(Fore.RED + " Invalid choice. Please choose a valid option.\n")
 
 # If yes print out the details including random user number and hourly pay
 
@@ -127,7 +128,8 @@ if __name__ == "__main__":
     # print("Earnings this year are £" + str(random.randint(67500, 80000)) + " so you will pay " + {chosen_profession['tax']} + "% tax and 13% National Insurance\n")
 
 # Ask user for dates and hours
-type_print(Fore.GREEN + "\nNext, we need to know the dates you worked (From - To), the number of days and number of hours.\n")
+type_print(Fore.GREEN + "\nNext, we need to know the dates you worked (From - To)")
+type_print(Fore.GREEN + "plus the number of days and number of hours worked.\n")
 time.sleep(0.5)
 type_print(Fore.WHITE + "This is for the months of August (08) and September(09) only.\n")
 time.sleep(0.5)
@@ -166,25 +168,24 @@ def get_date_input(prompt):
         if date:
             return date
         else:
-            print(Fore.RED + "\nInvalid date. Enter a date between 1 August 2023 and 30 September 2023.")
+            print(Fore.RED + "\n Invalid date. Enter a date between 1 August 2023 and 30 September 2023.")
 
 # Function to get the from and to dates from the user
 
 
 def get_from_to_dates():
     while True:
-        from_date = get_date_input(Fore.WHITE + "Enter the from date (DD-MM-YYYY): ")
-        to_date = get_date_input(Fore.WHITE + "Enter the to date (DD-MM-YYYY): ")
+        from_date = get_date_input(Fore.WHITE + " Enter the from date (DD-MM-YYYY): ")
+        to_date = get_date_input(Fore.WHITE + " Enter the to date (DD-MM-YYYY): ")
         if from_date <= to_date:
             return from_date, to_date
         else:
-            print(Fore.RED + "\nInvalid dates. The from date must be before or equal to the to date.")
+            print(Fore.RED + "\n Invalid dates. The from date must be before or equal to the to date.")
 
 
 from_date, to_date = get_from_to_dates()
 
-
-type_print(Fore.GREEN + f"Thank you, you entered from {from_date.strftime('%d-%m-%Y')} to {to_date.strftime('%d-%m-%Y')} as your dates.\n")
+type_print(Fore.GREEN + f" Thank you, you entered from {from_date.strftime('%d-%m-%Y')} to {to_date.strftime('%d-%m-%Y')} as your dates.\n")
 time.sleep(1)
 
 
@@ -208,8 +209,9 @@ while True:
         hrs = float(input(Fore.WHITE + "\nEnter your hours: "))
       
         if worked_too_many_hours(days_worked, hrs):
-            print("You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
-            print(Fore.RED + "You cannot enter more than 13 hours per day for a total of " + str(days_worked) + " days. Please check your total hours.")
+            print(" You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
+            print(Fore.RED + " You cannot enter more than 13 hours per day for a total of " + str(days_worked) + " days.") 
+            print(" Please check your total hours.")
         else:
             print("You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
             break
