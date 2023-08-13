@@ -1,4 +1,4 @@
-# Main code for Corri Construction Company that appears in terminal
+# Main code for Corri Construction Company 
 
 # imports ----------
 from datetime import datetime, timedelta
@@ -9,7 +9,7 @@ from flask import Flask
 from colorama import Fore, Back, Style
 # --------------
 
-# Typing effect for letters from Python 101
+# Typing effect for letters taken from Python 101
 
 
 def type_print(text):
@@ -27,6 +27,7 @@ new_text = text.center(90)
 print(new_text)
 
 # Instructions for contractors
+
 type_print(Fore.YELLOW + '\033[1m' + "\n Use this portal to input your August(08) and September(09) 2023 hours.\n")
 type_print(Fore.WHITE + " If your hours are for previous months please contact HR on 01305 483048")
 time.sleep(1)
@@ -46,7 +47,7 @@ type_print(Fore.GREEN + " Input your FULL (First + Last) name to begin:\n")
 time.sleep(0.5)
 
 """
-Instructions to add first and last name. 
+Instructions to add first and last name.
 Used strip() to detect if section left blank
 """
 
@@ -224,6 +225,7 @@ and total number of hours worked. Max number of hours
 allowed in one day is 13. Validates dates are in the
 right order, and the number of days added fits in
 with the dates inputted.
+Code added with help from Travis.Media
 """
 
 
@@ -268,22 +270,22 @@ while True:
         print(Fore.RED + " Error: Invalid info. Check your date. The year and days worked.")
 
 # Ask user to confirm the information added is correct
-info_confirm = input(Fore.GREEN + f"\nCheck that the information added so far is correct & confirm. Enter (y/n): ").lower()
+info_confirm = input(Fore.GREEN + f"\n Check that the information added so far is correct & confirm. Enter (y/n): ").lower()
 if info_confirm == "y":
-    type_print(Fore.WHITE + "\nThank you, " + first_name + ".")
+    type_print(Fore.WHITE + "\n Thank you, " + first_name + ".")
     time.sleep(1)
 
 else:
-    type_print(Back.RED + Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",")
+    type_print(Back.RED + Fore.WHITE + "\n Okay. You can't edit anything already entered " + first_name + ",")
     time.sleep(1)
-    type_print(Fore.WHITE + "but you can hit the" + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button above to start again.")
+    type_print(Fore.WHITE + " but you can hit the" + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button above to start again.")
     quit()
 
 # Confirm information of profession rate, dates, hours plus tax amount
-type_print("\nThis information will be authorised by your manager:\n")
+type_print("\n This information will be authorised by your manager:\n")
 time.sleep(1)
 pay = float(hrs) * chosen_profession['rate']
-type_print((f"From {start_date.strftime('%d-%m')}") + " " + (f"to {end_date.strftime('%d-%m')}") + f" 2023, your pay before tax is £{pay:.2f} for {hrs} hours")
+type_print((f" From {start_date.strftime('%d-%m')}") + " " + (f"to {end_date.strftime('%d-%m')}") + f" 2023, your pay before tax is £{pay:.2f} for {hrs} hours")
 time.sleep(1)
 
 # Calculates amount after tax and national insurance deductions
