@@ -127,10 +127,11 @@ if __name__ == "__main__":
     # print("Earnings this year are £" + str(random.randint(67500, 80000)) + " so you will pay " + {chosen_profession['tax']} + "% tax and 13% National Insurance\n")
 
 # Ask user for dates and hours
-type_print(Fore.GREEN + "\nNext, we need to know the dates you worked (From - To) and number of hours.\n")
+type_print(Fore.GREEN + "\nNext, we need to know the dates you worked (From - To), the number of days and number of hours.\n")
 time.sleep(0.5)
-type_print(Fore.WHITE + "This is for the months of August (08) and September(09) only.")
+type_print(Fore.WHITE + "This is for the months of August (08) and September(09) only.\n")
 time.sleep(0.5)
+
 """
 Get dates from the user for August or September 2023 only. Checks if the dates
 are within that range and in sequential order if not error message given.
@@ -186,8 +187,35 @@ from_date, to_date = get_from_to_dates()
 type_print(Fore.GREEN + f"Thank you, you entered from {from_date.strftime('%d-%m-%Y')} to {to_date.strftime('%d-%m-%Y')} as your dates.\n")
 time.sleep(1)
 
-# Asks user to input their hours and works out pay
-hrs = input(Fore.WHITE + "Enter your hours: ")
+
+"""
+Asks user to input their hours and works out pay.
+Checks to ensure no more than 13 hours per day have been worked.
+Code help provided by Travis.Media
+"""
+
+
+def worked_too_many_hours(days_worked, hours_entered):
+    max_hours_per_day = 13
+    max_total_hours = days_worked * max_hours_per_day
+    if hours_entered > max_total_hours:
+        return True
+    return False
+
+while True:
+    try:
+        days_worked = int(input(Fore.WHITE + "Enter the number of days worked: "))
+        hrs = float(input(Fore.WHITE + "\nEnter your hours: "))
+      
+        if worked_too_many_hours(days_worked, hrs):
+            print("You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
+            print(Fore.RED + "You cannot enter more than 13 hours per day for a total of " + str(days_worked) + " days. Please check your total hours.")
+        else:
+            print("You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
+            break
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+
 
 # Ask user to confirm the information added is correct
 info_confirm = input(Fore.GREEN + f"\nCheck that the information added so far is correct & confirm. Enter (y/n): ").lower()
