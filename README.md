@@ -9,7 +9,17 @@ This app asks contractors to input their name, profession, working dates and num
 
 ## Project Aims
 
-## Wireframes
+Reduce the number of calls from contractors to HR asking about their pay
+Encourge contractors to enter their working dates regularly (some contractors wait 3 or 4 months before submitting)
+It is important that the instructions are shown EACH TIME as contractors tend to ignore instructions if they are on another page and if there are gaps of 3 or 4 weeks in completing their dates they forget what needs to be added and call HR.
+
+### Pre development
+Wrote out how I wanted the app to work and what it will do
+Set up projects in GitHub to write out work that needed to be done
+
+### Development
+
+
 
 
 ## How It Works
@@ -26,15 +36,19 @@ Contractors are asked a series of questions after reading the instructions. Havi
 - Profession is chosen from a list of options
 ![CCCCP name](/assets/images/ccccp-rm-profession.webp)
 
-- The dates worked (must be within a two month period) and the number of hours
+- The dates worked (must be within a two month period), the total number of days and hours worked.
 
-- As per Working Time Regulations 1998 a maximum of 13 hours are allowed in a day. App checks that no more than 18 hours can be inputted if the dates show only one day was worked.
+- As per Working Time Regulations 1998 a maximum of 13 hours are allowed in a day. App checks that less than 13 hours is inputted if the dates show only one day was worked. It will also check for 13 hours over the days inputted e.g. 01-09-2023 - 03-09-2023 39 hours maximum can be added.
 
 - Based on information provided a calculation is made to determine pay before tax and then pay after tax and NI deductions.
 
 ## Technologies Used
 
+Python
 Python autograder - to help me write/blend code together and test before adding to run.py
+Codeanywhere
+GitHub
+HTML and CSS to change the background and add social media links.
 
 ## Future Updates
 
@@ -47,6 +61,8 @@ Contractor can input details of other payments that need to be removed from thei
 The program generates an employee number. An update of this app would be to link to a Google sheet where the number is saved so that if they returned and entered their name they will be given the same employee number and their past submissions will be listed.
 
 ## Testing
+
+## Validation
 
 ## Bugs
 
@@ -69,13 +85,13 @@ Using colorama import - [here](https://www.youtube.com/watch?v=u51Zjlnui4Y )
 
 Using typing font effect and clear screen [here](https://www.101computing.net/python-typing-text-effect/)
 
-Header code - being able to bold and center - taken from w3Schools - [here](https://www.w3schools.com/python/ref_string_center.asp)
+Being able to bold and center font - taken from w3Schools - [here](https://www.w3schools.com/python/ref_string_center.asp)
 
 
 ## Acknowledgements
 
 Code Institute women-in-tech group for their support during huddles.
 
-Travis.media community - To help with to and from dates function so it worked correctly
+Travis.media community - To help with date/hours/time function so it worked correctly
 
 My mentor

@@ -1,4 +1,4 @@
-# Main code for Corri Construction Company 
+# Main code for Corri Construction Company
 
 # imports ----------
 from datetime import datetime, timedelta
@@ -125,7 +125,6 @@ if __name__ == "__main__":
     type_print(Fore.GREEN + f" You earn £{chosen_profession['rate']} per hour")
     time.sleep(1)
     type_print(Fore.WHITE + " You pay 20% tax and 13% National Insurance\n")
-    # print("Earnings this year are £" + str(random.randint(67500, 80000)) + " so you will pay " + {chosen_profession['tax']} + "% tax and 13% National Insurance\n")
 
 # Ask user for dates and hours
 type_print(Fore.GREEN + "\n Next, we need to know the dates you worked (From - To)")
@@ -135,99 +134,13 @@ type_print(Fore.WHITE + " This is for the months of August (08) and September(09
 time.sleep(0.5)
 
 """
-Get dates from the user for August or September 2023 only. Checks if the dates
-are within that range and in sequential order if not error message given.
-Code created with support from Travis.media.
-"""
+Asks users to input their days worked, number of days and total number of hours
+worked. Max number of hours allowed in one day is 13. Validates dates are in
+the right order, and the number of days added fits in with the dates inputted.
 
-# Define the valid date range - this can change each month
-# start_date = datetime.date(2023, 8, 1)
-# end_date = datetime.date(2023, 9, 30)
-
-# Function to validate the user input
-
-
-# def validate_date(date_str):
-#     try:
-#         date = datetime.datetime.strptime(date_str, "%d-%m-%Y").date()
-#     except ValueError:
-#         return False
-#     # Check if the date is within the valid range
-#     if start_date <= date <= end_date:
-#         return date
-#     else:
-#         return False
-
-# Function to get the from and to dates from user
-
-
-# def get_date_input(prompt):
-#     while True:
-#         date_str = input(prompt)
-#         date = validate_date(date_str)
-#         if date:
-#             return date
-#         else:
-#             print(Fore.RED + "\n Invalid date. Enter a date between 1 August 2023 and 30 September 2023.")
-
-# Function to get the from and to dates from the user
-
-
-# def get_from_to_dates():
-#     while True:
-#         from_date = get_date_input(Fore.WHITE + " Enter the from date (DD-MM-YYYY): ")
-#         to_date = get_date_input(Fore.WHITE + " Enter the to date (DD-MM-YYYY): ")
-#         if from_date <= to_date:
-#             return from_date, to_date
-#         else:
-#             print(Fore.RED + "\n Invalid dates. The from date must be before or equal to the to date.")
-
-
-# from_date, to_date = get_from_to_dates()
-
-# type_print(Fore.GREEN + f" Thank you, you entered from {from_date.strftime('%d-%m-%Y')} to {to_date.strftime('%d-%m-%Y')} as your dates.\n")
-# time.sleep(1)
-
-
-"""
-Asks user to input their hours and works out pay.
-Checks to ensure no more than 13 hours per day have been worked.
-Code help provided by Travis.Media
-"""
-
-
-# def worked_too_many_hours(days_worked, hours_entered):
-#     max_hours_per_day = 13
-#     max_total_hours = days_worked * max_hours_per_day
-#     if hours_entered > max_total_hours:
-#         return True
-#     return False
-
-
-# while True:
-#     try:
-#         days_worked = int(input(Fore.WHITE + "Enter the number of days worked: "))
-#         hrs = float(input(Fore.WHITE + "\nEnter your hours: "))
-#         if worked_too_many_hours(days_worked, hrs):
-#             print(" You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
-#             print(Fore.RED + " You cannot enter more than 13 hours per day for a total of " + str(days_worked) + " days.")
-#             print(" Please check your total hours.")
-#         else:
-#             print("You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
-#             break
-#     except ValueError:
-#         print("Invalid input. Please enter a valid number.")
-
-"""
-new code
-Asks users to input their days worked, number of days
-and total number of hours worked. Max number of hours
-allowed in one day is 13. Validates dates are in the
-right order, and the number of days added fits in
-with the dates inputted.
 Code added with help from Travis.Media
 """
-
+# function to check that no more than 13 days are worked in one day
 
 def worked_too_many_hours(days_worked, hours_entered):
     max_hours_per_day = 13
