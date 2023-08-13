@@ -32,6 +32,10 @@ Contractors are asked a series of questions after reading the instructions. Havi
 
 - Based on information provided a calculation is made to determine pay before tax and then pay after tax and NI deductions.
 
+## Technologies Used
+
+Python autograder - to help me write/blend code together and test before adding to run.py
+
 ## Future Updates
 
 The next update of the app will include the option to choose whether it is their first visit (which will show the instructions) or whether they have used the service before - which will show the instructions behind a button.

@@ -19,13 +19,6 @@ def type_print(text):
         time.sleep(0.05)
     print('')
 
-# Clears the screen at the very end
-
-
-# def clearScreen():
-#     os.system("clear")
-
-
 # Corri Construction Company Introduction
 
 
@@ -51,7 +44,13 @@ type_print(" All Clear? Great. Let's get started - otherwise contact HR\n")
 time.sleep(0.5)
 type_print(Fore.GREEN + " Input your FULL (First + Last) name to begin:\n")
 time.sleep(0.5)
-# Instructions to add first and last name. Used strip() to detect if section left blank
+
+"""
+Instructions to add first and last name. 
+Used strip() to detect if section left blank
+"""
+
+
 while True:
     first_name = input(Fore.WHITE + " Enter your First Name: ")
     if first_name.strip() == "":     # code found at GeeksforGeeks
@@ -220,7 +219,13 @@ Code help provided by Travis.Media
 
 """
 new code
+Asks users to input their days worked, number of days
+and total number of hours worked. Max number of hours
+allowed in one day is 13. Validates dates are in the
+right order, and the number of days added fits in
+with the dates inputted.
 """
+
 
 def worked_too_many_hours(days_worked, hours_entered):
     max_hours_per_day = 13
@@ -229,26 +234,27 @@ def worked_too_many_hours(days_worked, hours_entered):
         return True
     return False
 
+
 while True:
     try:
         start_date_str = input(Fore.WHITE + " Enter the start date (DD-MM-YYYY): ")
         end_date_str = input(Fore.WHITE + " Enter the end date (DD-MM-YYYY): ")
         days_worked = int(input(Fore.WHITE + " Enter the number of days worked: "))
         hrs = float(input(Fore.WHITE + " Enter your hours: "))
-     
+
         start_date = datetime.strptime(start_date_str, "%d-%m-%Y")
         end_date = datetime.strptime(end_date_str, "%d-%m-%Y")
-      
-        # Validation to ensure the dates are within the specified range
+
+        # Validates that dates are within the specified range
         valid_start_date = datetime(2023, 8, 1)
         valid_end_date = datetime(2023, 9, 30)
-      
+
         if start_date < valid_start_date or end_date > valid_end_date:
             print(Fore.RED + " Error: The start and/or end date is outside the allowed range (01-08-2023 to 30-09-2023).")
             continue
-     
-        calculated_days_worked = (end_date - start_date).days + 1  # Including both start and end dates
-      
+
+        calculated_days_worked = (end_date - start_date).days + 1
+
         if days_worked != calculated_days_worked:
             print(Fore.RED + " Error: The dates entered and the number of days worked do not match.")
             continue
@@ -259,11 +265,7 @@ while True:
             print(" You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
             break
     except ValueError:
-        print(Fore.RED + " Error: Invalid input. Please enter valid values.")
-
-
-
-# NEW CODE ENDS HERE
+        print(Fore.RED + " Error: Invalid info. Check your date. The year and days worked.")
 
 # Ask user to confirm the information added is correct
 info_confirm = input(Fore.GREEN + f"\nCheck that the information added so far is correct & confirm. Enter (y/n): ").lower()
@@ -277,15 +279,14 @@ else:
     type_print(Fore.WHITE + "but you can hit the" + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button above to start again.")
     quit()
 
-# Confirm information of profession, dates and hours plus gives before tax amount
+# Confirm information of profession rate, dates, hours plus tax amount
 type_print("\nThis information will be authorised by your manager:\n")
 time.sleep(1)
 pay = float(hrs) * chosen_profession['rate']
-# type_print((f"From {from_date.strftime('%d-%m')}") + " " + (f"to {to_date.strftime('%d-%m')}") + " 2023, your pay before tax is £" + str(pay) + " for" + " " + str(hrs) + " hours\n")
-type_print((f" From {start_date.strftime('%d-%m-%Y')}") + (f" to {end_date.strftime('%d-%m-%Y')}") + " you worked " + str(days_worked) + " days, and")
-type_print(" your pay before tax is £" + str(pay))
+type_print((f"From {start_date.strftime('%d-%m')}") + " " + (f"to {end_date.strftime('%d-%m')}") + f" 2023, your pay before tax is £{pay:.2f} for {hrs} hours")
 time.sleep(1)
-# Calculating payment after tax - 20% tax is 0.2 and 13% NI is 0.13
+
+# Calculates amount after tax and national insurance deductions
 
 
 def final_pay(pay, tax, national_insurance):
@@ -334,15 +335,3 @@ else:
     time.sleep(1)
     type_print(" but you can hit the Run Program button above to start again.\n")
     quit()
-
-# Clear screen message once everything is complete - taken from Python 101
-
-# type_print("Your session is now complete.\n")
-# time.sleep(3)
-# type_print("This screen will clear itself in 3..")
-# time.sleep(1)
-# type_print("2..")
-# time.sleep(1)
-# type_print("1..")
-# time.sleep(1)
-# clearScreen()
