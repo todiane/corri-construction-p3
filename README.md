@@ -72,6 +72,8 @@ An opportunity to pick again if the wrong profession was selected has also been 
 ### Hourly pay and employee number
 Once a user has selected their name and profession and confirms the information is correct, the computer brings up confirmation of their hourly pay and contractor number.
 
+![CCCCP name](/assets/images/cc-rm-pay-number-confirmation.png)
+
 ### Working dates, days and hours
 The user is then prompted to add the dates they worked, the number of days and the number of hours. The number of days worked was not originally included in the program but after testing it was added to avoid any confusion about the days a contractor has worked. 
 
@@ -98,21 +100,45 @@ Once all information has been added the program will give a contractor a rough e
 
 Once the amount before and after tax has been shown the contractor can confirm that they would like this information submitted to HR. HR keep detailed information on the contractors they use and the hours they work. The information submitted is checked by a manager who confirms the working hours and days. Information on tax and NI payments is sent to the umbrella company.
 
+
+
 ### What the app checks
 
 
-- A name is inputted and not left blank. Instructions are given to only use letters to avoid a delay in payment.
-![CCCCP name](/assets/images/ccccp-rm-namecheck.webp)
+A name is inputted and not left blank. Instructions are given to only use letters to avoid a delay in payment.
+
+![CCCCP name](/assets/images/cc-rm-name-error.png)
 
 
-- Profession is chosen from a list of options
-![CCCCP name](/assets/images/ccccp-rm-profession.webp)
+Profession is chosen from a list of options
 
-- The dates (must be within a two month period), the total number of days and hours worked.
+![CCCCP professions](/assets/images/cc-rm-profession.png)
 
-- As per Working Time Regulations 1998 a maximum of 13 hours are allowed in a day. App checks that less than 13 hours is inputted if the dates show only one day was worked. It will also check for 13 hours over the days inputted e.g. 01-09-2023 - 03-09-2023 39 hours maximum can be added.
+The dates (must be within a two month period), the total number of days and hours worked.
 
-- Based on information provided a calculation is made to determine pay before tax and then pay after tax and NI deductions.
+![incorrect dates](/assets/images/cc-rm-incorrect-dates.png)
+
+
+As per Working Time Regulations 1998 a maximum of 13 hours are allowed in a day. App checks that less than 13 hours is inputted per day.
+
+![CCCCP hours](/assets/images/cc-rm-13.png)
+
+Hours can not exceed the dates.
+
+![incorrect hours](/assets/images/cc-rm-incorrect-hours.png)
+
+
+Based on information provided a calculation is made to determine pay before tax and then pay after tax and NI deductions.
+
+![CCCCP pay](/assets/images/cc-rm-check-information-ok.png)
+
+The program checks that the user is ready to submit this information. 
+
+If they select yes, they receive confirmation of submission
+
+![CCCCP pay](/assets/images/cc-rm-information-submitted.png)
+
+If they select no, they are invited to re-submit, as shown above.
 
 ## Technologies Used
 

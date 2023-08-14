@@ -65,7 +65,7 @@ while True:
         type_print(Fore.RED + " Last name is required. Please enter a valid First & Last name.")
         continue
     elif not last_name.isalpha():
-        type_print(Fore.RED + " First name should not contain numbers or symbols. Enter a valid Last name.")
+        type_print(Fore.RED + " Your name should not contain numbers or symbols. Re-enter name.")
         continue
     break
 
