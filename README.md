@@ -47,12 +47,56 @@ Code was written for each part of the program starting with the header and input
 i.e.
 In the "input name" section the user could hit enter and a blank space would be inputted so the first and last names were made required fields. Instructions were written to ensure each user understood the importance of entering their name only. After testing with required fields, the inability to add symbols and numbers was also added.
 
+![CCCCP name](/assets/images/cc-rm-name-error.png)
+
 In the "input dates and hours" section testing highlighted the fact that a user can enter that they worked for just one day but worked 36 hours. Additional coding was added to ensure the maximum number of hours worked in a day was 13 and that applied whether a user worked one day or 10.
 
+![CCCCP name](/assets/images/corri-rm-hours.webp)
 
-## How It Works
+![CCCCP name](/assets/images/cc-rm-incorrect-dates.png)
 
-Contractors are asked a series of questions after reading the instructions. 
+## Features
+
+### Slow Typing Instructions
+A staggered typing effect was used to display the instructions at the beginning and at different stages of the program at close to reading speed. The sleep effect was used to allow for delays in displaying the next line of information.
+This provided time for the user to process the information given before starting to input their details, the hope is that this will result in a reduction in input errors.
+
+### Name and profession input
+This feature gives the program the information it needs to find the contractor and connect to their employee number. An error message is displayed if an invalid letter is added:
+
+![CCCCP name](/assets/images/cc-rm-profession-invalid.png)
+
+An opportunity to pick again if the wrong profession was selected has also been given.
+![CCCCP name](/assets/images/cc-rm-profession-incorrect.png)
+
+### Hourly pay and employee number
+Once a user has selected their name and profession and confirms the information is correct, the computer brings up confirmation of their hourly pay and contractor number.
+
+### Working dates, days and hours
+The user is then prompted to add the dates they worked, the number of days and the number of hours. The number of days worked was not originally included in the program but after testing it was added to avoid any confusion about the days a contractor has worked. 
+
+![CCCCP name](/assets/images/cc-rm-incorrect-dates.png)
+
+The dates and number of days must match exactly otherwise the user cannot continue to add any further details. This avoids a contractor adding that they worked for 1-08-2023 to 7-08-2023 but they only worked 3 out of those 7 days. The contractor will then have to complete the exact number of days to continue moving forward.
+
+### Confirm information so far
+
+The user will be asked to confirm all the information they have submitted so far before being able to move on. 
+
+![CCCCP name](/assets/images/cc-rm-check-information.png)
+
+If anything needs to change e.g. name, professions, hours, dates etc. the contractor selects n for no.
+
+![CCCCP name](/assets/images/cc-rm-check-information-invalid.png)
+
+### Tax and National Insurance
+Once all information has been added the program will give a contractor a rough estimate of the tax and national insurance due, which is taken by an umbrella company they joined. The majority of self-employed contractors pay 20% tax or less so it wasn't felt necessary to include a 40% tax option for those earning more than £67,500 in a tax year. This could be added in the future if necessary.
+
+![CCCCP name](/assets/images/cc-rm-pay-number-confirmation.png)
+
+### Confirmation of information
+
+Once the amount before and after tax has been shown the contractor can confirm that they would like this information submitted to HR. HR keep detailed information on the contractors they use and the hours they work. The information submitted is checked by a manager who confirms the working hours and days. Information on tax and NI payments is sent to the umbrella company.
 
 ### What the app checks
 
@@ -64,7 +108,7 @@ Contractors are asked a series of questions after reading the instructions.
 - Profession is chosen from a list of options
 ![CCCCP name](/assets/images/ccccp-rm-profession.webp)
 
-- The dates worked (must be within a two month period), the total number of days and hours worked.
+- The dates (must be within a two month period), the total number of days and hours worked.
 
 - As per Working Time Regulations 1998 a maximum of 13 hours are allowed in a day. App checks that less than 13 hours is inputted if the dates show only one day was worked. It will also check for 13 hours over the days inputted e.g. 01-09-2023 - 03-09-2023 39 hours maximum can be added.
 
@@ -78,6 +122,13 @@ Codeanywhere
 GitHub
 HTML and CSS to change the background and add social media links.
 
+Libraries
+colorama Fore & Back
+random - to generate contractor number
+typing
+datetime
+
+
 ## Future Updates
 
 The next update of the app will include the option to choose whether it is their first visit (which will show the instructions) or whether they have used the service before - which will show the instructions behind a button.
@@ -87,6 +138,10 @@ The ability to edit information already added if it is incorrect without having 
 Contractor can input details of other payments that need to be removed from their pay e.g. student loan or pension.
 
 The program generates an employee number. An update of this app would be to link to a Google sheet where the number is saved so that if they returned and entered their name they will be given the same employee number and their past submissions will be listed.
+
+The ability for a manager to log into the system and confirm working dates and day for each contractor.
+
+Relevant information is accessible by the umbrella company so that HR doesn't have to collate and forward this information.
 
 ## Testing
 
