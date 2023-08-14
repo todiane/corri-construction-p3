@@ -1,30 +1,58 @@
 ![CCCCP header](/assets/images/ccccp-rm-header.webp)
 # Corri Construction Company - Contractor Page
 
-The deployed project live link is [HERE](https://corri-construction-p3-e9d1aa627f6f.herokuapp.com/) - Press Ctrl (Cmd) and mouse click to open in a new window.
+The deployed project live link is [HERE](https://corri-construction-p3-e9d1aa627f6f.herokuapp.com/) - *** Press Ctrl (Cmd) and mouse click to open in a new window. ***
 
-Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with calls from contractors asking different questions about their pay, so they asked for an app to be built that will help them manage these requests. 
+Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with calls from contractors asking different questions about their pay, many developers would store up three to four months of work before submitting their invoices, which caused payroll issues, so they asked for an app to be built that will help them manage contractors pay. 
 
-This app asks contractors to input their name, profession, working dates and number of hours. They are then given a rough estimate of payments due to them after tax and NI (which is handled by an umbrella company). Future updates will include the ability to save this information so that contractors can get an overview of their inputted data. Currently, the data is forwarded to HR and a copy to the contractor.
+This app asks contractors to input their name, profession, working dates, number of days worked and number of hours. They are then given a rough estimate of their pay due after tax and NI (which is handled by an umbrella company). The data is forwarded to HR with a copy also sent to the contractor's email address.
 
 ## Project Aims
 
-Reduce the number of calls from contractors to HR asking about their pay
-Encourge contractors to enter their working dates regularly (some contractors wait 3 or 4 months before submitting)
-It is important that the instructions are shown EACH TIME as contractors tend to ignore instructions if they are on another page and if there are gaps of 3 or 4 weeks in completing their dates they forget what needs to be added and call HR.
+- Reduce the number of calls from contractors to HR asking about their pay.
+- Encourge contractors to enter their working dates regularly and within a couple of months.
+- Provide a system that will send the information added by the contractor to HR as well as the user.
+- Provide clear, visible instructions with each visit.*
+
+*It is important that the instructions are shown EACH TIME a contractor visits. Having worked with contractors for several years, many of them have a tendency to dislike technology and not follow instructions. This then results in phone calls to HR that could easily be avoided. For this reason it was decided to leave the instructions in full view each time, rather than hide them behind an instruction button.
+
+### User goals:
+
+Get clear instructions on how to use the system in front of them that they can refer to if needed.
+The ability to input their details including dates of work, days, and hours.
+Retrieve their employee number.
+Get an estimate of tax and national insurance due to be paid.
+Receive a copy of the information inputted via email.
+
+
+### Site owner goals
+
+Provide a program that is easy to use and maintain.
+Present a program that gives clear instructions each time a contractor visits.
+Get access to the information inputted by users via email.
+Develop a program that can have additional features added at a later date.
+
 
 ### Pre development
-Wrote out how I wanted the app to work and what it will do
-Set up projects in GitHub to write out work that needed to be done
+As the program was being presented in one window I didn't feel the need for a wireframe but did write out the flow of what needed to be included. All I had to do then is follow my notes and code one area at a time before moving on to the next. I set up projects in GitHub to write out work that needed to be done.
+
+![CCCCP name](/assets/images/corri-constructionx500.webp)
+
+![CCCCP name](/assets/images/corri-rm-construction.webp)
 
 ### Development
 
+Code was written for each part of the program starting with the header and input for contractors to add their name. Once each section was working the development of the following section took place. Once all sections had been created testing took place which highlighted the need for additional features.
 
+i.e.
+In the "input name" section the user could hit enter and a blank space would be inputted so the first and last names were made required fields. Instructions were written to ensure each user understood the importance of entering their name only. After testing with required fields, the inability to add symbols and numbers was also added.
+
+In the "input dates and hours" section testing highlighted the fact that a user can enter that they worked for just one day but worked 36 hours. Additional coding was added to ensure the maximum number of hours worked in a day was 13 and that applied whether a user worked one day or 10.
 
 
 ## How It Works
 
-Contractors are asked a series of questions after reading the instructions. Having worked with contractors for several years, many of them have a tendency to dislike technology and not follow instructions. This then results in phone calls to HR that could easily be avoided. For this reason it was decided to leave the instructions in full view each time, rather than hide them behind an instruction button.
+Contractors are asked a series of questions after reading the instructions. 
 
 ### What the app checks
 
