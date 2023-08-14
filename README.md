@@ -1,13 +1,15 @@
 ![CCCCP header](/assets/images/ccccp-rm-header.webp)
 # Corri Construction Company - Contractor Page
 
-The deployed project live link is [HERE](https://corri-construction-p3-e9d1aa627f6f.herokuapp.com/) - *** Press Ctrl (Cmd) and mouse click to open in a new window. ***
+The deployed project live link is [HERE](https://corri-construction-p3-e9d1aa627f6f.herokuapp.com/) - ***Press Ctrl (Cmd) and mouse click to open in a new window.***
 
 Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with calls from contractors asking different questions about their pay, many developers would store up three to four months of work before submitting their invoices, which caused payroll issues, so they asked for an app to be built that will help them manage contractors pay. 
 
 This app asks contractors to input their name, profession, working dates, number of days worked and number of hours. They are then given a rough estimate of their pay due after tax and NI (which is handled by an umbrella company). The data is forwarded to HR with a copy also sent to the contractor's email address.
 
-## Project Aims
+## Project 
+
+The aim of this project is to:
 
 - Reduce the number of calls from contractors to HR asking about their pay.
 - Encourge contractors to enter their working dates regularly and within a couple of months.
@@ -36,9 +38,9 @@ Develop a program that can have additional features added at a later date.
 ### Pre development
 As the program was being presented in one window I didn't feel the need for a wireframe but did write out the flow of what needed to be included. All I had to do then is follow my notes and code one area at a time before moving on to the next. I set up projects in GitHub to write out work that needed to be done.
 
-![CCCCP name](/assets/images/corri-constructionx500.webp)
+![CCCCP notes](/assets/images/corri-constructionx500.webp)
 
-![CCCCP name](/assets/images/corri-rm-construction.webp)
+![CCCCP notes](/assets/images/corri-rm-construction.webp)
 
 ### Development
 
@@ -47,13 +49,13 @@ Code was written for each part of the program starting with the header and input
 i.e.
 In the "input name" section the user could hit enter and a blank space would be inputted so the first and last names were made required fields. Instructions were written to ensure each user understood the importance of entering their name only. After testing with required fields, the inability to add symbols and numbers was also added.
 
-![CCCCP name](/assets/images/cc-rm-name-error.png)
+![CCCCP name error](/assets/images/cc-rm-name-error.png)
 
 In the "input dates and hours" section testing highlighted the fact that a user can enter that they worked for just one day but worked 36 hours. Additional coding was added to ensure the maximum number of hours worked in a day was 13 and that applied whether a user worked one day or 10.
 
 ![CCCCP name](/assets/images/corri-rm-hours.webp)
 
-![CCCCP name](/assets/images/cc-rm-incorrect-dates.png)
+
 
 ## Features
 
@@ -62,22 +64,28 @@ A staggered typing effect was used to display the instructions at the beginning 
 This provided time for the user to process the information given before starting to input their details, the hope is that this will result in a reduction in input errors.
 
 ### Name and profession input
-This feature gives the program the information it needs to find the contractor and connect to their employee number. An error message is displayed if an invalid letter is added:
+This feature gives the program the information it needs to find the contractor and connect to their employee number. 
 
-![CCCCP name](/assets/images/cc-rm-profession-invalid.png)
+![CCCCP name](/assets/images/cc-rm-name.png)
+
+
+Next. The contractor is asked to select their profession. An error message is displayed if an invalid letter is added:
+
+![CCCCP profession](/assets/images/cc-rm-profession-invalid.png)
 
 An opportunity to pick again if the wrong profession was selected has also been given.
-![CCCCP name](/assets/images/cc-rm-profession-incorrect.png)
+
+![CCCCP profession](/assets/images/cc-rm-profession-incorrect.png)
 
 ### Hourly pay and employee number
-Once a user has selected their name and profession and confirms the information is correct, the computer brings up confirmation of their hourly pay and contractor number.
+Once a contractor has selected their name and profession and confirms the information is correct, the computer brings up confirmation of their hourly pay and contractor number.
 
-![CCCCP name](/assets/images/cc-rm-pay-number-confirmation.png)
+![CCCCP pay](/assets/images/cc-rm-pay-number-confirmation.png)
 
 ### Working dates, days and hours
-The user is then prompted to add the dates they worked, the number of days and the number of hours. The number of days worked was not originally included in the program but after testing it was added to avoid any confusion about the days a contractor has worked. 
+The contractor is then prompted to add the dates they worked, the number of days and the number of hours. The number of days worked was not originally included in the program but after testing it was added to avoid any confusion about the days a contractor has worked. 
 
-![CCCCP name](/assets/images/cc-rm-incorrect-dates.png)
+![CCCCP dates](/assets/images/cc-rm-incorrect-dates.png)
 
 The dates and number of days must match exactly otherwise the user cannot continue to add any further details. This avoids a contractor adding that they worked for 1-08-2023 to 7-08-2023 but they only worked 3 out of those 7 days. The contractor will then have to complete the exact number of days to continue moving forward.
 
@@ -85,16 +93,16 @@ The dates and number of days must match exactly otherwise the user cannot contin
 
 The user will be asked to confirm all the information they have submitted so far before being able to move on. 
 
-![CCCCP name](/assets/images/cc-rm-check-information.png)
+![CCCCP check](/assets/images/cc-rm-check-information.png)
 
 If anything needs to change e.g. name, professions, hours, dates etc. the contractor selects n for no.
 
-![CCCCP name](/assets/images/cc-rm-check-information-invalid.png)
+![CCCCP no selection](/assets/images/cc-rm-check-information-invalid.png)
 
 ### Tax and National Insurance
 Once all information has been added the program will give a contractor a rough estimate of the tax and national insurance due, which is taken by an umbrella company they joined. The majority of self-employed contractors pay 20% tax or less so it wasn't felt necessary to include a 40% tax option for those earning more than £67,500 in a tax year. This could be added in the future if necessary.
 
-![CCCCP name](/assets/images/cc-rm-pay-number-confirmation.png)
+![CCCCP pay](/assets/images/cc-rm-pay-number-confirmation.png)
 
 ### Confirmation of information
 
@@ -125,34 +133,37 @@ As per Working Time Regulations 1998 a maximum of 13 hours are allowed in a day.
 
 Hours can not exceed the dates.
 
-![incorrect hours](/assets/images/cc-rm-incorrect-hours.png)
-
 
 Based on information provided a calculation is made to determine pay before tax and then pay after tax and NI deductions.
 
-![CCCCP pay](/assets/images/cc-rm-check-information-ok.png)
+![CCCCP confirm](/assets/images/cc-rm-check-information-ok.png)
 
 The program checks that the user is ready to submit this information. 
 
 If they select yes, they receive confirmation of submission
 
-![CCCCP pay](/assets/images/cc-rm-information-submitted.png)
+![CCCCP submission](/assets/images/cc-rm-information-submitted.png)
 
 If they select no, they are invited to re-submit, as shown above.
 
 ## Technologies Used
 
-Python
-Python autograder - to help me write/blend code together and test before adding to run.py
-Codeanywhere
-GitHub
+The main technology used to create this program is Python
 HTML and CSS to change the background and add social media links.
 
-Libraries
-colorama Fore & Back
-random - to generate contractor number
-typing
-datetime
+### Resources
+
+Codeanywhere 
+GitHub 
+Heroku
+Font Awesome
+
+### Libraries
+![colorama Fore & Back](https://pypi.org/project/colorama/)
+![random](https://docs.python.org/3/library/random.html) - to generate contractor number
+![typing](https://www.101computing.net/python-typing-text-effect/))
+![datetime](https://www.programiz.com/python-programming/datetime)
+![sleep](https://www.programiz.com/python-programming/time/sleep) - function for delays in typing out lines
 
 
 ## Future Updates
@@ -192,7 +203,6 @@ To change numerical value to end in two figures only - [here](https://tutorial.e
 
 Using colorama import - [here](https://www.youtube.com/watch?v=u51Zjlnui4Y )
 
-Using typing font effect and clear screen [here](https://www.101computing.net/python-typing-text-effect/)
 
 Being able to bold and center font - taken from w3Schools - [here](https://www.w3schools.com/python/ref_string_center.asp)
 
