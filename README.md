@@ -142,6 +142,7 @@ Hours can not exceed the dates.
 
 Based on information provided a calculation is made to determine pay before tax and then pay after tax and NI deductions.
 
+
 ![CCCCP confirm](/assets/images/cc-rm-check-information-ok.png)
 
 The program checks that the user is ready to submit this information. 
@@ -190,7 +191,50 @@ Relevant information is accessible by the umbrella company so that HR doesn't ha
 
 ## Testing
 
+The following tests were carried out to ensure the portal is working correctly
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Instructions | User is given typed out instructions | Intro screen presented | Works as expected |
+| Name input | User is asked to enter their name | First & Last name input| Works as expected | 
+| Name input | User inputs symbol or number | Error message appears | Works as expected | 
+| Profession | User selects their profession | User selects a - f | Works as expected | 
+| Profession | User selects invalid letter | Error message appears | Works as expected | 
+| Information | User given contractor No & pay | Information confirmed as true | Works as expected |
+| Information | Information entered incorrect | Notice appears to start again| Works as expected |
+| Dates & hours | User adds dates, days and hours | Correct information confirmed | Works as expected |
+| Dates & hours | Incorrect information added | Error message appears | Works as expected |
+| "n" option  | User selects no to confirmation | Notice appears to start again | Works as expected |
+| Confirmed Info | Everything entered presented | Pay amount minus tax & NI appears | Works as expected |
+| Submit info | Everything entered ready to submit | Users clicks y to submit | Works as expected |
+| Submit info | Ready to submit, n selected | Notice appears to start again | Works as expected |
+
+
 ## Validation
+
+## Deployment
+
+### Heroku
+
+The Application has been deployed from GitHub to Heroku by following the steps:
+
+1. Create or log in to your account at heroku.com
+2. Create a new app, add a unique app name ( for example corri-construction-p3) and then choose your region
+3. Click on create app
+4. Go to "Settings"
+5. Under Config Vars add a key 'PORT' and value '8000'.
+6. Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom
+7. Go to "Deploy" and select "GitHub" in "Deployment method"
+8. To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below.
+9.  Choose the branch you want to buid your app from
+10. If prefered, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
+11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
+
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on the Fork button in the top right corner
+3. Copy of the repository will be in your own GitHub account.
+   
 
 ## Bugs
 
