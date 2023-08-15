@@ -3,9 +3,9 @@
 
 The deployed project live link is [HERE](https://corri-construction-p3-e9d1aa627f6f.herokuapp.com/) - ***Press Ctrl (Cmd) and mouse click to open in a new window.***
 
-Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with daily calls from contractors asking different questions about their pay. Many developers would store up three to four months of work before submitting their invoices, which caused payroll issues. A consultation took place with the company and contractors to discuss the best way to get regular pay invoices from contractors and to reduce the HR call volume. The end result of the consultation was the request for a portal to be built that will help them manage contractors pay. 
+Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with daily calls from contractors asking different questions about their pay. Many contractors would store up three to four months of work before submitting their invoices, which caused payroll issues. A consultation took place with the company and contractors to discuss the best way to get regular pay invoices from contractors and to reduce the HR call volume. The end result of the consultation was the request for a portal to be built that will help them manage contractors pay. 
 
-This portal asks contractors to input their name, profession, working dates, number of days worked and number of hours. They are then given a rough estimate of their pay due after tax and NI (which is handled by an umbrella company). The data is forwarded to HR (who extract information for the umbreall company) with a copy also sent to the contractor's email address.
+This portal asks contractors to input their name, profession, working dates, number of days worked and number of hours. They are then given a rough estimate of their pay due after tax and NI (which is handled by an umbrella company). The data is forwarded to HR (who extract information for the umbrella company) with a copy also sent to the contractor's email address.
 
 ## Project 
 
@@ -17,8 +17,6 @@ The aim of this project is to:
 - Provide clear, visible instructions with each visit.*
 
 ![storyboard](assets/images/ccccp-storyboard-small.png)
-
-Larger storyboard version [here]
 
 
 *Contractors felt that it was important for the instructions to be shown EACH TIME a contractor visits. In a questionnaire sent out many of them cited their dislike of technology and the fact that they tend to ignore instructions unless they are in front of them. This then results in phone calls to HR that could easily be avoided. For this reason it was decided to leave the instructions in full view each time, rather than hide them behind an instruction button.
@@ -41,7 +39,7 @@ Develop a program that can have additional features added at a later date.
 
 
 ### Pre development
-As the program was being presented in one window I didn't feel the need for a wireframe but did write out the flow of what needed to be included. All I had to do then is follow my notes and code one area at a time before moving on to the next. I set up projects in GitHub to write out work that needed to be done.
+I wrote out notes and createda flow chart. All I had to do then is follow my notes and code one area at a time before moving on to the next. I set up projects in GitHub to write out work that needed to be done.
 
 ![ccccp flow chart](/assets/images/ccccp-flow-chart.png)
 
@@ -111,7 +109,7 @@ If anything needs to change e.g. name, professions, hours, dates etc. the contra
 ### Tax and National Insurance
 Once all information has been added the program will give a contractor a rough estimate of the tax and national insurance due, which is taken by an umbrella company they joined. The majority of self-employed contractors pay 20% tax or less so it wasn't felt necessary to include a 40% tax option for those earning more than £67,500 in a tax year. This could be added in the future if necessary.
 
-![CCCCP pay](/assets/images/cc-rm-pay-number-confirmation.png)
+![CCCCP confirm](/assets/images/cc-rm-check-information-ok.png)
 
 ### Confirmation of information
 
@@ -169,11 +167,11 @@ Canva for help with images
 miro.com to create flow chart
 
 ### Libraries
-![colorama Fore & Back](https://pypi.org/project/colorama/)
-![random](https://docs.python.org/3/library/random.html) - to generate contractor number
-![typing](https://www.101computing.net/python-typing-text-effect/))
-![datetime](https://www.programiz.com/python-programming/datetime)
-![sleep](https://www.programiz.com/python-programming/time/sleep) - function for delays in typing out lines
+[colorama Fore & Back](https://pypi.org/project/colorama/)
+[random](https://docs.python.org/3/library/random.html) - to generate contractor number
+[typing](https://www.101computing.net/python-typing-text-effect/))
+[datetime](https://www.programiz.com/python-programming/datetime)
+[sleep](https://www.programiz.com/python-programming/time/sleep) - function for delays in typing out lines
 
 
 ## Future Updates
@@ -184,7 +182,7 @@ The ability to edit information already added if it is incorrect without having 
 
 Contractor can input details of other payments that need to be removed from their pay e.g. student loan or pension.
 
-The program generates an employee number. An update of this app would be to link to a Google sheet where the number is saved so that if they returned and entered their name they will be given the same employee number and their past submissions will be listed.
+The program already generates an employee number. An update of this app would be to link to a Google sheet where the number is saved so that if they returned and entered their name they will be given the same employee number and their past submissions will be listed.
 
 The ability for a manager to log into the system and confirm working dates and day for each contractor.
 
