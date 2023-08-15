@@ -1,4 +1,4 @@
-![CCCCP header](/assets/images/ccccp-rm-header.webp)
+![CCCCP header](/assets/images/cc-rm-instructions.png)
 # Corri Construction Company - Contractor Page
 
 The deployed project live link is [HERE](https://corri-construction-p3-e9d1aa627f6f.herokuapp.com/) - ***Press Ctrl (Cmd) and mouse click to open in a new window.***
