@@ -3,9 +3,9 @@
 
 The deployed project live link is [HERE](https://corri-construction-p3-e9d1aa627f6f.herokuapp.com/) - ***Press Ctrl (Cmd) and mouse click to open in a new window.***
 
-Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with calls from contractors asking different questions about their pay, many developers would store up three to four months of work before submitting their invoices, which caused payroll issues, so they asked for an app to be built that will help them manage contractors pay. 
+Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with daily calls from contractors asking different questions about their pay. Many developers would store up three to four months of work before submitting their invoices, which caused payroll issues. A consultation took place with the company and contractors to discuss the best way to get regular pay invoices from contractors and to reduce the HR call volume. The end result of the consultation was the request for a portal to be built that will help them manage contractors pay. 
 
-This app asks contractors to input their name, profession, working dates, number of days worked and number of hours. They are then given a rough estimate of their pay due after tax and NI (which is handled by an umbrella company). The data is forwarded to HR with a copy also sent to the contractor's email address.
+This portal asks contractors to input their name, profession, working dates, number of days worked and number of hours. They are then given a rough estimate of their pay due after tax and NI (which is handled by an umbrella company). The data is forwarded to HR (who extract information for the umbreall company) with a copy also sent to the contractor's email address.
 
 ## Project 
 
@@ -16,7 +16,12 @@ The aim of this project is to:
 - Provide a system that will send the information added by the contractor to HR as well as the user.
 - Provide clear, visible instructions with each visit.*
 
-*It is important that the instructions are shown EACH TIME a contractor visits. Having worked with contractors for several years, many of them have a tendency to dislike technology and not follow instructions. This then results in phone calls to HR that could easily be avoided. For this reason it was decided to leave the instructions in full view each time, rather than hide them behind an instruction button.
+![storyboard](assets/images/ccccp-storyboard-small.png)
+
+Larger storyboard version [here]
+
+
+*Contractors felt that it was important for the instructions to be shown EACH TIME a contractor visits. In a questionnaire sent out many of them cited their dislike of technology and the fact that they tend to ignore instructions unless they are in front of them. This then results in phone calls to HR that could easily be avoided. For this reason it was decided to leave the instructions in full view each time, rather than hide them behind an instruction button.
 
 ### User goals:
 
@@ -37,6 +42,10 @@ Develop a program that can have additional features added at a later date.
 
 ### Pre development
 As the program was being presented in one window I didn't feel the need for a wireframe but did write out the flow of what needed to be included. All I had to do then is follow my notes and code one area at a time before moving on to the next. I set up projects in GitHub to write out work that needed to be done.
+
+![ccccp flow chart](/assets/images/ccccp-flow-chart.png)
+
+My actual notes that created the flow chart
 
 ![CCCCP notes](/assets/images/corri-constructionx500.webp)
 
@@ -109,8 +118,7 @@ Once all information has been added the program will give a contractor a rough e
 Once the amount before and after tax has been shown the contractor can confirm that they would like this information submitted to HR. HR keep detailed information on the contractors they use and the hours they work. The information submitted is checked by a manager who confirms the working hours and days. Information on tax and NI payments is sent to the umbrella company.
 
 
-
-### What the app checks
+### What the portal checks
 
 
 A name is inputted and not left blank. Instructions are given to only use letters to avoid a delay in payment.
@@ -157,6 +165,8 @@ Codeanywhere
 GitHub 
 Heroku
 Font Awesome
+Canva for help with images
+miro.com to create flow chart
 
 ### Libraries
 ![colorama Fore & Back](https://pypi.org/project/colorama/)
