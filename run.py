@@ -105,7 +105,7 @@ def get_profession_choice():
         list of options again
         """
         if choice in professions:
-            confirm = input(f" You chose {professions[choice]['name']}. Is this correct? (y/n): ").lower()
+            confirm = input(f" You chose {professions[choice]['name']}. Is this correct? Enter (y/n) only: ").lower()
             if confirm == "y":
                 return professions[choice]
         else:
@@ -183,7 +183,7 @@ while True:
         print(Fore.RED + " Error: Invalid info. Check your date. The year and days worked.")
 
 # Ask user to confirm the information added is correct
-info_confirm = input(Fore.GREEN + f"\n Check that the information added so far is correct & confirm. Enter (y/n): ").lower()
+info_confirm = input(Fore.GREEN + f"\n Check that the information added so far is correct & confirm. Enter (y/n) only: ").lower()
 if info_confirm == "y":
     type_print(Fore.WHITE + "\n Thank you, " + first_name + ".")
     time.sleep(1)

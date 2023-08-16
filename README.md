@@ -39,7 +39,7 @@ Develop a program that can have additional features added at a later date.
 
 
 ### Pre development
-I wrote out notes and createda flow chart. All I had to do then is follow my notes and code one area at a time before moving on to the next. I set up projects in GitHub to write out work that needed to be done.
+I wrote out notes and created a flow chart. All I had to do then is follow my notes and code one area at a time before moving on to the next. I set up projects in GitHub to write out work that needed to be done.
 
 ![ccccp flow chart](/assets/images/ccccp-flow-chart.png)
 
@@ -249,7 +249,7 @@ py4e autograder to help with checking maths - [here](https://www.py4e.com/tsugi/
 Geek for Geek to help me use strip() to add required field for first/last name - [here](https://www.geeksforgeeks.org/python-program-to-check-if-string-is-empty-or-not/)
 
 
-Help putting together the function that calculates income tax and national insurance I started with this video and adapated it - [here](https://www.youtube.com/watch?v=b4lok6-_GGg )
+Help putting together the function that calculates income tax and national insurance I started with this video and adapted it - [here](https://www.youtube.com/watch?v=b4lok6-_GGg )
 
 To change numerical value to end in two figures only - [here](https://tutorial.eyehunts.com/python/how-to-display-2-decimal-places-in-python-example-code/)
 
