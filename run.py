@@ -180,7 +180,8 @@ while True:
             print(" You have entered " + str(hrs) + " hours for " + str(days_worked) + " days.")
             break
     except ValueError:
-        print(Fore.RED + " Error: Invalid info. Check your date. The year and days worked.")
+        print(Fore.RED + " Error: Check your dates match, your days add up and/or your hours.")
+        print(Fore.RED + " NUMBERS ONLY in this section. Anything else is invalid and you will have to re-enter.")
 
 # Ask user to confirm the information added is correct
 info_confirm = input(Fore.GREEN + f"\n Confirm the information added so far is correct. Enter (y/n) only: ").lower()
@@ -240,12 +241,12 @@ while True:
     exit = input(Fore.GREEN + " Information Complete. Select y to submit or n to continue (y/n): ").lower()
     
     if exit == "y":
-        print(Fore.WHITE + "\n Information successfully submitted to HR. Thank you " + first_name + ".")
-        # rest of code
-        break
+        type_print(Fore.WHITE + "\n Information successfully submitted to HR. Thank you " + first_name + ".")
+        type_print(Fore.WHITE + "\n You can now exit the program.")
+        sys.exit()
     elif exit == "n":
-        print(Back.RED + Fore.WHITE + "\n Okay. You can't edit anything already entered " + first_name + ",")
-        print(" but you can restart the program to start again.")
+        type_print(Back.RED + Fore.WHITE + "\n Okay. You can't edit anything already entered " + first_name + ",")
+        type_print(" but you can restart the program to start again.")
         sys.exit()
     else:
         print(Fore.RED + " Invalid input. Please enter y or n only.")
