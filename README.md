@@ -12,7 +12,7 @@ This portal asks contractors to input their name, profession, working dates, num
 The aim of this project is to:
 
 - Reduce the number of calls from contractors to HR asking about their pay.
-- Encourge contractors to enter their working dates regularly and within a couple of months.
+- Encourage contractors to enter their working dates regularly and within a couple of months.
 - Provide a system that will send the information added by the contractor to HR as well as the user.
 - Provide clear, visible instructions with each visit.*
 
@@ -161,6 +161,7 @@ HTML and CSS to change the background and add social media links.
 ### Resources
 
 Codeanywhere 
+Visual Studio Code (VSC)
 GitHub 
 Heroku
 Font Awesome
@@ -209,6 +210,7 @@ The following tests were carried out to ensure the portal is working correctly
 | Submit info | Everything entered ready to submit | Users clicks y to submit | Works as expected |
 | Submit info | Ready to submit, n selected | Notice appears to start again | Works as expected |
 
+Thanks to Cheryl at Code Institute who highlighted if an x is entered instead of y/n an error message does not show up. Error message added and I updated the statement to make it clear only y or n should be inputted.
 
 ## Validation
 
@@ -226,14 +228,17 @@ The Application has been deployed from GitHub to Heroku by following the steps:
 6. Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom
 7. Go to "Deploy" and select "GitHub" in "Deployment method"
 8. To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below.
-9.  Choose the branch you want to buid your app from
-10. If prefered, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
+9.  Choose the branch you want to build your app from
+10. If preferred, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
 11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
 
-### Forking the GitHub Repository
-1. Go to the GitHub repository
-2. Click on the Fork button in the top right corner
-3. Copy of the repository will be in your own GitHub account.
+### Branching the GitHub Repository using GitHub Desktop and Visual Studio Code
+1. Go to the GitHub repository.
+2. Click on the branch button in the left hand side under the repository name.
+3. Give your branch a name.
+4. Go to the CODE area on the right and select "Open with GitHub Desktop"
+5. You will be asked if you want to clone the repository - say yes
+6. GitHub desktop will suggest what to do next - select Open code using Visual Studio Code
    
 
 ## Bugs

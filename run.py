@@ -183,7 +183,7 @@ while True:
         print(Fore.RED + " Error: Invalid info. Check your date. The year and days worked.")
 
 # Ask user to confirm the information added is correct
-info_confirm = input(Fore.GREEN + f"\n Check that the information added so far is correct & confirm. Enter (y/n) only: ").lower()
+info_confirm = input(Fore.GREEN + f"\n Confirm the information added so far is correct. Enter (y/n) only: ").lower()
 if info_confirm == "y":
     type_print(Fore.WHITE + "\n Thank you, " + first_name + ".")
     time.sleep(1)
@@ -193,6 +193,7 @@ else:
     time.sleep(1)
     type_print(Fore.WHITE + " but you can hit the" + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button above to start again.")
     quit()
+
 
 # Confirm information of profession rate, dates, hours plus tax amount
 type_print("\n This information will be authorised by your manager:\n")
