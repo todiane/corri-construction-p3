@@ -183,16 +183,18 @@ while True:
         print(Fore.RED + " Error: Invalid info. Check your date. The year and days worked.")
 
 # Ask user to confirm the information added is correct
-info_confirm = input(Fore.GREEN + f"\n Confirm the information added so far is correct. Enter (y/n) only: ").lower()
-if info_confirm == "y":
-    type_print(Fore.WHITE + "\n Thank you, " + first_name + ".")
-    time.sleep(1)
+info_confirm = input(Fore.GREEN + f"\nConfirm the information added so far is correct. Enter (y/n) only: ").lower()
 
+while info_confirm not in ["y", "n"]:
+    print(Fore.RED + "\nInvalid input. Please enter y or n only.")
+    info_confirm = input(Fore.GREEN + "\nPlease enter y or n: ").lower()
+
+if info_confirm == "y":
+    print(Fore.WHITE + "\nThank you, " + first_name + ".")
 else:
-    type_print(Back.RED + Fore.WHITE + "\n Okay. You can't edit anything already entered " + first_name + ",")
-    time.sleep(1)
-    type_print(Fore.WHITE + " but you can hit the" + Fore.GREEN + "'RUN CONTRACTOR PROGRAM'" + Fore.WHITE + " button above to start again.")
-    quit()
+    print(Back.RED + Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",") 
+    print(Fore.WHITE + "but you can restart the program to start again.")
+    sys.exit()
 
 
 # Confirm information of profession rate, dates, hours plus tax amount
@@ -243,11 +245,12 @@ if exit == "y":
     print(" If you have any questions contact HR on 01305 483048.\n")
     time.sleep(1)
     type_print(Fore.GREEN + " You can now exit this window " + first_name + ".")
-    quit()
-
-
+    sys.exit()
+while info_confirm not in ["y", "n"]:
+    print(Fore.RED + "\nInvalid input. Please enter y or n only.")
+    info_confirm = input(Fore.GREEN + "\nPlease enter y or n: ").lower()
 else:
     type_print(Back.RED + Fore.WHITE + "\n Okay. You can't edit anything already entered " + first_name + ",")
     time.sleep(1)
     type_print(" but you can hit the Run Program button above to start again.\n")
-    quit()
+    sys.exit()
