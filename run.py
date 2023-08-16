@@ -183,17 +183,17 @@ while True:
         print(Fore.RED + " Error: Invalid info. Check your date. The year and days worked.")
 
 # Ask user to confirm the information added is correct
-info_confirm = input(Fore.GREEN + f"\nConfirm the information added so far is correct. Enter (y/n) only: ").lower()
+info_confirm = input(Fore.GREEN + f"\n Confirm the information added so far is correct. Enter (y/n) only: ").lower()
 
 while info_confirm not in ["y", "n"]:
-    print(Fore.RED + "\nInvalid input. Please enter y or n only.")
-    info_confirm = input(Fore.GREEN + "\nPlease enter y or n: ").lower()
+    print(Fore.RED + "\n Error: Invalid input. Please enter y or n only.")
+    info_confirm = input(Fore.GREEN + "\n Please enter either y or n to continue: ").lower()
 
 if info_confirm == "y":
-    print(Fore.WHITE + "\nThank you, " + first_name + ".")
+    print(Fore.WHITE + "\n Thank you, " + first_name + ".")
 else:
-    print(Back.RED + Fore.WHITE + "\nOkay. You can't edit anything already entered " + first_name + ",") 
-    print(Fore.WHITE + "but you can restart the program to start again.")
+    print(Back.RED + Fore.WHITE + "\n Okay. You can't edit anything already entered " + first_name + ",") 
+    print(Fore.WHITE + " but you can restart the program to start again.")
     sys.exit()
 
 
@@ -235,22 +235,17 @@ time.sleep(1)
 print('')
 type_print(" If you have any questions contact HR on 01305 483048.\n")
 
-# Ask user if they want to exit
-exit = input(Fore.GREEN + f" Information Complete. Select y to submit or n to continue (y/n): ").lower()
-if exit == "y":
-    type_print(Fore.WHITE + "\n Information successfully submitted to HR. Thank you " + first_name + ".")
-    time.sleep(1)
-    print('')
-    type_print(" A copy has been sent to the email address we have on file for you.")
-    print(" If you have any questions contact HR on 01305 483048.\n")
-    time.sleep(1)
-    type_print(Fore.GREEN + " You can now exit this window " + first_name + ".")
-    sys.exit()
-while info_confirm not in ["y", "n"]:
-    print(Fore.RED + "\nInvalid input. Please enter y or n only.")
-    info_confirm = input(Fore.GREEN + "\nPlease enter y or n: ").lower()
-else:
-    type_print(Back.RED + Fore.WHITE + "\n Okay. You can't edit anything already entered " + first_name + ",")
-    time.sleep(1)
-    type_print(" but you can hit the Run Program button above to start again.\n")
-    sys.exit()
+# Ask user if they want to exit  
+while True:
+    exit = input(Fore.GREEN + " Information Complete. Select y to submit or n to continue (y/n): ").lower()
+    
+    if exit == "y":
+        print(Fore.WHITE + "\n Information successfully submitted to HR. Thank you " + first_name + ".")
+        # rest of code
+        break
+    elif exit == "n":
+        print(Back.RED + Fore.WHITE + "\n Okay. You can't edit anything already entered " + first_name + ",")
+        print(" but you can restart the program to start again.")
+        sys.exit()
+    else:
+        print(Fore.RED + " Invalid input. Please enter y or n only.")
