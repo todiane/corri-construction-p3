@@ -198,7 +198,7 @@ if __name__ == "__main__":
         print(Back.RED + Fore.WHITE + "\n Okay. You can't edit anything already entered " + first_name + ",")
         print(Fore.WHITE + " but you can restart the program to start again.")
         sys.exit()
-    
+
     # User given full pay details before and after tax/NI
 
     type_print("\n This information will be authorised by your manager:\n")
@@ -230,6 +230,8 @@ if __name__ == "__main__":
     time.sleep(1)
     print('')
     type_print(" If you have any questions contact HR on 01305 483048.\n")
+
+    # User asked to confirm information is complete
 
     while True:
         exit = input(Fore.GREEN + " Information Complete. Select y to submit or n to continue (y/n): ").lower()
