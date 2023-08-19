@@ -39,7 +39,7 @@ Develop a program that can have additional features added at a later date.
 
 
 ### Pre development
-I wrote out notes and created a flow chart. All I had to do then is follow my notes and code one area at a time before moving on to the next. I set up projects in GitHub to write out work that needed to be done.
+I wrote out notes and created a flow chart. All I had to do then is follow my notes and code one area at a time before moving on to the next. I set up projects in GitHub to write out work that needed to be done. The aim is to provide early and continuous delivery of the project.
 
 ![ccccp flow chart](/assets/images/ccccp-flow-chart.png)
 
@@ -58,7 +58,7 @@ In the "input name" section the user could hit enter and a blank space would be 
 
 ![CCCCP name error](/assets/images/cc-rm-name-error.png)
 
-In the "input dates and hours" section testing highlighted the fact that a user can enter that they worked for just one day but worked 36 hours. Additional coding was added to ensure the maximum number of hours worked in a day was 13 and that applied whether a user worked one day or 10.
+In the "input dates and hours" section testing highlighted the fact that a customer can enter that they worked for just one day but worked 36 hours. Additional coding was added to ensure the maximum number of hours worked in a day was 13 and that applied whether a user worked one day or 10.
 
 ![CCCCP name](/assets/images/corri-rm-hours.webp)
 
@@ -68,7 +68,7 @@ In the "input dates and hours" section testing highlighted the fact that a user 
 
 ### Slow Typing Instructions
 A staggered typing effect was used to display the instructions at the beginning and at different stages of the program at close to reading speed. The sleep effect was used to allow for delays in displaying the next line of information.
-This provided time for the user to process the information given before starting to input their details, the hope is that this will result in a reduction in input errors.
+This provided time for the customer to process the information given before starting to input their details, the hope is that this will result in a reduction in input errors.
 
 ### Name and profession input
 This feature gives the program the information it needs to find the contractor and connect to their employee number. 
@@ -98,7 +98,7 @@ The dates and number of days must match exactly otherwise the user cannot contin
 
 ### Confirm information so far
 
-The user will be asked to confirm all the information they have submitted so far before being able to move on. 
+The contractor will be asked to confirm all the information they have submitted so far before being able to move on. 
 
 ![CCCCP check](/assets/images/cc-rm-check-information.png)
 
@@ -145,7 +145,7 @@ Based on information provided a calculation is made to determine pay before tax 
 
 ![CCCCP confirm](/assets/images/cc-rm-check-information-ok.png)
 
-The program checks that the user is ready to submit this information. 
+The program checks that the contractor is ready to submit this information. 
 
 If they select yes, they receive confirmation of submission
 
@@ -175,21 +175,6 @@ miro.com to create flow chart
 [datetime](https://www.programiz.com/python-programming/datetime)
 [sleep](https://www.programiz.com/python-programming/time/sleep) - function for delays in typing out lines
 
-
-## Future Updates
-
-The next update of the app will include the option to choose whether it is their first visit (which will show the instructions) or whether they have used the service before - which will show the instructions behind a button.
-
-The ability to edit information already added if it is incorrect without having to start again.
-
-Contractor can input details of other payments that need to be removed from their pay e.g. student loan or pension.
-
-The program already generates an employee number. An update of this app would be to link to a Google sheet where the number is saved so that if they returned and entered their name they will be given the same employee number and their past submissions will be listed.
-
-The ability for a manager to log into the system and confirm working dates and day for each contractor.
-
-Relevant information is accessible by the umbrella company so that HR doesn't have to collate and forward this information.
-
 ## Testing
 
 The following tests were carried out to ensure the portal is working correctly
@@ -211,6 +196,20 @@ The following tests were carried out to ensure the portal is working correctly
 | Submit info | Ready to submit, n selected | Notice appears to start again | Works as expected |
 
 Thanks to Cheryl at Code Institute who highlighted if an x is entered instead of y/n an error message does not show up. Error message added and I updated the statement to make it clear only y or n should be inputted.
+
+A focus group with the customer and contractors was held so that contractors could run through the portal and provide feedback. This resulted in small changes being made to the current features and a list of potential future updates.
+
+## Future Updates
+
+The next update of the app will include the option to choose whether it is their first visit (which will show the instructions) or whether they have used the service before - which will show the instructions behind a button.
+
+The ability to edit information already added if it is incorrect without having to start again.
+
+Contractor can selection options for other payments that need to be removed from their pay e.g. student loan or pension to make their final pay amount more accurate.
+
+The ability for a manager to log into the system and confirm working dates and days for each contractor all in one place rather than via separate emails.
+
+Relevant information is accessible by the umbrella company so that HR doesn't have to collate and forward this information.
 
 ## Validation
 
