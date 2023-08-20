@@ -234,7 +234,7 @@ if __name__ == "__main__":
 
 
     pay_statement = Fore.YELLOW + (f"\n Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}")
-    pay_summary = pay_statement.center(80)
+    pay_summary = pay_statement.center(50)
     type_print(pay_summary)
     time.sleep(1)
 
@@ -251,10 +251,15 @@ if __name__ == "__main__":
   
     # Adds information collected from user to the Google data sheet
 
-    data = [first_name, last_name, chosen_profession['name'], start_date_str, end_date_str, pay_after]
+    data = [first_name, last_name, chosen_profession['name'], start_date_str, end_date_str, pay]
 
     payments_worksheet = SHEET.worksheet("payments")
     payments_worksheet.append_row(data)
+
+    data2 = [first_name, last_name, chosen_profession['name'], pay, tax_amount, national_insurance_amount]
+
+    payments_worksheet = SHEET.worksheet("tax")
+    payments_worksheet.append_row(data2)
 
     # User asked to confirm information is complete
 
@@ -263,7 +268,8 @@ if __name__ == "__main__":
 
         if exit == "y":
             type_print(Fore.WHITE + "\n Information successfully submitted to HR. Thank you " + first_name + ".")
-            type_print(Fore.WHITE + "\n You can now exit the program.")
+            type_print(Fore.WHITE + "\n You will be paid within the next 10 working days.")
+            type_print(Fore.WHITE + "\n We have updated our records. You can now exit the program.")
             sys.exit()
         elif exit == "n":
             type_print(Back.RED + Fore.WHITE + "\n Okay. You can't edit anything already entered " + first_name + ",")
