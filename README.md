@@ -36,6 +36,7 @@ Provide a program that is easy to use and maintain.
 Present a program that gives clear instructions each time a contractor visits.
 Get access to the information inputted by users via email.
 Develop a program that can have additional features added at a later date.
+Add the submitted information to Google Sheets with one sheet for information before tax and the other sheet containing tax and national insurance information.
 
 
 ### Pre development
@@ -152,6 +153,32 @@ If they select yes, they receive confirmation of submission
 ![CCCCP submission](/assets/images/cc-rm-information-submitted.png)
 
 If they select no, they are invited to re-submit, as shown above.
+
+## Google Sheets
+
+Using Google sheets wasn't part of the original project spec and was added after all the code was created, tested and working. The sheet contains two sections
+
+### Payments
+In this area the following contractor information is included:
+
+- First name
+- Last name
+- Profession
+- Start date
+- End date
+- Pay before tax
+
+### Tax
+In this area the following contractor information is included:
+
+- First name
+- Last name
+- Profession
+- Pay before tax
+- Tax to pay
+- National Insurance to pay
+
+This information is sent to the umbrella company.
 
 ## Technologies Used
 
