@@ -248,7 +248,7 @@ if __name__ == "__main__":
     print('')
     type_print(" If you have any questions contact HR on 01305 483048.\n")
 
-   
+  
     # Adds information collected from user to the Google data sheet
 
     data = [first_name, last_name, chosen_profession['name'], start_date_str, end_date_str, pay_after]
