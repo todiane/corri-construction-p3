@@ -7,6 +7,21 @@ import sys
 from flask import Flask
 from colorama import Fore, Back, Style
 
+import gspread
+from google.oauth2.service_account import Credentials
+
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('corri-construction')
+
+
 # FUNCTIONS
 
 # for type effect on screen
@@ -34,6 +49,7 @@ def worked_too_many_hours(days_worked, hours_entered):
 def final_pay(pay, tax, national_insurance):
     pay_after = pay - (tax * pay) - (national_insurance * pay)
     return pay_after
+
 
 #   user can choose their profession
 
@@ -68,6 +84,7 @@ def get_profession_choice():
         else:
             print(Fore.RED + " Error: Invalid choice." 
                   " Please choose a valid option.\n")
+
 
 if __name__ == "__main__":
 
@@ -230,6 +247,14 @@ if __name__ == "__main__":
     time.sleep(1)
     print('')
     type_print(" If you have any questions contact HR on 01305 483048.\n")
+
+   
+    # Adds information collected from user to the Google data sheet
+
+    data = [first_name, last_name, chosen_profession['name'], start_date_str, end_date_str, pay_after]
+
+    payments_worksheet = SHEET.worksheet("payments")
+    payments_worksheet.append_row(data)
 
     # User asked to confirm information is complete
 
