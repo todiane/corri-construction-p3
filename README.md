@@ -1,7 +1,7 @@
 ![CCCCP header](/assets/images/cc-rm-instructions.png)
 # Corri Construction Company - Contractor Page
 
-The deployed project live link is [HERE](https://corri-construction-8c4725a33281.herokuapp.com/) - ***Press Ctrl (Cmd) and mouse click to open in a new window.*** 
+The deployed project live link is [HERE](https://corri-construction-8c4725a33281.herokuapp.com/) - ***Use Ctrl (Cmd) and click to open in a new window.*** 
 
 Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with daily calls from contractors asking different questions about their pay. Many contractors would store up three to four months of work before submitting their invoices, which caused payroll issues. A consultation took place with the company and contractors to discuss the best way to get regular pay invoices from contractors and to reduce the HR call volume. The end result of the consultation was the request for a portal to be built that will help them manage contractors pay. 
 
