@@ -104,8 +104,8 @@ if __name__ == "__main__":
     time.sleep(1)
     type_print("\n INSTRUCTIONS: (please read carefully)")
     time.sleep(0.5)
-    type_print("\n If you leave this browser window this program will stop ")
-    type_print(" and you will have to start again.\n")
+    type_print("\n If you leave this browser window this program will stop and you ")
+    type_print(" will have to start again.\n")
     time.sleep(1)
     type_print(Fore.RED + " Information once entered CANNOT be amended. " +
                Fore.WHITE + "If you make an error")
