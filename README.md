@@ -200,6 +200,8 @@ In this area the following contractor information is included:
 - End date
 - Pay before tax
 
+![gsheet](assets/images/gsheet-rm-ccccp.png)
+
 ### Tax
 In this area the following contractor information is included:
 
@@ -209,6 +211,8 @@ In this area the following contractor information is included:
 - Pay before tax
 - Tax to pay
 - National Insurance to pay
+
+![gsheet](assets/images/gsheet2-rm-ccccp.png)
 
 This information is sent to the umbrella company.
 
@@ -258,7 +262,7 @@ The following tests were carried out to ensure the portal is working correctly
 
 Thanks to Cheryl at Code Institute who highlighted if an x is entered instead of y/n an error message does not show up. Error message added and I updated the statement to make it clear only y or n should be inputted.
 
-A focus group with the customer and contractors was held so that contractors could run through the portal and provide feedback. This resulted in small changes being made to the current features and a list of potential future updates.
+A focus group with the customer and contractors was held so that contractors could run through the portal and provide feedback. This resulted in small changes being made to the current features and a list of potential future updates. One issue noticed was the whole program stalled if you moved away from the browser so a warning was added to the instructions.
 
 Once the Google sheets was attached and working I tested the system several times by including ficticious workers that were added as data to the Google sheets.
 
