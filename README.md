@@ -96,9 +96,6 @@ In the "input name" section the user could hit enter and a blank space would be 
 
 In the "input dates and hours" section testing highlighted the fact that a customer can enter that they worked for just one day but worked 36 hours. Additional coding was added to ensure the maximum number of hours worked in a day was 13 and that applied whether a user worked one day or 10.
 
-![CCCCP name](/assets/images/corri-rm-hours.webp)
-
-
 
 ## Features
 
@@ -219,16 +216,18 @@ This information is sent to the umbrella company.
 
 The main technology used to create this program is Python
 HTML and CSS to change the background and add social media links.
+Google API
+Google Sheets
 
 ### Resources
 
-Codeanywhere 
-Visual Studio Code (VSC)
-GitHub 
-Heroku
-Font Awesome
-Canva for help with images
-miro.com to create flow chart
+- Codeanywhere 
+- Visual Studio Code (VSC)
+- GitHub 
+- Heroku
+- Font Awesome
+- Canva for help with images
+- miro.com to create flow chart
 
 ### Libraries
 [colorama Fore & Back](https://pypi.org/project/colorama/)
@@ -249,7 +248,7 @@ The following tests were carried out to ensure the portal is working correctly
 | Profession | User selects their profession | User selects a - f | Works as expected | 
 | Profession | User selects invalid letter | Error message appears | Works as expected | 
 | Information | User given contractor No & pay | Information confirmed as true | Works as expected |
-| Information | Information entered incorrect | Notice appears to start again| Works as expected |
+| Information | Information entered incorrect | Notice appears to start again | Works as expected |
 | Dates & hours | User adds dates, days and hours | Correct information confirmed | Works as expected |
 | Dates & hours | Incorrect information added | Error message appears | Works as expected |
 | "n" option  | User selects no to confirmation | Notice appears to start again | Works as expected |
@@ -308,6 +307,10 @@ The Application has been deployed from GitHub to Heroku by following the steps:
 ## Bugs
 
 After importing the type element so that text can be typed out a line at a time the codes for Fore.WHITE or bold kept showing up e.g. '\033[1m' for bold was typed out. To fix this I had to remove - colorama.init(autoreset=True) - which  meant I had to go through each line of code to ensure if one line was red, all subsequent lines didn't turn red. 
+
+I went through and adjusted all the "line too long" messages except one. The line that contains a breakdown of pay after deductions - line 259. 
+ "pay_statement = Fore.YELLOW + (f"\n Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}")"
+ Attempting to break this line up caused issues that I couldn't fix so I left it as one line. 
 
 ## Credits
 
