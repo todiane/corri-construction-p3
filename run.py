@@ -273,17 +273,25 @@ if __name__ == "__main__":
     print('')
     type_print(" If you have any questions contact HR on 01305 483048.\n")
 
+    # Adds pay/tax/NI to Google data sheet rounded to two digits
+
+    tax_amount = round(tax * pay, 2)
+    national_insurance_amount = round(national_insurance * pay, 2)
+    pay = round(pay, 2)
+
+    tax_amount_str = str(round(tax_amount, 2))
+    national_insurance_amount_str = str(round(national_insurance_amount, 2))
+    pay_str = str(round(pay, 2))
+
     # Adds information collected from user to the Google data sheet
 
     data = [first_name, last_name, chosen_profession['name'], start_date_str,
-            end_date_str, pay]
-
+            end_date_str, pay_str]
     payments_worksheet = SHEET.worksheet("payments")
     payments_worksheet.append_row(data)
 
-    data2 = [first_name, last_name, chosen_profession['name'], pay,
-             tax_amount, national_insurance_amount]
-
+    data2 = [first_name, last_name, chosen_profession['name'], pay_str,
+             tax_amount_str, national_insurance_amount_str]
     payments_worksheet = SHEET.worksheet("tax")
     payments_worksheet.append_row(data2)
 

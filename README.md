@@ -260,6 +260,8 @@ Thanks to Cheryl at Code Institute who highlighted if an x is entered instead of
 
 A focus group with the customer and contractors was held so that contractors could run through the portal and provide feedback. This resulted in small changes being made to the current features and a list of potential future updates.
 
+Once the Google sheets was attached and working I tested the system several times by including ficticious workers that were added as data to the Google sheets.
+
 ## Future Updates
 
 The next update of the app will include the option to choose whether it is their first visit (which will show the instructions) or whether they have used the service before - which will show the instructions behind a button.
@@ -337,6 +339,6 @@ Code Institute women-in-tech group for their support during huddles and when rev
 
 Peer-review slack channel for help trying to find any issues/break the code.
 
-Travis.media community - To help with date/hours/time function so it worked correctly
+Travis.media community - To help with date/hours/time function so it worked correctly.
 
-My mentor Andre Aquilina for teaching me about the proper structure for code - e.g. imports, functions, main code and for encouraging me to create the database.
+My mentor Andre Aquilina for teaching me about the proper structure for code - e.g. imports, functions, main code and for encouraging me to create the Google sheets addition and for helping with explaining coding.
