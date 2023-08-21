@@ -1,4 +1,39 @@
 ![CCCCP header](/assets/images/cc-rm-instructions.png)
+
+
+## Contents
+
+- [Corri Construction Company - Contractor Page](#corri-construction-company---contractor-page)
+- [Project](#project)
+  - [User goals:](#user-goals)
+  - [Site owner goals](#site-owner-goals)
+- [Pre development](#pre-development)
+- [Development](#development)
+- [Features](#features)
+  - [Slow Typing Instructions](#slow-typing-instructions)
+  - [Name and profession input](#name-and-profession-input)
+  - [Hourly pay and employee number](#hourly-pay-and-employee-number)
+  - [Working dates, days and hours](#working-dates-days-and-hours)
+  - [Confirm information so far](#confirm-information-so-far)
+  - [Tax and National Insurance](#tax-and-national-insurance)
+  - [Confirmation of information](#confirmation-of-information)
+  - [What the portal checks](#what-the-portal-checks)
+- [Google Sheets](#google-sheets)
+  - [Payments](#payments)
+  - [Tax](#tax)
+- [Technologies Used](#technologies-used)
+- [Resources](#resources)
+  - [Libraries](#libraries)
+- [Testing](#testing)
+- [Future Updates](#future-updates)  
+- [Validation](#validation)
+- [Deployment](#deployment)
+  - [Heroku](#heroku)
+  - [Branching the GitHub Repository using GitHub Desktop and Visual Studio Code](#branching-the-github-repository-using-github-desktop-and-visual-studio-code)
+- [Bugs](#bugs)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
+
 # Corri Construction Company - Contractor Page
 
 The deployed project live link is [HERE](https://corri-construction-8c4725a33281.herokuapp.com/) - ***Use Ctrl (Cmd) and click to open in a new window.*** 
