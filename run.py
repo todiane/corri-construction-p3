@@ -102,8 +102,10 @@ if __name__ == "__main__":
     type_print(Fore.WHITE + " If your hours are for previous months please "
                             "contact HR on 01305 483048")
     time.sleep(1)
-
     type_print("\n INSTRUCTIONS: (please read carefully)")
+    time.sleep(0.5)
+    type_print("\n If you leave this browser window this program ")
+    type_print("will stop and you will have to start again.\n")
     time.sleep(1)
     type_print(Fore.RED + "\n Information once entered CANNOT be amended. " +
                Fore.WHITE + "If you make an error")
