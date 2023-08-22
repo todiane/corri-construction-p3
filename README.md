@@ -1,9 +1,14 @@
+
+# Corri Construction Company - Contractor Page
 ![CCCCP header](/assets/images/cc-rm-instructions.png)
 
+Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with daily calls from contractors asking different questions about their pay. Many contractors would store up three to four months of work before submitting their invoices, which caused payroll issues. A consultation took place with the company and contractors to discuss the best way to get regular pay invoices from contractors and to reduce the HR call volume. The end result of the consultation was the request for a portal to be built that will help them manage contractors pay. 
+
+The deployed project live link is [HERE](https://corri-construction-8c4725a33281.herokuapp.com/) - ***Use Ctrl (Cmd) and click to open in a new window.*** 
 
 ## Contents
 
-- [Corri Construction Company - Contractor Page](#corri-construction-company---contractor-page)
+- [Introduction](#introduction)
 - [Project](#project)
   - [User goals:](#user-goals)
   - [Site owner goals](#site-owner-goals)
@@ -34,11 +39,7 @@
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
 
-# Corri Construction Company - Contractor Page
-
-The deployed project live link is [HERE](https://corri-construction-8c4725a33281.herokuapp.com/) - ***Use Ctrl (Cmd) and click to open in a new window.*** 
-
-Corri Construction Company (not their real name!) hires anything from 2 - 300 contractors in a week. HR was inundated with daily calls from contractors asking different questions about their pay. Many contractors would store up three to four months of work before submitting their invoices, which caused payroll issues. A consultation took place with the company and contractors to discuss the best way to get regular pay invoices from contractors and to reduce the HR call volume. The end result of the consultation was the request for a portal to be built that will help them manage contractors pay. 
+## Introduction
 
 This portal asks contractors to input their name, profession, working dates, number of days worked and number of hours. They are then given a rough estimate of their pay due after tax and NI (which is handled by an umbrella company). The data is forwarded to HR (who extract information for the umbrella company) with a copy also sent to the contractor's email address.
 
@@ -305,10 +306,11 @@ The Application has been deployed from GitHub to Heroku by following the steps:
 1. Go to the GitHub repository.
 2. Click on the branch button in the left hand side under the repository name.
 3. Give your branch a name.
-4. Go to the CODE area on the right and select "Open with GitHub Desktop"
-5. You will be asked if you want to clone the repository - say yes
-6. GitHub desktop will suggest what to do next - select Open code using Visual Studio Code
+4. Go to the CODE area on the right and select "Open with GitHub Desktop".
+5. You will be asked if you want to clone the repository - say yes.
+6. GitHub desktop will suggest what to do next - select Open code using Visual Studio Code.
    
+The deployed project live link is [HERE](https://corri-construction-8c4725a33281.herokuapp.com/) - ***Use Ctrl (Cmd) and click to open in a new window.*** 
 
 ## Bugs
 
