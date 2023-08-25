@@ -33,7 +33,9 @@ The following tests were carried out to ensure the portal is working correctly
 
 Once the Google sheets was attached and working I tested the system several times by including ficticious workers that were added as data to the Google sheets file.
 
-When first added the data numerical value added extra numbers e.g. £897.4953 - to ensure the number was rounded to only two digits at the end the str(round) object was used.
+When first added the data numerical value added extra numbers e.g. £897.4953 - to ensure the number was rounded to only two digits at the end the str(round) object was used. The idea to use str(round) decided after a session with Tutor support.
+
+![round](assets/images/strround-testing.png)
 
 Even though Google Sheets was added after the program was developed there were no other issues and it worked perfectly and integrated easily.
 
@@ -46,5 +48,5 @@ The ability to edit information already added if it is incorrect without having 
 Contractor can selection options for other payments that need to be removed from their pay e.g. student loan or pension to make their final pay amount more accurate.
 
 
-[BACK TO README]()
+### [BACK TO README](https://github.com/todiane/corri-construction-p3/blob/main/README.md)
 

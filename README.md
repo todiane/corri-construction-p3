@@ -243,7 +243,7 @@ Google Sheets
 
 ## Testing
 
-The portal has been well tested and the results can be viewed [here - TESTING]
+The portal has been well tested and the results can be viewed [here - TESTING](https://github.com/todiane/corri-construction-p3/blob/main/TESTING.md)
 
 
 ## Future Updates
@@ -321,6 +321,8 @@ Being able to bold and center font - taken from w3Schools - [here](https://www.w
 Code Institute women-in-tech group for their support during huddles and when reviewing my code.
 
 Peer-review slack channel for help trying to find any issues/break the code.
+
+Tutor support for help with figuring out how to round numbers in Google sheet.
 
 Travis.media community - To help with date/hours/time function so it worked correctly.
 
