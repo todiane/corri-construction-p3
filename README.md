@@ -243,41 +243,18 @@ Google Sheets
 
 ## Testing
 
-The following tests were carried out to ensure the portal is working correctly
+The portal has been well tested and the results can be viewed [here - TESTING]
 
-| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
-| ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Instructions | User is given typed out instructions | Intro screen presented | Works as expected |
-| Name input | User is asked to enter their name | First & Last name input| Works as expected | 
-| Name input | User inputs symbol or number | Error message appears | Works as expected | 
-| Profession | User selects their profession | User selects a - f | Works as expected | 
-| Profession | User selects invalid letter | Error message appears | Works as expected | 
-| Information | User given contractor No & pay | Information confirmed as true | Works as expected |
-| Information | Information entered incorrect | Notice appears to start again | Works as expected |
-| Dates & hours | User adds dates, days and hours | Correct information confirmed | Works as expected |
-| Dates & hours | Incorrect information added | Error message appears | Works as expected |
-| "n" option  | User selects no to confirmation | Notice appears to start again | Works as expected |
-| Confirmed Info | Everything entered presented | Pay amount minus tax & NI appears | Works as expected |
-| Submit info | Everything entered ready to submit | Users clicks y to submit | Works as expected |
-| Submit info | Ready to submit, n selected | Notice appears to start again | Works as expected |
-
-Thanks to Cheryl at Code Institute who highlighted if an x is entered instead of y/n an error message does not show up. Error message added and I updated the statement to make it clear only y or n should be inputted.
-
-A focus group with the customer and contractors was held so that contractors could run through the portal and provide feedback. This resulted in small changes being made to the current features and a list of potential future updates. One issue noticed was the whole program stalled if you moved away from the browser so a warning was added to the instructions.
-
-Once the Google sheets was attached and working I tested the system several times by including ficticious workers that were added as data to the Google sheets.
 
 ## Future Updates
 
 The next update of the app will include the option to choose whether it is their first visit (which will show the instructions) or whether they have used the service before - which will show the instructions behind a button.
 
-The ability to edit information already added if it is incorrect without having to start again.
-
-Contractor can selection options for other payments that need to be removed from their pay e.g. student loan or pension to make their final pay amount more accurate.
-
 The ability for a manager to log into the system and confirm working dates and days for each contractor all in one place rather than via separate emails.
 
 Relevant information is accessible by the umbrella company so that HR doesn't have to collate and forward this information.
+
+Other future updates are included in the TESTING.md file.
 
 ## Validation
 
@@ -294,7 +271,7 @@ The Application has been deployed from GitHub to Heroku by following the steps:
 2. Create a new app, add a unique app name ( for example corri-construction-p3) and then choose your region
 3. Click on create app
 4. Go to "Settings"
-5. Under Config Vars add a key 'PORT' and value '8000'.
+5. Under Config Vars add the CREDS.json key information and a key 'PORT' and value '8000'.
 6. Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom
 7. Go to "Deploy" and select "GitHub" in "Deployment method"
 8. To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below.

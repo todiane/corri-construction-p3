@@ -154,7 +154,6 @@ if __name__ == "__main__":
     type_print(Fore.YELLOW + " HELLO, " + first_name + " " + last_name + "\n")
 
     # user has chosen their profession
-
     chosen_profession = get_profession_choice()
 
     # Info typed once the correct info confirmed y
