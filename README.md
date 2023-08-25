@@ -23,6 +23,7 @@ The deployed project live link is [HERE](https://corri-construction-8c4725a33281
   - [Tax and National Insurance](#tax-and-national-insurance)
   - [Confirmation of information](#confirmation-of-information)
   - [What the portal checks](#what-the-portal-checks)
+  - [Error Page](#error-page)
 - [Google Sheets](#google-sheets)
   - [Payments](#payments)
   - [Tax](#tax)
@@ -186,6 +187,11 @@ If they select yes, they receive confirmation of submission
 ![CCCCP submission](/assets/images/cc-rm-information-submitted.png)
 
 If they select no, they are invited to re-submit, as shown above.
+
+### Error Page
+
+A 404 error page has been included. The html was run through the W3C html validator and errors removed. A css style file was created to support the display of the text on the page.
+
 
 ## Google Sheets
 
