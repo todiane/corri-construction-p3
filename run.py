@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
     # MAIN CODE
 
-    # Corri Construction Introduction
+    # Corri Construction Introduction and instructions
 
     text = Fore.WHITE + '\033[1m' + "CORRI CONSTRUCTION COMPANY "
     "CONTRACTORS PAGE" + '\033[0m'
@@ -104,8 +104,8 @@ if __name__ == "__main__":
     time.sleep(1)
     type_print("\n INSTRUCTIONS: (please read carefully)")
     time.sleep(0.5)
-    type_print("\n If you leave this browser window this program will stop ")
-    type_print(" and you will have to start again.\n")
+    type_print("\n If you leave this page the program may stop and you ")
+    type_print(" will have to re-start, so stay until completed.\n")
     time.sleep(1)
     type_print(Fore.RED + " Information once entered CANNOT be amended. " +
                Fore.WHITE + "If you make an error")
@@ -156,7 +156,7 @@ if __name__ == "__main__":
     # user has chosen their profession
     chosen_profession = get_profession_choice()
 
-    # Info typed once the correct info confirmed y
+    # Details provided once the information added is confirmed y
 
     type_print(Fore.WHITE + " Thank you.\n")
     time.sleep(1)

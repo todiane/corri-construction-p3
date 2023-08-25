@@ -28,6 +28,16 @@ The following tests were carried out to ensure the portal is working correctly
 | Submit info | Everything entered ready to submit | Users clicks y to submit | Works as expected |
 | Submit info | Ready to submit, n selected | Notice appears to start again | Works as expected |
 
+## Testing Browsers
+The portal was tested in the following browsers (based on my own testing and those of people who tested the portal):
+
+- Chrome
+- Edge
+- Firefox
+- Oprea
+- Safari
+
+It worked without issues in the above browsers.
 
 ## Testing Google Sheets
 
