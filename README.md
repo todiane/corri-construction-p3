@@ -271,7 +271,7 @@ The Application has been deployed from GitHub to Heroku by following the steps:
 2. Create a new app, add a unique app name ( for example corri-construction-p3) and then choose your region
 3. Click on create app
 4. Go to "Settings"
-5. Under Config Vars add the CREDS.json key information and a key 'PORT' and value '8000'.
+5. Under Config Vars add the private API key information using key 'CRED' and into the value area copy the API key information added to the .json file.  Also add a key 'PORT' and value '8000'.
 6. Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom
 7. Go to "Deploy" and select "GitHub" in "Deployment method"
 8. To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below.
