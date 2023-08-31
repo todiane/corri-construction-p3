@@ -49,8 +49,6 @@ When first added the data numerical value added extra numbers e.g. £897.4953 - 
 
 Even though Google Sheets was added after the program was developed there were no other issues and it worked perfectly and integrated easily.
 
-*** PLEASE NOTE: *** 10 entries have been included in Google Sheets as an example for assessment of my project and to test that portal/Google sheets are connected. As this project was shared in Slack and with other people outside of my training environment there may be additional entries not made by me at the time of submission. If there are more than 10 entries and any of them use rude or inappropriate first and last names, I can only apologise in advance.
-
 ## CSS and HTML Validation
 
 A small amount of CSS and HTML was used when creating the 404 error page. Both pages were run through the appropriate W3C validator and no errors were found.
