@@ -299,10 +299,6 @@ The deployed project live link is [HERE](https://corri-construction-8c4725a33281
 
 After importing the type element so that text can be typed out a line at a time the codes for Fore.WHITE or bold kept showing up e.g. '\033[1m' for bold was typed out. To fix this I had to remove - colorama.init(autoreset=True) - which  meant I had to go through each line of code to ensure if one line was red, all subsequent lines didn't turn red. 
 
-I went through and adjusted all the "line too long" messages except one. The line that contains a breakdown of pay after deductions - line 259. 
- "pay_statement = Fore.YELLOW + (f"\n Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}")"
- Attempting to break this line up caused issues that I couldn't fix so I left it as one line. 
-
 ## Credits
 
 Free Code Camp Python for everyone course that helped me get my project started - [here](https://www.youtube.com/watch?v=wgkC8SxraAQ)

@@ -7,6 +7,7 @@ import sys
 from flask import Flask
 from colorama import Fore, Back, Style
 
+# google sheet import and CREDS
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -85,10 +86,10 @@ def get_profession_choice():
             print(Fore.RED + " Error: Invalid choice."
                   " Please choose a valid option.\n")
 
+# MAIN CODE
+
 
 if __name__ == "__main__":
-
-    # MAIN CODE
 
     # Corri Construction Introduction and instructions
 
@@ -181,7 +182,7 @@ if __name__ == "__main__":
                "days work.\n")
     time.sleep(0.5)
 
-    # User asked to input their dates, days and hours
+    # User asked to input the dates, days and hours they worked.
 
     while True:
         try:
@@ -257,7 +258,10 @@ if __name__ == "__main__":
     tax_amount = tax * pay
     national_insurance_amount = national_insurance * pay
 
-    pay_statement = Fore.YELLOW + (f"\n Your pay minus tax of (£{tax_amount:.2f}) and NI of (£{national_insurance_amount:.2f}) is £{pay_after:.2f}")
+    pay_statement = Fore.YELLOW + (
+        f"\n Your pay minus tax of (£{tax_amount:.2f}) and NI of "
+        f"(£{national_insurance_amount:.2f}) is £{pay_after:.2f}"
+        )   
     pay_summary = pay_statement.center(50)
     type_print(pay_summary)
     time.sleep(1)
@@ -296,7 +300,7 @@ if __name__ == "__main__":
     payments_worksheet = SHEET.worksheet("tax")
     payments_worksheet.append_row(data2)
 
-    # User asked to confirm information is complete
+    # User asked to confirm information is complete and ready to submit
 
     while True:
         exit = input(Fore.GREEN + " Information Complete. Select y to submit "
